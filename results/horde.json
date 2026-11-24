@@ -1,0 +1,1107 @@
+{
+  "alternatives": {
+    "back": [
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": 0.0,
+        "id": 13340,
+        "name": "Cape of the Black Baron",
+        "source": "drop: Baron Rivendare (Stratholme)"
+      },
+      {
+        "allowed": true,
+        "category": "vendor",
+        "dpsChange": -0.79,
+        "id": 272414,
+        "name": "Howler's Furs",
+        "source": "vendor: Pix Xizzix (Stranglethorn Vale)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -3.53,
+        "id": 11626,
+        "name": "Blackveil Cape",
+        "source": "drop: High Interrogator Gerstahn  (Blackrock Depths)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -4.02,
+        "id": 18496,
+        "name": "Heliotrope Cloak",
+        "source": "drop: Guard Mol'dar (Dire Maul); drop: Guard Slip'kik (Dire Maul)"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -4.02,
+        "id": 18509,
+        "name": "Chromatic Cloak",
+        "source": "crafted: leatherworking"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -4.02,
+        "id": 279269,
+        "name": "Fel Cape",
+        "source": "crafted: tailoring"
+      },
+      {
+        "allowed": false,
+        "category": "battleground reputation",
+        "dpsChange": -1.13,
+        "id": 20068,
+        "name": "Deathguard's Cloak",
+        "source": "reputation: The Defilers at Exalted; vendor: Rutherford Twing (Arathi Highlands)"
+      }
+    ],
+    "chest": [
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": 0.0,
+        "id": 252484,
+        "name": "Timbermaw Tunic",
+        "source": "crafted: leatherworking"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -5.24,
+        "id": 252483,
+        "name": "Dawn Armor",
+        "source": "crafted: leatherworking"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -9.77,
+        "id": 11726,
+        "name": "Savage Gladiator Chain",
+        "source": "drop: Gorosh the Dervish (Blackrock Depths)"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -13.69,
+        "id": 15141,
+        "name": "Onyxia Scale Breastplate",
+        "source": "crafted: leatherworking"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -14.96,
+        "id": 13944,
+        "name": "Tombstone Breastplate",
+        "source": "drop: Darkmaster Gandling (Scholomance)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -15.96,
+        "id": 18530,
+        "name": "Ogre Forged Hauberk",
+        "source": "drop: Tribute (Dire Maul)"
+      }
+    ],
+    "feet": [
+      {
+        "allowed": true,
+        "category": "vendor",
+        "dpsChange": 0.0,
+        "id": 226857,
+        "name": "Battleboots of Heroism",
+        "source": "vendor: Mokvar (Orgrimmar)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -4.74,
+        "id": 14616,
+        "name": "Bloodmail Boots",
+        "source": "drop: Instructor Malicia (Scholomance); drop: Doctor Theolen Krastinov (Scholomance); drop: Lorekeeper Polkelt (Scholomance)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -4.81,
+        "id": 13967,
+        "name": "Windreaver Greaves",
+        "source": "drop: Kirtonos the Herald (Scholomance)"
+      },
+      {
+        "allowed": true,
+        "category": "confirmed by hand",
+        "dpsChange": -8.31,
+        "id": 287033,
+        "name": "Furbolg Berserker's Boots",
+        "source": "ruling: Drops from Blackmaw furbolgs in Blackmaw Hold (dungeon) and Azshara; the drop rate is reported as very low."
+      },
+      {
+        "allowed": true,
+        "category": "vendor",
+        "dpsChange": -9.79,
+        "id": 226871,
+        "name": "Sabatons of Heroism",
+        "source": "vendor: Mokvar (Orgrimmar)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -12.62,
+        "id": 16711,
+        "name": "Shadowcraft Boots",
+        "source": "drop: Rattlegore (Scholomance)"
+      }
+    ],
+    "finger1": [
+      {
+        "allowed": true,
+        "category": "Alterac Valley reputation",
+        "dpsChange": 0.0,
+        "id": 19325,
+        "name": "Don Julio's Band",
+        "source": "vendor: Grunnda Wolfheart (Alterac Valley); vendor: Jekyll Flandring (Alterac Mountains)"
+      },
+      {
+        "allowed": true,
+        "category": "vendor",
+        "dpsChange": -5.94,
+        "id": 272408,
+        "name": "Cutthroat's Signet",
+        "source": "vendor: Pix Xizzix (Stranglethorn Vale)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -8.99,
+        "id": 17713,
+        "name": "Blackstone Ring",
+        "source": "drop: Princess Theradras (Maraudon)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -9.12,
+        "id": 18500,
+        "name": "Tarnished Elven Ring",
+        "source": "drop: Tribute (Dire Maul)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -14.67,
+        "id": 13098,
+        "name": "Painweaver Band",
+        "source": "drop: General Drakkisath (Blackrock Spire)"
+      },
+      {
+        "allowed": true,
+        "category": "Classic-era item, source not listed",
+        "dpsChange": -17.28,
+        "id": 2246,
+        "name": "Myrmidon's Signet",
+        "source": "no known source"
+      }
+    ],
+    "finger2": [
+      {
+        "allowed": true,
+        "category": "confirmed by hand",
+        "dpsChange": 0.0,
+        "id": 260219,
+        "name": "Engraved Band",
+        "source": "ruling: Reward of the Blackmaw Hold quest Blackmaw Reclamation."
+      },
+      {
+        "allowed": true,
+        "category": "vendor",
+        "dpsChange": -1.84,
+        "id": 272408,
+        "name": "Cutthroat's Signet",
+        "source": "vendor: Pix Xizzix (Stranglethorn Vale)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -2.21,
+        "id": 13098,
+        "name": "Painweaver Band",
+        "source": "drop: General Drakkisath (Blackrock Spire)"
+      },
+      {
+        "allowed": true,
+        "category": "Classic-era item, source not listed",
+        "dpsChange": -3.05,
+        "id": 20721,
+        "name": "Band of the Cultist",
+        "source": "no known source"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -3.05,
+        "id": 22255,
+        "name": "Magma Forged Band",
+        "source": "drop: Dark Coffer (Blackrock Depths); drop: Watchman Doomgrip (Blackrock Depths)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -3.62,
+        "id": 17713,
+        "name": "Blackstone Ring",
+        "source": "drop: Princess Theradras (Maraudon)"
+      },
+      {
+        "allowed": false,
+        "category": "reputation",
+        "dpsChange": 0.54,
+        "id": 275981,
+        "name": "Warden's Signet of Ferocity",
+        "source": "reputation: The Watchers at Exalted"
+      },
+      {
+        "allowed": false,
+        "category": "reputation",
+        "dpsChange": -0.72,
+        "id": 275976,
+        "name": "Watcher's Signet of Ferocity",
+        "source": "reputation: The Watchers at Revered"
+      },
+      {
+        "allowed": false,
+        "category": "battleground reputation",
+        "dpsChange": -1.83,
+        "id": 19510,
+        "name": "Legionnaire's Band",
+        "source": "vendor: Kelm Hargunth (The Barrens)"
+      },
+      {
+        "allowed": false,
+        "category": "reputation",
+        "dpsChange": -2.08,
+        "id": 275972,
+        "name": "Tracker's Signet of Ferocity",
+        "source": "reputation: The Watchers at Honored"
+      }
+    ],
+    "hands": [
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": 0.0,
+        "id": 15063,
+        "name": "Devilsaur Gauntlets",
+        "source": "crafted: leatherworking"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -21.53,
+        "id": 21278,
+        "name": "Stormshroud Gloves",
+        "source": "crafted: leatherworking"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -23.45,
+        "id": 18722,
+        "name": "Death Grips",
+        "source": "drop: Magistrate Barthilas (Stratholme)"
+      },
+      {
+        "allowed": true,
+        "category": "vendor",
+        "dpsChange": -24.87,
+        "id": 226861,
+        "name": "Gauntlets of Heroism",
+        "source": "vendor: Mokvar (Orgrimmar)"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -26.08,
+        "id": 19049,
+        "name": "Timbermaw Brawlers",
+        "source": "crafted: leatherworking"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -29.16,
+        "id": 13162,
+        "name": "Reiver Claws",
+        "source": "drop: Overlord Wyrmthalak (Blackrock Spire)"
+      }
+    ],
+    "head": [
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": 0.0,
+        "id": 12640,
+        "name": "Lionheart Helm",
+        "source": "crafted: blacksmithing"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -23.1,
+        "id": 13404,
+        "name": "Mask of the Unforgiven",
+        "source": "drop: The Unforgiven (Stratholme)"
+      },
+      {
+        "allowed": true,
+        "category": "confirmed by hand",
+        "dpsChange": -23.62,
+        "id": 284086,
+        "name": "Scarlet Executioner's Guise",
+        "source": "ruling: Drops from the Scarlet Executioner, a level 60 rare elite in Western Plaguelands."
+      },
+      {
+        "allowed": true,
+        "category": "quest",
+        "dpsChange": -23.89,
+        "id": 20521,
+        "name": "Fury Visor",
+        "source": "quest: Voodoo Feathers"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -30.01,
+        "id": 12587,
+        "name": "Eye of Rend",
+        "source": "drop: Warchief Rend Blackhand (Blackrock Spire)"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -36.89,
+        "id": 279253,
+        "name": "Outlaw's Collar",
+        "source": "crafted: leatherworking"
+      }
+    ],
+    "legs": [
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": 0.0,
+        "id": 15062,
+        "name": "Devilsaur Leggings",
+        "source": "crafted: leatherworking"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -19.66,
+        "id": 12963,
+        "name": "Blademaster Leggings",
+        "source": "drop: The Beast (Blackrock Spire)"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -24.6,
+        "id": 15065,
+        "name": "Warbear Woolies",
+        "source": "crafted: leatherworking"
+      },
+      {
+        "allowed": true,
+        "category": "Classic-era item, source not listed",
+        "dpsChange": -24.8,
+        "id": 14554,
+        "name": "Cloudkeeper Legplates",
+        "source": "no known source"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -27.05,
+        "id": 279265,
+        "name": "Azerothium Legplates",
+        "source": "crafted: blacksmithing"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -27.25,
+        "id": 13498,
+        "name": "Handcrafted Mastersmith Leggings",
+        "source": "drop: Goraluk Anvilcrack  (Blackrock Spire)"
+      }
+    ],
+    "mainHand": [
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": 0.0,
+        "id": 22384,
+        "name": "Persuader",
+        "source": "crafted: blacksmithing"
+      },
+      {
+        "allowed": true,
+        "category": "Classic-era item, source not listed",
+        "dpsChange": -13.07,
+        "id": 1728,
+        "name": "Teebu's Blazing Longsword",
+        "source": "no known source"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -16.38,
+        "id": 11684,
+        "name": "Ironfoe",
+        "source": "drop: Emperor Dagran Thaurissan (Blackrock Depths)"
+      },
+      {
+        "allowed": true,
+        "category": "Classic-era item, source not listed",
+        "dpsChange": -20.57,
+        "id": 6622,
+        "name": "Sword of Zeal",
+        "source": "no known source"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -22.81,
+        "id": 279259,
+        "name": "Ironwood Blade",
+        "source": "crafted: blacksmithing"
+      },
+      {
+        "allowed": true,
+        "category": "Classic-era item, source not listed",
+        "dpsChange": -25.35,
+        "id": 2244,
+        "name": "Krol Blade",
+        "source": "no known source"
+      }
+    ],
+    "neck": [
+      {
+        "allowed": true,
+        "category": "quest",
+        "dpsChange": 0.0,
+        "id": 15411,
+        "name": "Mark of Fordring",
+        "source": "quest: In Dreams"
+      },
+      {
+        "allowed": true,
+        "category": "quest",
+        "dpsChange": -1.46,
+        "id": 19491,
+        "name": "Amulet of the Darkmoon",
+        "source": "quest: 1200 Tickets - Amulet of the Darkmoon"
+      },
+      {
+        "allowed": true,
+        "category": "quest",
+        "dpsChange": -5.58,
+        "id": 22150,
+        "name": "Beads of Ogre Might",
+        "source": "quest: Falrin's Vendetta"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -6.83,
+        "id": 22340,
+        "name": "Pendant of Celerity",
+        "source": "drop: Lord Valthalak (Blackrock Spire)"
+      },
+      {
+        "allowed": true,
+        "category": "quest",
+        "dpsChange": -7.1,
+        "id": 12059,
+        "name": "Conqueror's Medallion",
+        "source": "quest: Operation: Death to Angerforge"
+      },
+      {
+        "allowed": true,
+        "category": "Classic-era item, source not listed",
+        "dpsChange": -7.88,
+        "id": 13089,
+        "name": "Skibi's Pendant",
+        "source": "no known source"
+      }
+    ],
+    "offHand": [
+      {
+        "allowed": true,
+        "category": "Classic-era item, source not listed",
+        "dpsChange": 0.0,
+        "id": 871,
+        "name": "Flurry Axe",
+        "source": "no known source"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -1.66,
+        "id": 279259,
+        "name": "Ironwood Blade",
+        "source": "crafted: blacksmithing"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -2.44,
+        "id": 279261,
+        "name": "Greenhammer",
+        "source": "crafted: blacksmithing"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -2.74,
+        "id": 12590,
+        "name": "Felstriker",
+        "source": "drop: Warchief Rend Blackhand (Blackrock Spire)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -8.36,
+        "id": 22322,
+        "name": "The Jaw Breaker",
+        "source": "drop: Mor Grayhoof (Blackrock Spire)"
+      },
+      {
+        "allowed": true,
+        "category": "Alterac Valley reputation",
+        "dpsChange": -8.52,
+        "id": 19103,
+        "name": "Frostbite",
+        "source": "vendor: Grunnda Wolfheart (Alterac Valley); vendor: Jekyll Flandring (Alterac Mountains)"
+      }
+    ],
+    "ranged": [
+      {
+        "allowed": true,
+        "category": "quest",
+        "dpsChange": 0.0,
+        "id": 19107,
+        "name": "Bloodseeker",
+        "source": "quest: The Legend of Korrak; quest: Hero of the Frostwolf"
+      },
+      {
+        "allowed": true,
+        "category": "Classic-era item, source not listed",
+        "dpsChange": -1.28,
+        "id": 2100,
+        "name": "Precisely Calibrated Boomstick",
+        "source": "no known source"
+      },
+      {
+        "allowed": true,
+        "category": "confirmed by hand",
+        "dpsChange": -2.43,
+        "id": 280020,
+        "name": "Deep Jungle Rifle",
+        "source": "ruling: Drops from Thunderhoof in Shaper's Terrace (dungeon)."
+      },
+      {
+        "allowed": true,
+        "category": "confirmed by hand",
+        "dpsChange": -2.89,
+        "id": 280083,
+        "name": "Truesight Rifle",
+        "source": "ruling: Drops from Sabella No-Eyes, a rare elite; her spawn location is not documented."
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -3.07,
+        "id": 12653,
+        "name": "Riphook",
+        "source": "drop: Shadow Hunter Vosh'gajin (Blackrock Spire)"
+      },
+      {
+        "allowed": true,
+        "category": "world drop",
+        "dpsChange": -3.13,
+        "id": 287070,
+        "name": "Skypierce Javelin",
+        "source": "drop: World Drop"
+      }
+    ],
+    "shoulder": [
+      {
+        "allowed": true,
+        "category": "confirmed by hand",
+        "dpsChange": 0.26,
+        "id": 275737,
+        "name": "Hermit's Pauldron",
+        "source": "ruling: Reward of the Mount Hyjal quest Work Well Done (outdoor zone, medium confidence)."
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": 0.0,
+        "id": 22241,
+        "name": "Dark Warder's Pauldrons",
+        "source": "drop: Warder Stilgiss (Blackrock Depths)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -1.6,
+        "id": 12927,
+        "name": "Truestrike Shoulders",
+        "source": "drop: Pyroguard Emberseer (Blackrock Spire)"
+      },
+      {
+        "allowed": true,
+        "category": "vendor",
+        "dpsChange": -2.01,
+        "id": 226858,
+        "name": "Spaulders of Heroism",
+        "source": "vendor: Mokvar (Orgrimmar)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -2.4,
+        "id": 14503,
+        "name": "Death's Clutch",
+        "source": "drop: Ras Frostwhisper (Scholomance)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -2.64,
+        "id": 18374,
+        "name": "Flamescarred Shoulders",
+        "source": "drop: Magister Kalendris (Dire Maul)"
+      },
+      {
+        "allowed": false,
+        "category": "battleground reputation",
+        "dpsChange": 6.12,
+        "id": 272105,
+        "name": "Darkspear Pauldrons",
+        "source": "reputation: Darkspear Raiders at Exalted; vendor: Creeg Bothunk (The Barrens)"
+      },
+      {
+        "allowed": false,
+        "category": "battleground reputation",
+        "dpsChange": 6.12,
+        "id": 272106,
+        "name": "Darkspear Epaulets",
+        "source": "reputation: Darkspear Raiders at Exalted; vendor: Creeg Bothunk (The Barrens)"
+      },
+      {
+        "allowed": false,
+        "category": "battleground reputation",
+        "dpsChange": 4.42,
+        "id": 20184,
+        "name": "Defiler's Lamellar Spaulders",
+        "source": "reputation: The Defilers at Exalted"
+      },
+      {
+        "allowed": false,
+        "category": "battleground reputation",
+        "dpsChange": 4.42,
+        "id": 20212,
+        "name": "Defiler's Plate Spaulders",
+        "source": "reputation: The Defilers at Exalted; vendor: Rutherford Twing (Arathi Highlands)"
+      }
+    ],
+    "trinket1": [
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": 0.0,
+        "id": 22321,
+        "name": "Heart of Wyrmthalak",
+        "source": "drop: Overlord Wyrmthalak (Blackrock Spire)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -3.09,
+        "id": 11815,
+        "name": "Hand of Justice",
+        "source": "drop: Emperor Dagran Thaurissan (Blackrock Depths)"
+      },
+      {
+        "allowed": true,
+        "category": "quest",
+        "dpsChange": -3.37,
+        "id": 13965,
+        "name": "Blackhand's Breadth",
+        "source": "quest: For The Horde!"
+      },
+      {
+        "allowed": true,
+        "category": "confirmed by hand",
+        "dpsChange": -8.23,
+        "id": 280065,
+        "name": "Behemoth Bones",
+        "source": "ruling: Drops from Blackmaw Behemoth in Blackmaw Hold (dungeon)."
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -9.5,
+        "id": 18537,
+        "name": "Counterattack Lodestone",
+        "source": "drop: Tribute (Dire Maul)"
+      },
+      {
+        "allowed": true,
+        "category": "vendor",
+        "dpsChange": -10.46,
+        "id": 272437,
+        "name": "Adaptive Combat Assistant",
+        "source": "vendor: Pix Xizzix (Stranglethorn Vale)"
+      }
+    ],
+    "trinket2": [
+      {
+        "allowed": true,
+        "category": "quest",
+        "dpsChange": 0.0,
+        "id": 19289,
+        "name": "Darkmoon Card: Maelstrom",
+        "source": "quest: Darkmoon Elementals Deck"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -1.25,
+        "id": 11815,
+        "name": "Hand of Justice",
+        "source": "drop: Emperor Dagran Thaurissan (Blackrock Depths)"
+      },
+      {
+        "allowed": true,
+        "category": "quest",
+        "dpsChange": -1.38,
+        "id": 13965,
+        "name": "Blackhand's Breadth",
+        "source": "quest: For The Horde!"
+      },
+      {
+        "allowed": true,
+        "category": "vendor",
+        "dpsChange": -6.07,
+        "id": 272437,
+        "name": "Adaptive Combat Assistant",
+        "source": "vendor: Pix Xizzix (Stranglethorn Vale)"
+      },
+      {
+        "allowed": true,
+        "category": "quest",
+        "dpsChange": -7.26,
+        "id": 19120,
+        "name": "Rune of the Guard Captain",
+        "source": "quest: Job Opening: Guard Captain of Revantusk Village"
+      },
+      {
+        "allowed": true,
+        "category": "confirmed by hand",
+        "dpsChange": -7.49,
+        "id": 280065,
+        "name": "Behemoth Bones",
+        "source": "ruling: Drops from Blackmaw Behemoth in Blackmaw Hold (dungeon)."
+      },
+      {
+        "allowed": false,
+        "category": "no known source",
+        "dpsChange": -2.28,
+        "id": 260205,
+        "name": "Highborne Research Tablet",
+        "source": "no known source"
+      }
+    ],
+    "waist": [
+      {
+        "allowed": true,
+        "category": "vendor",
+        "dpsChange": 0.0,
+        "id": 272403,
+        "name": "Valiant's Waistguard",
+        "source": "vendor: Pix Xizzix (Stranglethorn Vale)"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -1.13,
+        "id": 19044,
+        "name": "Might of the Timbermaw",
+        "source": "crafted: leatherworking"
+      },
+      {
+        "allowed": true,
+        "category": "quest",
+        "dpsChange": -3.54,
+        "id": 13959,
+        "name": "Omokk's Girth Restrainer",
+        "source": "quest: Warlord's Command"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -5.82,
+        "id": 18393,
+        "name": "Warpwood Binding",
+        "source": "drop: Tendris Warpwood (Dire Maul)"
+      },
+      {
+        "allowed": true,
+        "category": "crafted",
+        "dpsChange": -6.07,
+        "id": 252473,
+        "name": "Prowler's Leather Waistguard",
+        "source": "crafted: leatherworking"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -6.42,
+        "id": 22232,
+        "name": "Marksman's Girdle",
+        "source": "drop: Urok Doomhowl (Blackrock Spire)"
+      },
+      {
+        "allowed": false,
+        "category": "battleground reputation",
+        "dpsChange": -2.03,
+        "id": 20204,
+        "name": "Defiler's Plate Girdle",
+        "source": "reputation: The Defilers at Honored; vendor: Rutherford Twing (Arathi Highlands)"
+      },
+      {
+        "allowed": false,
+        "category": "battleground reputation",
+        "dpsChange": -2.91,
+        "id": 20150,
+        "name": "Defiler's Chain Girdle",
+        "source": "reputation: The Defilers at Honored; vendor: Rutherford Twing (Arathi Highlands)"
+      },
+      {
+        "allowed": false,
+        "category": "battleground reputation",
+        "dpsChange": -2.91,
+        "id": 20190,
+        "name": "Defiler's Leather Girdle",
+        "source": "reputation: The Defilers at Honored; vendor: Rutherford Twing (Arathi Highlands)"
+      },
+      {
+        "allowed": false,
+        "category": "battleground reputation",
+        "dpsChange": -2.91,
+        "id": 20177,
+        "name": "Defiler's Lamellar Girdle",
+        "source": "reputation: The Defilers at Honored"
+      }
+    ],
+    "wrist": [
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": 0.0,
+        "id": 12936,
+        "name": "Battleborn Armbraces",
+        "source": "drop: Warchief Rend Blackhand (Blackrock Spire)"
+      },
+      {
+        "allowed": true,
+        "category": "confirmed by hand",
+        "dpsChange": -4.9,
+        "id": 280010,
+        "name": "Gargantuan Wristguards",
+        "source": "ruling: Drops from Titanosaur in Shaper's Terrace (dungeon)."
+      },
+      {
+        "allowed": true,
+        "category": "confirmed by hand",
+        "dpsChange": -5.7,
+        "id": 280061,
+        "name": "Spike Crested Bracers",
+        "source": "ruling: Drops from Bonesnout the Unbroken in Blackmaw Hold (dungeon)."
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -9.42,
+        "id": 13400,
+        "name": "Vambraces of the Sadist",
+        "source": "drop: Timmy the Cruel (Stratholme)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -11.77,
+        "id": 18375,
+        "name": "Bracers of the Eclipse",
+        "source": "drop: Prince Tortheldrin (Dire Maul)"
+      },
+      {
+        "allowed": true,
+        "category": "dungeon drop",
+        "dpsChange": -12.78,
+        "id": 18533,
+        "name": "Gordok Bracers of Power",
+        "source": "drop: Tribute (Dire Maul)"
+      }
+    ]
+  },
+  "dps": 939.78,
+  "faction": "horde",
+  "gear": [
+    {
+      "enchant": 2543,
+      "id": 12640,
+      "name": "Lionheart Helm",
+      "slot": "head",
+      "source": "crafted: blacksmithing"
+    },
+    {
+      "enchant": 856,
+      "id": 15411,
+      "name": "Mark of Fordring",
+      "slot": "neck",
+      "source": "quest: In Dreams"
+    },
+    {
+      "enchant": 0,
+      "id": 22241,
+      "name": "Dark Warder's Pauldrons",
+      "slot": "shoulder",
+      "source": "drop: Warder Stilgiss (Blackrock Depths)"
+    },
+    {
+      "enchant": 7667,
+      "id": 13340,
+      "name": "Cape of the Black Baron",
+      "slot": "back",
+      "source": "drop: Baron Rivendare (Stratholme)"
+    },
+    {
+      "enchant": 1891,
+      "id": 252484,
+      "name": "Timbermaw Tunic",
+      "slot": "chest",
+      "source": "crafted: leatherworking"
+    },
+    {
+      "enchant": 1885,
+      "id": 12936,
+      "name": "Battleborn Armbraces",
+      "slot": "wrist",
+      "source": "drop: Warchief Rend Blackhand (Blackrock Spire)"
+    },
+    {
+      "enchant": 2563,
+      "id": 15063,
+      "name": "Devilsaur Gauntlets",
+      "slot": "hands",
+      "source": "crafted: leatherworking"
+    },
+    {
+      "enchant": 0,
+      "id": 272403,
+      "name": "Valiant's Waistguard",
+      "slot": "waist",
+      "source": "vendor: Pix Xizzix (Stranglethorn Vale)"
+    },
+    {
+      "enchant": 2543,
+      "id": 15062,
+      "name": "Devilsaur Leggings",
+      "slot": "legs",
+      "source": "crafted: leatherworking"
+    },
+    {
+      "enchant": 1887,
+      "id": 226857,
+      "name": "Battleboots of Heroism",
+      "slot": "feet",
+      "source": "vendor: Mokvar (Orgrimmar)"
+    },
+    {
+      "enchant": 0,
+      "id": 19325,
+      "name": "Don Julio's Band",
+      "slot": "finger1",
+      "source": "vendor: Grunnda Wolfheart (Alterac Valley); vendor: Jekyll Flandring (Alterac Mountains)"
+    },
+    {
+      "enchant": 0,
+      "id": 260219,
+      "name": "Engraved Band",
+      "slot": "finger2",
+      "source": "ruling: Reward of the Blackmaw Hold quest Blackmaw Reclamation."
+    },
+    {
+      "enchant": 0,
+      "id": 22321,
+      "name": "Heart of Wyrmthalak",
+      "slot": "trinket1",
+      "source": "drop: Overlord Wyrmthalak (Blackrock Spire)"
+    },
+    {
+      "enchant": 0,
+      "id": 19289,
+      "name": "Darkmoon Card: Maelstrom",
+      "slot": "trinket2",
+      "source": "quest: Darkmoon Elementals Deck"
+    },
+    {
+      "enchant": 1900,
+      "id": 22384,
+      "name": "Persuader",
+      "slot": "mainHand",
+      "source": "crafted: blacksmithing"
+    },
+    {
+      "enchant": 1900,
+      "id": 871,
+      "name": "Flurry Axe",
+      "slot": "offHand",
+      "source": "no known source"
+    },
+    {
+      "enchant": 0,
+      "id": 19107,
+      "name": "Bloodseeker",
+      "slot": "ranged",
+      "source": "quest: The Legend of Korrak; quest: Hero of the Frostwolf"
+    }
+  ],
+  "mainHandDpsWeight": 10.641970149094785,
+  "offHandDpsWeight": 3.5606041052477053,
+  "race": "Orc",
+  "weights": {
+    "agi": 1.5744587461711381,
+    "ap": 1.0,
+    "arpen": 0.4194907486101284,
+    "crit": 2.1010884481715246,
+    "expertise": 2.3992270445474375,
+    "expertisePct": 23.992270445474375,
+    "haste": 1.8274029200822326,
+    "hit": 1.8610287586189609,
+    "meleeCritPct": 29.415238274401347,
+    "meleeHastePct": 18.274029200822326,
+    "meleeHitPct": 18.61028758618961,
+    "physDmg": 7.856635189034269,
+    "str": 2.1999999999999313
+  }
+}

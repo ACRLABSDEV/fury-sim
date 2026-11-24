@@ -1,0 +1,152 @@
+{
+  "273944": {
+    "name": "Legplates of Glory",
+    "preRaid": false,
+    "note": "Crafting needs Malleable Essence of Nature, which only comes from disenchanting Hyjal Summit or Barrow Deeps raid gear; the plans are also bought with it.",
+    "source": "https://www.icy-veins.com/wow-forever/news/wow-forever-crafted-tier-sets-datamined-recipes-costs-and-set-bonuses/"
+  },
+  "273945": {
+    "name": "Gauntlets of Glory",
+    "preRaid": false,
+    "note": "Crafting needs Malleable Essence of Nature, which only comes from disenchanting Hyjal Summit or Barrow Deeps raid gear; the plans are also bought with it.",
+    "source": "https://www.icy-veins.com/wow-forever/news/wow-forever-crafted-tier-sets-datamined-recipes-costs-and-set-bonuses/"
+  },
+  "273946": {
+    "name": "Shoulders of Glory",
+    "preRaid": false,
+    "note": "Crafting needs Malleable Essence of Nature, which only comes from disenchanting Hyjal Summit or Barrow Deeps raid gear; the plans are also bought with it.",
+    "source": "https://www.icy-veins.com/wow-forever/news/wow-forever-crafted-tier-sets-datamined-recipes-costs-and-set-bonuses/"
+  },
+  "273947": {
+    "name": "Greaves of Glory",
+    "preRaid": false,
+    "note": "Crafting needs Malleable Essence of Nature, which only comes from disenchanting Hyjal Summit or Barrow Deeps raid gear; the plans are also bought with it.",
+    "source": "https://www.icy-veins.com/wow-forever/news/wow-forever-crafted-tier-sets-datamined-recipes-costs-and-set-bonuses/"
+  },
+  "273948": {
+    "name": "Legguards of Glory",
+    "preRaid": false,
+    "note": "Crafting needs Malleable Essence of Nature, which only comes from disenchanting Hyjal Summit or Barrow Deeps raid gear; the plans are also bought with it.",
+    "source": "https://www.icy-veins.com/wow-forever/news/wow-forever-crafted-tier-sets-datamined-recipes-costs-and-set-bonuses/"
+  },
+  "273949": {
+    "name": "Handguards of Glory",
+    "preRaid": false,
+    "note": "Crafting needs Malleable Essence of Nature, which only comes from disenchanting Hyjal Summit or Barrow Deeps raid gear; the plans are also bought with it.",
+    "source": "https://www.icy-veins.com/wow-forever/news/wow-forever-crafted-tier-sets-datamined-recipes-costs-and-set-bonuses/"
+  },
+  "273950": {
+    "name": "Pauldrons of Glory",
+    "preRaid": false,
+    "note": "Crafting needs Malleable Essence of Nature, which only comes from disenchanting Hyjal Summit or Barrow Deeps raid gear; the plans are also bought with it.",
+    "source": "https://www.icy-veins.com/wow-forever/news/wow-forever-crafted-tier-sets-datamined-recipes-costs-and-set-bonuses/"
+  },
+  "273951": {
+    "name": "Sabatons of Glory",
+    "preRaid": false,
+    "note": "Crafting needs Malleable Essence of Nature, which only comes from disenchanting Hyjal Summit or Barrow Deeps raid gear; the plans are also bought with it.",
+    "source": "https://www.icy-veins.com/wow-forever/news/wow-forever-crafted-tier-sets-datamined-recipes-costs-and-set-bonuses/"
+  },
+  "287033": {
+    "name": "Furbolg Berserker's Boots",
+    "preRaid": true,
+    "note": "Drops from Blackmaw furbolgs in Blackmaw Hold (dungeon) and Azshara; the drop rate is reported as very low.",
+    "source": "https://www.wowhead.com/forever/item=287033/furbolg-berserkers-boots"
+  },
+  "22385": {
+    "name": "Titanic Leggings",
+    "preRaid": false,
+    "note": "The reagents need no raid, but nobody has found where Plans: Titanic Leggings drop in Forever and no plans or leggings were listed on any auction house on 2026-11-23. Flip this when the plans are confirmed outside raids.",
+    "source": "https://outof.games/realms/forever/item/22388-plans-titanic-leggings/"
+  },
+  "284716": {
+    "name": "Band of the Better Half",
+    "preRaid": false,
+    "note": "Source unknown: databases describe it as an unsolved level 60 secret.",
+    "source": "https://foreverchanges.pro/item/284716/band-of-the-better-half"
+  },
+  "284102": {
+    "name": "Signet of the Soulless Rider",
+    "preRaid": false,
+    "note": "Source unknown.",
+    "source": "https://foreverchanges.pro/item/284102/signet-of-the-soulless-rider"
+  },
+  "284100": {
+    "name": "Horseman's Unyielding Shroud",
+    "preRaid": false,
+    "note": "Source unknown.",
+    "source": "https://www.wowhead.com/forever/item=284100"
+  },
+  "284086": {
+    "name": "Scarlet Executioner's Guise",
+    "preRaid": true,
+    "note": "Drops from the Scarlet Executioner, a level 60 rare elite in Western Plaguelands.",
+    "source": "https://www.wowhead.com/forever/item=284086"
+  },
+  "280061": {
+    "name": "Spike Crested Bracers",
+    "preRaid": true,
+    "note": "Drops from Bonesnout the Unbroken in Blackmaw Hold (dungeon).",
+    "source": "https://www.wowhead.com/forever/item=280061"
+  },
+  "280010": {
+    "name": "Gargantuan Wristguards",
+    "preRaid": true,
+    "note": "Drops from Titanosaur in Shaper's Terrace (dungeon).",
+    "source": "https://www.wowhead.com/forever/item=280010"
+  },
+  "280024": {
+    "name": "Legplates of Reinforced Crystal",
+    "preRaid": true,
+    "note": "Drops from Nanaya in Shaper's Terrace (dungeon).",
+    "source": "https://www.wowhead.com/forever/item=280024"
+  },
+  "260219": {
+    "name": "Engraved Band",
+    "preRaid": true,
+    "note": "Reward of the Blackmaw Hold quest Blackmaw Reclamation.",
+    "source": "https://www.wowhead.com/forever/item=260219"
+  },
+  "280065": {
+    "name": "Behemoth Bones",
+    "preRaid": true,
+    "note": "Drops from Blackmaw Behemoth in Blackmaw Hold (dungeon).",
+    "source": "https://www.wowhead.com/forever/item=280065"
+  },
+  "280018": {
+    "name": "Hammer of Thundering Hooves",
+    "preRaid": true,
+    "note": "Drops from Thunderhoof in Shaper's Terrace (dungeon).",
+    "source": "https://www.wowhead.com/forever/item=280018"
+  },
+  "280020": {
+    "name": "Deep Jungle Rifle",
+    "preRaid": true,
+    "note": "Drops from Thunderhoof in Shaper's Terrace (dungeon).",
+    "source": "https://www.wowhead.com/forever/item=280020"
+  },
+  "280078": {
+    "name": "Apprentice's Protective Treads",
+    "preRaid": true,
+    "note": "Drops from Gortek the Apprentice, a rare in Blackmaw Hold (dungeon).",
+    "source": "https://www.wowhead.com/forever/item=280078"
+  },
+  "280083": {
+    "name": "Truesight Rifle",
+    "preRaid": true,
+    "note": "Drops from Sabella No-Eyes, a rare elite; her spawn location is not documented.",
+    "source": "https://www.wowhead.com/forever/item=280083"
+  },
+  "280084": {
+    "name": "Furbolg Rib Protector",
+    "preRaid": true,
+    "note": "Drops from Sabella No-Eyes, a rare elite; her spawn location is not documented.",
+    "source": "https://www.wowhead.com/forever/item=280084"
+  },
+  "275737": {
+    "name": "Hermit's Pauldron",
+    "preRaid": true,
+    "note": "Reward of the Mount Hyjal quest Work Well Done (outdoor zone, medium confidence).",
+    "source": "https://www.wowhead.com/forever/item=275737"
+  }
+}

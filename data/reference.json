@@ -1,0 +1,151 @@
+{
+  "source": "https://github.com/wowsims/forever",
+  "license": "MIT, Copyright (c) 2022 wowsims team",
+  "commit": "534df0795bbefb75b45f11bab9cbdaaae9d3fef5",
+  "commitDate": "2026-11-23T21:33:08Z",
+  "counts": {
+    "items": 5702,
+    "enchants": 248,
+    "sets": 40,
+    "spells": 1238,
+    "consumables": 435
+  },
+  "setsWithoutGeneratedBonuses": [
+    {
+      "id": 1,
+      "name": "The Gladiator"
+    },
+    {
+      "id": 65,
+      "name": "Spider's Kiss"
+    },
+    {
+      "id": 121,
+      "name": "Cadaverous Garb"
+    },
+    {
+      "id": 122,
+      "name": "Necropile Raiment"
+    },
+    {
+      "id": 123,
+      "name": "Bloodmail Regalia"
+    },
+    {
+      "id": 124,
+      "name": "Deathbone Guardian"
+    },
+    {
+      "id": 161,
+      "name": "Defias Leather"
+    },
+    {
+      "id": 163,
+      "name": "Chain of the Scarlet Crusade"
+    },
+    {
+      "id": 181,
+      "name": "Magister's Regalia"
+    },
+    {
+      "id": 182,
+      "name": "Vestments of the Devout"
+    },
+    {
+      "id": 183,
+      "name": "Dreadmist Raiment"
+    },
+    {
+      "id": 184,
+      "name": "Shadowcraft Armor"
+    },
+    {
+      "id": 185,
+      "name": "Wildheart Raiment"
+    },
+    {
+      "id": 186,
+      "name": "Beaststalker Armor"
+    },
+    {
+      "id": 187,
+      "name": "The Elements"
+    },
+    {
+      "id": 188,
+      "name": "Lightforge Armor"
+    },
+    {
+      "id": 189,
+      "name": "Battlegear of Valor"
+    },
+    {
+      "id": 321,
+      "name": "Imperial Plate"
+    },
+    {
+      "id": 442,
+      "name": "Blood Tiger Harness"
+    },
+    {
+      "id": 471,
+      "name": "The Highlander's Purpose"
+    },
+    {
+      "id": 486,
+      "name": "The Defiler's Purpose"
+    },
+    {
+      "id": 496,
+      "name": "Conqueror's Battlegear"
+    },
+    {
+      "id": 523,
+      "name": "Dreadnaught's Battlegear"
+    },
+    {
+      "id": 1778,
+      "name": "Battlegear of Heroism"
+    },
+    {
+      "id": 1968,
+      "name": "Blessed Plate"
+    },
+    {
+      "id": 2071,
+      "name": "Teachings of the Furbolgs"
+    },
+    {
+      "id": 2102,
+      "name": "Battlegear of Glory"
+    },
+    {
+      "id": 2103,
+      "name": "Battleplate of Glory"
+    },
+    {
+      "id": 2131,
+      "name": "Partners in Crime"
+    },
+    {
+      "id": 2132,
+      "name": "Blessing of Kalimdor"
+    },
+    {
+      "id": 2133,
+      "name": "Rotmender's Raiment"
+    },
+    {
+      "id": 2134,
+      "name": "Violet Sorcerer's Vestments"
+    },
+    {
+      "id": 2135,
+      "name": "Krol'dok Battlegear"
+    },
+    {
+      "id": 2136,
+      "name": "Defias Enforcer's Garb"
+    }
+  ]
+}

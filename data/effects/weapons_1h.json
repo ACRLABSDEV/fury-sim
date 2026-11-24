@@ -1,0 +1,3489 @@
+{
+ "items": {
+  "754": {
+   "name": "Shortsword of Vengeance",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 13519,
+      "school": "holy",
+      "min": 30.0,
+      "max": 30.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3130",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 13519",
+    "tools/database/overrides/weapon_procs.go:269"
+   ]
+  },
+  "809": {
+   "name": "Bloodrazor",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 17504,
+      "school": "physical",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 31,
+       "periodMs": 3000,
+       "durationMs": 15000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). The application rolls the melee special table without a crit and the bleed lands only if it does; bleed ticks ignore armor. When a main-hand white swing of this weapon triggers it, the landed strike is a main-hand special that rolls main-hand weapon procs once more (R-0040, EV-0145). 5 ticks; ticks can crit (Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3138",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "spell 17504",
+    "tools/database/overrides/weapon_procs.go:488"
+   ]
+  },
+  "810": {
+   "name": "Hammer of the Northern Wind",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 4.6,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 13439,
+      "school": "frost",
+      "min": 40.0,
+      "max": 60.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Frostbolt movement slow"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3146",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 13439",
+    "tools/database/overrides/weapon_procs.go:890"
+   ]
+  },
+  "811": {
+   "name": "Axe of the Deep Woods",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.9,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18104,
+      "school": "nature",
+      "min": 105.0,
+      "max": 147.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0146). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3154",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 18104",
+    "tools/database/overrides/weapon_procs.go:590"
+   ]
+  },
+  "871": {
+   "name": "Flurry Axe",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.75,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "extraAttack",
+      "spellId": 18797,
+      "count": 1
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0120). The extra attack is a MAIN-hand white swing cast in the same instant after the triggering hit, even when the weapon sits in the off hand and rolls on off-hand hits; the extra swing cannot trigger this proc again, can be replaced by a queued Heroic Strike/Cleave, and rolls other procs as a white swing.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3178",
+    "sim/common/shared/spell_data_extra_attack.go:21",
+    "sim/core/extra_attack.go:11",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "spell 18797",
+    "tools/database/overrides/weapon_procs.go:904"
+   ]
+  },
+  "1728": {
+   "name": "Teebu's Blazing Longsword",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1300753,
+      "school": "fire",
+      "min": 140.0,
+      "max": 140.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 1300753. 140 Fire on the spell table (can crit, no variance, SPCoef 0).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:237",
+    "spell 1300753",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md"
+   ]
+  },
+  "2163": {
+   "name": "Shadowblade",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.05,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18138,
+      "school": "shadow",
+      "min": 110.0,
+      "max": 140.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3254",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 18138",
+    "tools/database/overrides/weapon_procs.go:939"
+   ]
+  },
+  "2164": {
+   "name": "Gut Ripper",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.5,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18107,
+      "school": "physical",
+      "min": 92,
+      "max": 118,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Physical strike on the melee special table (miss, dodge, parry, block; melee crit x2; armor applies). When a main-hand white swing of this weapon triggers it, the landed strike is a main-hand special that rolls main-hand weapon procs once more (R-0040, EV-0145); in the off hand it never does. Hand-written extra: damage x2 (row dummy effect 2 = +100%) while the target is below 25% health (execute phase).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3262",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "sim/common/forever/items_weapons.go:640",
+    "sim/common/forever/items_weapons.go:661",
+    "spell 18107",
+    "tools/database/overrides/weapon_procs.go:625"
+   ]
+  },
+  "5616": {
+   "name": "Gutwrencher",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1294426,
+      "school": "physical",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 11,
+       "periodMs": 1000,
+       "durationMs": 7000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 1294426. Bleed of 11 per second for 7 s (7 ticks, Periodic Can Crit) applied by a melee-table roll.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:276",
+    "spell 1294426",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md"
+   ]
+  },
+  "6622": {
+   "name": "Sword of Zeal",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.95,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "buff",
+      "spellId": 8191,
+      "name": "Zeal",
+      "durationMs": 15000,
+      "stats": {
+       "physDmg": 10
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [
+    "Zeal +150 armor"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0175). A_MOD_DAMAGE_DONE misc 1 is parsed as +10 flat physical damage (Stat PhysicalDamage) for 15 s; a new proc refreshes the buff.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3342",
+    "sim/common/shared/shared_utils.go:467",
+    "sim/common/shared/shared_utils.go:588",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "sim/core/spelldata/parse_effects_table.go:204",
+    "spell 8191",
+    "tools/database/overrides/weapon_procs.go:1300"
+   ]
+  },
+  "6831": {
+   "name": "Black Menace",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1293407,
+      "school": "shadow",
+      "min": 77.0,
+      "max": 77.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3358",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 1293407",
+    "tools/database/overrides/weapon_procs.go:276"
+   ]
+  },
+  "7961": {
+   "name": "Phantom Blade",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "targetArmor",
+      "spellId": 9806,
+      "amount": -100,
+      "durationMs": 20000,
+      "maxStacks": 1
+     }
+    }
+   ],
+   "ignored": [
+    "Phantom Strike stealth/invisibility prevention"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Magic defense type, so the debuff lands with every proc with no hit roll of its own. It is in no exclusive category: it stacks with Sunder Armor, Faerie Fire and the rest.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3398",
+    "sim/common/shared/spell_data_debuff_proc.go:26",
+    "sim/common/shared/spell_data_debuff_proc.go:49",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "sim/common/shared/spell_data_debuff_proc.go:105",
+    "docs/evidence/EV-0147-weapon-armor-debuffs-against-faerie-fire-and-curse-of-recklessness.md",
+    "spell 9806",
+    "tools/database/overrides/weapon_procs.go:674"
+   ]
+  },
+  "8190": {
+   "name": "Hanzo Sword",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16405,
+      "school": "physical",
+      "min": 75,
+      "max": 75,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). Physical strike on the melee special table (miss, dodge, parry, block; melee crit x2; armor applies). When a main-hand white swing of this weapon triggers it, the landed strike is a main-hand special that rolls main-hand weapon procs once more (R-0040, EV-0145); in the off hand it never does.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3406",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "spell 16405",
+    "tools/database/overrides/weapon_procs.go:459"
+   ]
+  },
+  "8708": {
+   "name": "Hammer of Expertise",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.85,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1317432,
+      "school": "physical",
+      "min": 112,
+      "max": 112,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). Physical strike on the melee special table (miss, dodge, parry, block; melee crit x2; armor applies). When a main-hand white swing of this weapon triggers it, the landed strike is a main-hand special that rolls main-hand weapon procs once more (R-0040, EV-0145). Tooltip says Fire but the row is School 1 (physical) on the melee table, which the reference uses. VERSUS: base damage x3 against Earth Elemental, Fire Elemental and Mountain Giant creature families (not a mob type).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3415",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "sim/core/spelldata/versus.go:18",
+    "sim/core/spell_result.go:464",
+    "spell 1317432",
+    "tools/database/overrides/weapon_procs.go:466"
+   ]
+  },
+  "9419": {
+   "name": "Galgann's Firehammer",
+   "effects": [],
+   "ignored": [
+    "Firebolt (77 Fire, chance on harmful spell cast)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Caster effect: the trigger 1293980 hears harmful spell casts only, so a Fury warrior never procs it. The reference leaves it unregistered as well (commented out, states no rate).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:345",
+    "spell 1293980",
+    "spell 18083"
+   ]
+  },
+  "9465": {
+   "name": "Digmaster 5000",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "targetArmor",
+      "spellId": 1293005,
+      "amount": -100,
+      "durationMs": 30000,
+      "maxStacks": 1
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 1293005. Puncture Armor 1293005: -100 armor for 30 s, no stacking, on the melee hit table. The reference lists it in the MinorArmorReduction exclusive category (with Faerie Fire and Curse of Recklessness, only the strongest counts; EV-0147), \"for when its wielder proc is registered, which no item does yet\".",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:388",
+    "spell 1293005",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md",
+    "sim/common/shared/spell_data_debuff_proc.go:93"
+   ]
+  },
+  "9467": {
+   "name": "Gahz'rilla Fang",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 3742,
+      "school": "nature",
+      "min": 84.0,
+      "max": 84.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Static Electricity (movement stacks, never granted by the reference)"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate measured in logs (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists. Hand-written extra: +2% damage per Static Electricity stack, but the reference grants no stacks (TODO in code), so it is a plain 84 Nature. VERSUS: base damage x2 against the Aquatic creature family.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:403",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3467",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/forever/items_weapons.go:717",
+    "sim/core/spelldata/versus.go:18",
+    "spell 3742",
+    "tools/database/overrides/weapon_procs.go:702"
+   ]
+  },
+  "9478": {
+   "name": "Ripsaw",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1292573,
+      "school": "physical",
+      "min": 70,
+      "max": 70,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0022). Physical strike on the melee special table (miss, dodge, parry, block; melee crit x2; armor applies). When a main-hand white swing of this weapon triggers it, the landed strike is a main-hand special that rolls main-hand weapon procs once more (R-0040, EV-0145).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3491",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "spell 1292573",
+    "tools/database/overrides/weapon_procs.go:143"
+   ]
+  },
+  "9511": {
+   "name": "Bloodletter Scalpel",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 13486,
+      "school": "physical",
+      "min": 71,
+      "max": 83,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 13486. 71 to 83 Physical on the melee special table.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:429",
+    "spell 13486",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md"
+   ]
+  },
+  "9639": {
+   "name": "The Hand of Antu'sul",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 13532,
+      "school": "nature",
+      "min": 42.0,
+      "max": 42.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Thunder Clap attack-speed slow on targets"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0022). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists. Area around the wearer: every enemy in 8 yd up to 4 targets takes its own roll of 42; single target is one hit.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3500",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 13532",
+    "tools/database/overrides/weapon_procs.go:150"
+   ]
+  },
+  "9651": {
+   "name": "Gryphon Rider's Stormhammer",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.9,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18081,
+      "school": "nature",
+      "min": 76.68,
+      "max": 105.32,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3508",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 18081",
+    "tools/database/overrides/weapon_procs.go:723"
+   ]
+  },
+  "10623": {
+   "name": "Winter's Bite",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 13439,
+      "school": "frost",
+      "min": 40.0,
+      "max": 60.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Frostbolt movement slow"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 13439. 40 to 60 Frost on the spell table, binary. The same spell on Hammer of the Northern Wind runs at an observed 4.6 ppm, which says nothing about this axe.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:457",
+    "spell 13439",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md"
+   ]
+  },
+  "10797": {
+   "name": "Firebreather",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2.05,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16413,
+      "school": "fire",
+      "min": 77.0,
+      "max": 77.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 2,
+       "periodMs": 1000,
+       "durationMs": 7000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). 7 ticks; ticks cannot crit.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3548",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 16413",
+    "tools/database/overrides/weapon_procs.go:737"
+   ]
+  },
+  "10803": {
+   "name": "Blade of the Wretched",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18088,
+      "school": "shadow",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 30,
+       "periodMs": 1000,
+       "durationMs": 3000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). DoT only: one spell-hit roll without crit applies it; no spell power scaling (SPCoef 0). 3 ticks; ticks can crit (Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3556",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 18088",
+    "tools/database/overrides/weapon_procs.go:744"
+   ]
+  },
+  "10804": {
+   "name": "Fist of the Damned",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 3.05,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18084,
+      "school": "shadow",
+      "min": 56.0,
+      "max": 56.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Drain Life heal"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). E_HEALTH_LEECH: the wearer is healed for the damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3564",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 18084",
+    "tools/database/overrides/weapon_procs.go:751"
+   ]
+  },
+  "10805": {
+   "name": "Eater of the Dead",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.8,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1299869,
+      "school": "shadow",
+      "min": 21.0,
+      "max": 21.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Corpse Eater heal"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists. Tooltip \"3 times as much damage to Undead\" is NOT applied by the reference: the row has no versus override. The heal equals damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3572",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 1299869",
+    "tools/database/overrides/weapon_procs.go:758"
+   ]
+  },
+  "10847": {
+   "name": "Dragon's Call",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 4.5,
+      "icdMs": 45000
+     },
+     "result": {
+      "type": "other",
+      "description": "Summons an Emerald Dragon Whelp (guardian pet, creature 8776) on the hit target for 15 s. The proc starts the row's 45 s category cooldown and no hit rolls while it runs. The whelp is level 60, inherits nothing from its owner and never crits. It auto-attacks with a 2.0 s swing for 75.02 to 101.50 physical (average 88.26 = 0.73 x creature dps 60.4529 x 2.0 s, +/-15%) on the normal white-hit table, and hard-casts Acid Spit (spell 9591, Nature, 3.0 s cast, base 265.10 = 438.52% of creature dps, rolled +/-14.67% by its variance 0.2933, spell hit table, no spell power). The first Acid Spit cast starts a uniform 0 to 1.8 s after the summon; after each cast lands the next starts a uniform 0.2 to 3.5 s later; the whelp swings only outside its casts."
+     }
+    }
+   ],
+   "ignored": [
+    "Dragon's Call 1318108 (passive dummy aura, no effect)"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Hand-written. 4.5 ppm measured on landed hits outside the cooldown (EV-0021); any landed hit of the hand holding it rolls, zero-damage ones such as Sunder Armor included. The whelp's swing damage is a fit and the code says its swings read high against the log.",
+   "cite": [
+    "sim/common/forever/items_weapons.go:124",
+    "sim/common/forever/items_dragons_call.go:36",
+    "sim/common/forever/items_dragons_call.go:84",
+    "sim/core/base_stats_auto_gen.go:24",
+    "spell 13049",
+    "spell 9591",
+    "tools/database/overrides/weapon_procs.go:1308",
+    "docs/evidence/EV-0021-dragons-call-tablet-and-shield-hits-level-57.md"
+   ]
+  },
+  "11635": {
+   "name": "Hookfang Shanker",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.95,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 13526,
+      "school": "nature",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 13,
+       "periodMs": 2000,
+       "durationMs": 14000
+      }
+     }
+    },
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.95,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "targetArmor",
+      "spellId": 13526,
+      "amount": -50,
+      "durationMs": 14000,
+      "maxStacks": 1
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0177). DoT only: one spell-hit roll without crit applies it; no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists. 7 ticks; ticks can crit (Periodic Can Crit). effects[0] and effects[1] are ONE proc roll: a landed application also takes 50 armor off the target for 14 s, in no exclusive category (stacks with every other armor debuff).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3597",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/spell_data_debuff_proc.go:146",
+    "docs/evidence/EV-0147-weapon-armor-debuffs-against-faerie-fire-and-curse-of-recklessness.md",
+    "spell 13526",
+    "tools/database/overrides/weapon_procs.go:1058"
+   ]
+  },
+  "11684": {
+   "name": "Ironfoe",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "chance": 0.03,
+      "icdMs": 100
+     },
+     "result": {
+      "type": "extraAttack",
+      "spellId": 15494,
+      "count": 2
+     }
+    }
+   ],
+   "ignored": [
+    "Fury of Forgewright language aura"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Hand-written, overrides items.json procChance 0.06: the row's 6% column is the chance against Orc-family targets and every other target rolls 6%/2 = 3% (EV-0119). An equip proc, not a chance-on-hit: main-hand white swings and main-hand specials that land AND deal damage roll it, hits of proc-flagged spells and its own two extra swings do not; 100 ms internal cooldown. The 2 extra attacks are main-hand white swings.",
+   "cite": [
+    "sim/common/forever/items_weapons.go:456",
+    "sim/common/forever/items_weapons.go:882",
+    "sim/core/extra_attack.go:11",
+    "sim/core/procs.go:117",
+    "spell 1301046",
+    "spell 15494",
+    "docs/evidence/EV-0119-weapon-proc-rates-isolated-hits.md"
+   ]
+  },
+  "11702": {
+   "name": "Grizzle's Skinner",
+   "effects": [],
+   "ignored": [
+    "Skinning (on use, 3 s cast, 30 s cooldown)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "On-use skinning dummy effect; no damage. Commented out in the reference (\"deals no damage and heals no one\").",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:48",
+    "spell 1300763"
+   ]
+  },
+  "11744": {
+   "name": "Bloodfist",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 3.2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16433,
+      "school": "physical",
+      "min": 35,
+      "max": 35,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0003). Physical strike on the melee special table (miss, dodge, parry, block; melee crit x2; armor applies). When a main-hand white swing of this weapon triggers it, the landed strike is a main-hand special that rolls main-hand weapon procs once more (R-0040, EV-0145); in the off hand it never does.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3605",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "spell 16433",
+    "tools/database/overrides/weapon_procs.go:28"
+   ]
+  },
+  "11817": {
+   "name": "Lord General's Sword",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "buff",
+      "spellId": 15602,
+      "name": "Lord General's Sword",
+      "durationMs": 10000,
+      "stats": {
+       "ap": 84
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [
+    "+84 ranged attack power"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). +84 attack power for 10 s; a new proc refreshes the buff.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3646",
+    "sim/common/shared/shared_utils.go:467",
+    "sim/common/shared/shared_utils.go:588",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "spell 15602",
+    "tools/database/overrides/weapon_procs.go:386"
+   ]
+  },
+  "11902": {
+   "name": "Linken's Sword of Mastery",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18089,
+      "school": "nature",
+      "min": 73.5,
+      "max": 122.5,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3662",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 18089",
+    "tools/database/overrides/weapon_procs.go:1065"
+   ]
+  },
+  "11920": {
+   "name": "Wraith Scythe",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 3.65,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16414,
+      "school": "shadow",
+      "min": 49.0,
+      "max": 49.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Drain Life heal"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0153). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists. VERSUS: base damage x2 against Undead (row VersusMobTypes). The heal equals damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3670",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/core/spelldata/versus.go:18",
+    "sim/core/spell_result.go:464",
+    "spell 16414",
+    "tools/database/overrides/weapon_procs.go:765"
+   ]
+  },
+  "12531": {
+   "name": "Searing Needle",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2.8,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16454,
+      "school": "fire",
+      "min": 56.0,
+      "max": 56.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Searing Blast +10 Fire damage done aura (parsed onto the target as its own stat; does not raise damage it takes)"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0183). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3694",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 16454",
+    "tools/database/overrides/weapon_procs.go:1072"
+   ]
+  },
+  "12582": {
+   "name": "Keris of Zul'Serak",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.7,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16528,
+      "school": "nature",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 10,
+       "periodMs": 1000,
+       "durationMs": 10000
+      }
+     }
+    }
+   ],
+   "ignored": [
+    "Numbing Pain attack-speed slow on target"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0003). DoT only: one spell-hit roll without crit applies it; no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists. 10 ticks; ticks can crit (Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3703",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 16528",
+    "tools/database/overrides/weapon_procs.go:49"
+   ]
+  },
+  "12590": {
+   "name": "Felstriker",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 0.55,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "buff",
+      "spellId": 16551,
+      "name": "Felstriker",
+      "durationMs": 3000,
+      "stats": {},
+      "pct": {
+       "meleeHitPct": 100,
+       "meleeCritPct": 100
+      },
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Applied as plain percentage points: +100 physical hit (A_MOD_HIT_CHANCE) and +100 physical and spell crit (A_MOD_CRIT_PCT) for 3 s. It removes misses only: dodge, parry, glancing and crit suppression still apply, so not every attack is a crit.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3719",
+    "sim/common/shared/spell_data_aura.go:83",
+    "sim/core/spelldata/parse_effects_table.go:319",
+    "sim/core/spelldata/parse_effects_table.go:346",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "spell 16551",
+    "tools/database/overrides/weapon_procs.go:393"
+   ]
+  },
+  "12621": {
+   "name": "Demonfork",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16603,
+      "school": "shadow",
+      "min": 0,
+      "max": 0,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": false,
+      "dot": {
+       "tickDamage": 10,
+       "periodMs": 1000,
+       "durationMs": 5000
+      }
+     }
+    }
+   ],
+   "ignored": [
+    "Demonfork health transfer to the wearer"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated block is a commented-out \"TODO: Manual implementation required\" stub with no helper and no rate and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 16603. A_PERIODIC_LEECH: 10 Shadow per second for 5 s (5 ticks) leeched to the wearer; the generic damage-proc helper does not handle a periodic leech either.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:637",
+    "spell 16603",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md"
+   ]
+  },
+  "12777": {
+   "name": "Blazing Rapier",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16898,
+      "school": "fire",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 20,
+       "periodMs": 3000,
+       "durationMs": 30000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "low",
+   "notes": "Rate is a vanilla carry-over with a TODO to verify in game. DoT only: one spell-hit roll without crit applies it; no spell power scaling (SPCoef 0). 10 ticks; ticks can crit (Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3743",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 16898",
+    "tools/database/overrides/weapon_procs.go:1425"
+   ]
+  },
+  "12791": {
+   "name": "Barman Shanker",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.95,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1300787,
+      "school": "physical",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 14,
+       "periodMs": 1000,
+       "durationMs": 7000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0146). The application rolls the melee special table without a crit and the bleed lands only if it does; bleed ticks ignore armor. When a main-hand white swing of this weapon triggers it, the landed strike is a main-hand special that rolls main-hand weapon procs once more (R-0040, EV-0145). 7 ticks; ticks can crit (Periodic Can Crit). Hand-written extra: tick damage x2 (row dummy effect 2) when the wearer is NOT in front of the target, i.e. 28 per tick from behind.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3760",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "sim/common/forever/items_weapons.go:672",
+    "docs/evidence/EV-0146-proc-rates-of-six-weapons-from-the-11-17-reports.md",
+    "spell 1300787",
+    "tools/database/overrides/weapon_procs.go:1086"
+   ]
+  },
+  "12792": {
+   "name": "Volcanic Hammer",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18082,
+      "school": "fire",
+      "min": 200.0,
+      "max": 256.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 12,
+       "periodMs": 2000,
+       "durationMs": 6000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "low",
+   "notes": "Rate is a vanilla carry-over with a TODO to verify in game. Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). 3 ticks; ticks can crit (Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3768",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 18082",
+    "tools/database/overrides/weapon_procs.go:1439"
+   ]
+  },
+  "12794": {
+   "name": "Masterwork Stormhammer",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 0.9,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16921,
+      "school": "nature",
+      "min": 105.0,
+      "max": 145.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0184). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Chain Lightning: jumps to up to 3 targets, each jump rolls its own 105 to 145 at 70% per jump; single target is one hit.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3776",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "docs/evidence/EV-0184-masterwork-stormhammer-proc-rate-and-its-chain-lightning.md",
+    "spell 16921",
+    "tools/database/overrides/weapon_procs.go:1260"
+   ]
+  },
+  "12795": {
+   "name": "Blood Talon",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 13318,
+      "school": "physical",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 10,
+       "periodMs": 3000,
+       "durationMs": 30000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "low",
+   "notes": "Rate is a vanilla carry-over with a TODO to verify in game. The application rolls the melee special table without a crit and the bleed lands only if it does; bleed ticks ignore armor. When a main-hand white swing of this weapon triggers it, the landed strike is a main-hand special that rolls main-hand weapon procs once more (R-0040, EV-0145). 10 ticks; ticks can crit (Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3784",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "spell 13318",
+    "tools/database/overrides/weapon_procs.go:1446"
+   ]
+  },
+  "12797": {
+   "name": "Frostguard",
+   "effects": [],
+   "ignored": [
+    "Chilled: target attack speed -25% and movement -30% for 5 s"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The reference models the proc (1 ppm, vanilla carry-over) as an attack-speed slow on the target only, which does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3792",
+    "sim/common/shared/spell_data_debuff_proc.go:26",
+    "sim/common/shared/spell_data_debuff_proc.go:49",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "spell 16927",
+    "tools/database/overrides/weapon_procs.go:1453"
+   ]
+  },
+  "12798": {
+   "name": "Annihilator",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "targetArmor",
+      "spellId": 16928,
+      "amount": -165,
+      "durationMs": 45000,
+      "maxStacks": 3
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "low",
+   "notes": "Rate is a TBC carry-over, unverified in this game. -165 armor per stack, each proc adds a stack and refreshes 45 s; magic defense type, so it lands with every proc with no hit roll. EXCLUSIVE: Armor Shatter shares the MinorArmorReduction category with Faerie Fire, Curse of Recklessness, Dust Cloud and Puncture Armor, and only the strongest of them counts (EV-0147: in game it never lands while Faerie Fire or Curse of Recklessness is up; it does stack with Sunder Armor).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3800",
+    "sim/common/shared/spell_data_debuff_proc.go:26",
+    "sim/common/shared/spell_data_debuff_proc.go:49",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "sim/core/buffs/meta.go:182",
+    "sim/core/buffs/debuffs_auto_gen.go:357",
+    "sim/core/buffs/drivers.go:538",
+    "docs/evidence/EV-0147-weapon-armor-debuffs-against-faerie-fire-and-curse-of-recklessness.md",
+    "spell 16928",
+    "tools/database/overrides/weapon_procs.go:1327"
+   ]
+  },
+  "13035": {
+   "name": "Serpent Slicer",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 17511,
+      "school": "nature",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 8,
+       "periodMs": 2000,
+       "durationMs": 20000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). DoT only: one spell-hit roll without crit applies it; no spell power scaling (SPCoef 0). 10 ticks; ticks can crit (Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3824",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 17511",
+    "tools/database/overrides/weapon_procs.go:551"
+   ]
+  },
+  "13183": {
+   "name": "Venomspitter",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.7,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18203,
+      "school": "nature",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 7,
+       "periodMs": 1000,
+       "durationMs": 15000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0003). DoT only: one spell-hit roll without crit applies it; no spell power scaling (SPCoef 0). 15 ticks; ticks can crit (Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3864",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 18203",
+    "tools/database/overrides/weapon_procs.go:63"
+   ]
+  },
+  "13198": {
+   "name": "Hurd Smasher",
+   "effects": [],
+   "ignored": [
+    "Stun (1 s stun, 2x as long on Orcs and Ogres)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Stun only (crowd control); the registration is commented out in the reference. The item entry carries 2 ppm (EV-0177).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:740",
+    "spell 17308",
+    "tools/database/overrides/weapon_procs.go:786"
+   ]
+  },
+  "13204": {
+   "name": "Bashguuder",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 3,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "targetArmor",
+      "spellId": 17315,
+      "amount": -100,
+      "durationMs": 30000,
+      "maxStacks": 3
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). -100 armor per stack (max 3, 30 s). Melee defense type: each proc casts a no-damage strike on the melee special table (miss, dodge, parry, no crit) and the stack lands only if it does; a strike cast off this weapon's main-hand white swing rolls main-hand weapon procs once more (R-0040). EXCLUSIVE: MinorArmorReduction category with Faerie Fire, Curse of Recklessness, Dust Cloud and Armor Shatter, only the strongest counts (EV-0147: never lands under Faerie Fire or Curse of Recklessness; stacks with Sunder Armor).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3872",
+    "sim/common/shared/spell_data_debuff_proc.go:26",
+    "sim/common/shared/spell_data_debuff_proc.go:49",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "sim/common/shared/spell_data_debuff_proc.go:60",
+    "sim/core/buffs/meta.go:182",
+    "sim/core/buffs/debuffs_auto_gen.go:415",
+    "sim/core/buffs/drivers.go:546",
+    "docs/evidence/EV-0147-weapon-armor-debuffs-against-faerie-fire-and-curse-of-recklessness.md",
+    "spell 17315",
+    "tools/database/overrides/weapon_procs.go:1107"
+   ]
+  },
+  "13218": {
+   "name": "Fang of the Crystal Spider",
+   "effects": [],
+   "ignored": [
+    "Fang of the Crystal Spider: target cast, melee and ranged speed -9% for 10 s"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The reference models the proc (1.05 ppm, observed) as slows on the target only, which do not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3880",
+    "sim/common/shared/spell_data_debuff_proc.go:26",
+    "sim/common/shared/spell_data_debuff_proc.go:49",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "spell 17331",
+    "tools/database/overrides/weapon_procs.go:1114"
+   ]
+  },
+  "13246": {
+   "name": "Argent Avenger",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.05,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "buff",
+      "spellId": 17352,
+      "name": "Argent Avenger",
+      "durationMs": 10000,
+      "stats": {
+       "ap": 100
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    },
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.05,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "other",
+      "description": "Same proc roll and same 10 s buff (spell 17352) as effects[0]: while the buff is up the wearer has an additional +100 melee attack power against Undead targets only (A_MOD_MELEE_ATTACK_POWER_VERSUS, creature type mask 32 = Undead), i.e. +200 AP in total versus Undead."
+     }
+    }
+   ],
+   "ignored": [
+    "+100 ranged attack power"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0126). effects[0] and effects[1] are ONE proc roll. The item's passive +12 AP versus Undead is in items.json mobStats and is not repeated here.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3888",
+    "sim/common/shared/shared_utils.go:467",
+    "sim/common/shared/shared_utils.go:588",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "sim/common/shared/shared_utils.go:627",
+    "sim/core/spelldata/mob_types.go:34",
+    "spell 17352",
+    "tools/database/overrides/weapon_procs.go:558"
+   ]
+  },
+  "13286": {
+   "name": "Rivenspike",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.95,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "targetArmor",
+      "spellId": 17315,
+      "amount": -100,
+      "durationMs": 30000,
+      "maxStacks": 3
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). -100 armor per stack (max 3, 30 s). Melee defense type: each proc casts a no-damage strike on the melee special table (miss, dodge, parry, no crit) and the stack lands only if it does; a strike cast off this weapon's main-hand white swing rolls main-hand weapon procs once more (R-0040). EXCLUSIVE: MinorArmorReduction category with Faerie Fire, Curse of Recklessness, Dust Cloud and Armor Shatter, only the strongest counts (EV-0147: never lands under Faerie Fire or Curse of Recklessness; stacks with Sunder Armor).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3904",
+    "sim/common/shared/spell_data_debuff_proc.go:26",
+    "sim/common/shared/spell_data_debuff_proc.go:49",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "sim/common/shared/spell_data_debuff_proc.go:60",
+    "sim/core/buffs/meta.go:182",
+    "sim/core/buffs/debuffs_auto_gen.go:415",
+    "sim/core/buffs/drivers.go:546",
+    "docs/evidence/EV-0147-weapon-armor-debuffs-against-faerie-fire-and-curse-of-recklessness.md",
+    "spell 17315",
+    "tools/database/overrides/weapon_procs.go:1121"
+   ]
+  },
+  "13361": {
+   "name": "Skullforge Reaver",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.9,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 17484,
+      "school": "shadow",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 21,
+       "periodMs": 1000,
+       "durationMs": 10000
+      }
+     }
+    }
+   ],
+   "ignored": [
+    "Skullforge Brand heal over time on the wearer (21 per second)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Hand-written, 1.9 ppm measured (EV-0121). Each proc rolls the spell hit table once without crit; if it lands, a 10-tick Shadow DoT of 21 per second goes on the target (a new proc refreshes it). Ticks can crit on spell crit (x1.5), take partial resists (not binary) and have no spell power scaling.",
+   "cite": [
+    "sim/common/forever/items_weapons.go:280",
+    "spell 17484",
+    "tools/database/overrides/weapon_procs.go:800",
+    "docs/evidence/EV-0121-skullforge-reaver-rate-from-log-order.md"
+   ]
+  },
+  "13399": {
+   "name": "Gargoyle Shredder Talons",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "ohAuto",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2.05,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1320824,
+      "school": "physical",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 20,
+       "periodMs": 2000,
+       "durationMs": 14000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0183). The application rolls the melee special table without a crit and the bleed lands only if it does; bleed ticks ignore armor. Cast off an off-hand hit, so the strike never re-rolls weapon procs (R-0040). 7 ticks; ticks can crit (Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3928",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "spell 1320824",
+    "tools/database/overrides/weapon_procs.go:1128"
+   ]
+  },
+  "13401": {
+   "name": "The Cruel Hand of Timmy",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2.15,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 17505,
+      "school": "shadow",
+      "min": 85.0,
+      "max": 85.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Hand of Timmy heal"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). E_HEALTH_LEECH: the wearer is healed for the damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3936",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 17505",
+    "tools/database/overrides/weapon_procs.go:814"
+   ]
+  },
+  "13408": {
+   "name": "Soul Breaker",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 17506,
+      "school": "shadow",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 10,
+       "periodMs": 1000,
+       "durationMs": 10000
+      }
+     }
+    }
+   ],
+   "ignored": [
+    "Soul Breaker mana drain (10 per second)"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 17506. Shadow DoT of 10 per second for 10 s (10 ticks, Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:794",
+    "spell 17506",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md"
+   ]
+  },
+  "13952": {
+   "name": "Iceblade Hacker",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "chance": 1.0,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1298414,
+      "school": "frost",
+      "min": 40.7,
+      "max": 40.7,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "none",
+      "canCrit": true
+     }
+    },
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1298416,
+      "school": "frost",
+      "min": 73.5,
+      "max": 136.5,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Frostbolt movement slow"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Hand-written, two independent procs. effects[0]: equip proc 1298413 (100%, main hand only) casts 40.7 Frost on every main-hand white swing or special that lands AND deals damage (not on proc-flagged spells); the row is Always Hit so it never misses and rolls only the melee crit (x2), is resisted as Frost (partial resists, no armor), no spell power scaling (EV-0164). effects[1]: chance-on-hit Frostbolt 2 ppm (EV-0136), 73.5 to 136.5 Frost on the spell table (spell crit x1.5), binary.",
+   "cite": [
+    "sim/common/forever/items_weapons.go:782",
+    "sim/common/forever/items_weapons.go:809",
+    "spell 1298413",
+    "spell 1298414",
+    "spell 1298416",
+    "tools/database/overrides/weapon_procs.go:821",
+    "docs/evidence/EV-0164-on-hit-frost-damage-of-iceblade-hacker-and-warblade-always-lands.md"
+   ]
+  },
+  "13984": {
+   "name": "Darrowspike",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18276,
+      "school": "frost",
+      "min": 105.0,
+      "max": 105.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3960",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 18276",
+    "tools/database/overrides/weapon_procs.go:1135"
+   ]
+  },
+  "14487": {
+   "name": "Bonechill Hammer",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.95,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18276,
+      "school": "frost",
+      "min": 105.0,
+      "max": 105.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3968",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 18276",
+    "tools/database/overrides/weapon_procs.go:828"
+   ]
+  },
+  "14555": {
+   "name": "Alcor's Sunrazor",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18833,
+      "school": "fire",
+      "min": 94.5,
+      "max": 115.5,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 18833. 94.5 to 115.5 Fire on the spell table.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:882",
+    "spell 18833",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md"
+   ]
+  },
+  "14576": {
+   "name": "Ebon Hilt of Marduk",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18656,
+      "school": "shadow",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 28,
+       "periodMs": 3000,
+       "durationMs": 9000
+      }
+     }
+    }
+   ],
+   "ignored": [
+    "Decrease Threat 1% (equip aura, modelled by the reference)"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 18656. Shadow DoT of 28 every 3 s for 9 s (3 ticks, Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:96",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:895",
+    "spell 18656",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:96"
+   ]
+  },
+  "15814": {
+   "name": "Hameya's Slayer",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.05,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16406,
+      "school": "physical",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 8,
+       "periodMs": 3000,
+       "durationMs": 30000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). The application rolls the melee special table without a crit and the bleed lands only if it does; bleed ticks ignore armor. When a main-hand white swing of this weapon triggers it, the landed strike is a main-hand special that rolls main-hand weapon procs once more (R-0040, EV-0145); in the off hand it never does. 10 ticks; ticks can crit (Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4000",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "spell 16406",
+    "tools/database/overrides/weapon_procs.go:1156"
+   ]
+  },
+  "15853": {
+   "name": "Windreaper",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 20586,
+      "school": "nature",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 21,
+       "periodMs": 2000,
+       "durationMs": 10000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 20586. Nature DoT of 21 every 2 s for 10 s (5 ticks, Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:923",
+    "spell 20586",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md"
+   ]
+  },
+  "17002": {
+   "name": "Ichor Spitter",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 17511,
+      "school": "nature",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 8,
+       "periodMs": 2000,
+       "durationMs": 20000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 17511. Nature DoT of 8 every 2 s for 20 s (10 ticks, Periodic Can Crit). The same spell on Serpent Slicer runs at a measured 1 ppm, which says nothing about this axe.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:1083",
+    "spell 17511",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md"
+   ]
+  },
+  "17705": {
+   "name": "Thrash Blade",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "extraAttack",
+      "spellId": 21919,
+      "count": 1
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0022). The extra attack is a MAIN-hand white swing cast in the same instant after the triggering hit, even when the weapon sits in the off hand and rolls on off-hand hits; the extra swing cannot trigger this proc again, can be replaced by a queued Heroic Strike/Cleave, and rolls other procs as a white swing.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4040",
+    "sim/common/shared/spell_data_extra_attack.go:21",
+    "sim/core/extra_attack.go:11",
+    "sim/core/spelldata/resolve_proc.go:102",
+    "sim/core/procs.go:288",
+    "spell 21919",
+    "tools/database/overrides/weapon_procs.go:164"
+   ]
+  },
+  "17738": {
+   "name": "Claw of Celebras",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "ohAuto",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2.05,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 21952,
+      "school": "nature",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 13,
+       "periodMs": 1000,
+       "durationMs": 7000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). DoT only: one spell-hit roll without crit applies it; no spell power scaling (SPCoef 0). 7 ticks; ticks can crit (Periodic Can Crit).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4056",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 21952",
+    "tools/database/overrides/weapon_procs.go:1163"
+   ]
+  },
+  "17752": {
+   "name": "Satyr's Lash",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.95,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1292155,
+      "school": "shadow",
+      "min": 55.0,
+      "max": 85.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4064",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 1292155",
+    "tools/database/overrides/weapon_procs.go:480"
+   ]
+  },
+  "17780": {
+   "name": "Blade of Eternal Darkness",
+   "effects": [],
+   "ignored": [
+    "Engulfing Shadows (112 Shadow damage and 104 mana on landing a harmful spell)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Hand-written spell-cast proc (1.8 ppm priced on cast time): only the wearer's landed harmful spells roll it, and no warrior melee attack, shout or item proc counts, so it never fires for a Fury warrior.",
+   "cite": [
+    "sim/common/forever/items_weapons.go:347",
+    "spell 21978",
+    "spell 27860",
+    "docs/evidence/EV-0025-blade-of-eternal-darkness-cast-time-rate.md",
+    "docs/evidence/EV-0108-blade-of-eternal-darkness-mana-on-every-proc.md"
+   ]
+  },
+  "17943": {
+   "name": "Fist of Stone",
+   "effects": [],
+   "ignored": [
+    "Fist of Stone (restores 32 mana on hit, x3 against Earth Elementals)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Modelled by the reference as a mana gain (3.2 ppm), which a warrior without a mana bar never receives.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4090",
+    "sim/common/shared/spell_data_energize.go:140",
+    "spell 1294794",
+    "tools/database/overrides/weapon_procs.go:105"
+   ]
+  },
+  "18321": {
+   "name": "Energetic Rod",
+   "effects": [],
+   "ignored": [
+    "Demonic Energy (48 mana on landing a damaging spell)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Caster effect that restores mana on damaging spells; irrelevant to a warrior and commented out in the reference.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:1233",
+    "spell 1302190",
+    "spell 1302191"
+   ]
+  },
+  "18348": {
+   "name": "Quel'Serrar",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "buff",
+      "spellId": 22850,
+      "name": "Sanctuary",
+      "durationMs": 10000,
+      "stats": {
+       "ap": 30
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [
+    "Sanctuary +13 Defense",
+    "Sanctuary +300 armor"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 22850. +30 attack power for 10 s, plus +36 melee attack power against Dragonkin only (A_MOD_MELEE_ATTACK_POWER_VERSUS, creature type mask 2), +13 Defense and +300 armor.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:1247",
+    "spell 22850",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md"
+   ]
+  },
+  "18463": {
+   "name": "Ogre Pocket Knife",
+   "effects": [],
+   "ignored": [
+    "Improved Pick Pocket and Distract (+2% success)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rogue utility modifier; no effect on damage. Commented out in the reference.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:1323",
+    "spell 1302345"
+   ]
+  },
+  "18498": {
+   "name": "Hedgecutter",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.75,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1302344,
+      "school": "arcane",
+      "min": 33.18,
+      "max": 50.82,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0183). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists. Tooltip \"3 times as much damage to Plants\" is NOT applied by the reference: the row has no versus override.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4124",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 1302344",
+    "tools/database/overrides/weapon_procs.go:1170"
+   ]
+  },
+  "18671": {
+   "name": "Baron Charr's Sceptre",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 13442,
+      "school": "fire",
+      "min": 90.0,
+      "max": 90.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference does NOT model this: the generated registration is commented out (\"unsupported: states no rate\") and no hand-written code exists; no proc rate is known, so ppm is null. Effect described from spell 13442. 90 Fire on the spell table.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:1365",
+    "spell 13442",
+    "docs/rulings/R-0046-unstated-rate-carryover-todo.md"
+   ]
+  },
+  "19099": {
+   "name": "Glacial Blade",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.3,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18398,
+      "school": "frost",
+      "min": 45.0,
+      "max": 45.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0183). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). The row states an 8 s category cooldown that the reference proc path drops (the proc spell is built with no cast or cooldown), so icd is 0.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4148",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/core/spelldata/resolve_spell.go:221",
+    "spell 18398",
+    "tools/database/overrides/weapon_procs.go:1177"
+   ]
+  },
+  "19100": {
+   "name": "Electrified Dagger",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.25,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 23592,
+      "school": "nature",
+      "min": 45.0,
+      "max": 45.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0183). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4156",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 23592",
+    "tools/database/overrides/weapon_procs.go:1184"
+   ]
+  },
+  "19324": {
+   "name": "The Lobotomizer",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 0.55,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1290950,
+      "school": "shadow",
+      "min": 200.0,
+      "max": 300.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Brain Damage cast-speed slow on target"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0177). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4197",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 1290950",
+    "tools/database/overrides/weapon_procs.go:1250"
+   ]
+  },
+  "22332": {
+   "name": "Blade of Necromancy",
+   "effects": [],
+   "ignored": [
+    "Necromancy (5% on killing an enemy: summons a minion, creature 268677, for 2 min; 2 min internal cooldown)"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "No registration of this item exists anywhere in the reference. The trigger 1302108 fires on a kill (PROC_FLAG_KILL), so it never fires during a single-target boss fight; the summoned minion's damage is stated in no row available, so it cannot be modelled.",
+   "cite": [
+    "spell 1302108",
+    "spell 1302109",
+    "sim/core/dbcenums/proc_flags.go:8"
+   ]
+  },
+  "274265": {
+   "name": "Brush Cutter",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1293518,
+      "school": "nature",
+      "min": 49.77,
+      "max": 76.23,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists. Tooltip \"3 times as much damage to Plants\" is NOT applied by the reference for this row (only Grass Killer 1293568 has the versus override).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4254",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "tools/database/overrides/spell_overrides.go:223",
+    "spell 1293518",
+    "tools/database/overrides/weapon_procs.go:863"
+   ]
+  },
+  "274271": {
+   "name": "Deadhead Blade",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.9,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1293518,
+      "school": "nature",
+      "min": 49.77,
+      "max": 76.23,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Rate status Observed: a log fit not yet validated (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists. Tooltip \"3 times as much damage to Plants\" is NOT applied by the reference for this row (only Grass Killer 1293568 has the versus override).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4271",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "tools/database/overrides/spell_overrides.go:223",
+    "spell 1293518",
+    "tools/database/overrides/weapon_procs.go:1198"
+   ]
+  },
+  "274647": {
+   "name": "Farraki Kris",
+   "effects": [],
+   "ignored": [
+    "Blood Sacrifice (leech 19 health every 2 s for 6 s, chance on harmful spell cast)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Caster effect: the trigger 1294644 hears harmful spell casts only, so a Fury warrior never procs it. Commented out in the reference.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:2811",
+    "spell 1294644",
+    "spell 1294645"
+   ]
+  },
+  "276419": {
+   "name": "Lightcrest Hammer",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 3.6,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1299631,
+      "school": "holy",
+      "min": 105.0,
+      "max": 105.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0003). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). Binary: the hit roll carries the whole resist, no partial resists. VERSUS: base damage x2 against Undead (row VersusMobTypes). Holy has no resistance.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4335",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/core/spelldata/versus.go:18",
+    "sim/core/spell_result.go:464",
+    "spell 1299631",
+    "tools/database/overrides/weapon_procs.go:133"
+   ]
+  },
+  "279852": {
+   "name": "Rock on Stick",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.85,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1309967,
+      "school": "physical",
+      "min": 0,
+      "max": 0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": false,
+      "dot": {
+       "tickDamage": 7,
+       "periodMs": 2000,
+       "durationMs": 20000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0050). The application rolls the melee special table without a crit and the bleed lands only if it does; bleed ticks ignore armor. When a main-hand white swing of this weapon triggers it, the landed strike is a main-hand special that rolls main-hand weapon procs once more (R-0040, EV-0145); in the off hand it never does. 10 ticks; ticks cannot crit.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4359",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "spell 1309967",
+    "tools/database/overrides/weapon_procs.go:171"
+   ]
+  },
+  "281665": {
+   "name": "Twilight Forgehammer",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2.95,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1312176,
+      "school": "fire",
+      "min": 51.0,
+      "max": 51.0,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Spell-table hit (spell hit, spell crit x1.5, resists), no spell power scaling (SPCoef 0). The row carries main-hand proc flags, but it is registered as a weapon proc, so the hand holding the mace decides.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4367",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 1312176",
+    "tools/database/overrides/weapon_procs.go:565"
+   ]
+  },
+  "286430": {
+   "name": "Toofbreaker",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 2,
+      "icdMs": 100
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1320269,
+      "school": "physical",
+      "min": 42,
+      "max": 42,
+      "spCoef": 0,
+      "apCoef": 0,
+      "table": "melee",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Rate measured in logs (EV-0136). Physical strike on the melee special table (miss, dodge, parry, block; melee crit x2; armor applies). When a main-hand white swing of this weapon triggers it, the landed strike is a main-hand special that rolls main-hand weapon procs once more (R-0040, EV-0145); in the off hand it never does. icd 100 ms is the row's own cooldown, so a Toofbreak never brings a second one. Tooltip \"2 times as much damage if the target is facing you\" (dummy effect 2) is NOT applied by the reference.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4415",
+    "sim/common/shared/shared_utils.go:691",
+    "sim/common/shared/shared_utils.go:738",
+    "sim/common/shared/shared_utils.go:1004",
+    "docs/rulings/R-0040-weapon-proc-special-hit-chains.md",
+    "sim/common/shared/shared_utils.go:697",
+    "spell 1320269",
+    "tools/database/overrides/weapon_procs.go:421"
+   ]
+  }
+ }
+}

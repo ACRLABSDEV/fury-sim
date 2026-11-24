@@ -1,0 +1,2385 @@
+{
+ "items": {
+  "744": {
+   "name": "Thunderbrew's Boot Flask",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 0,
+     "offGcd": true,
+     "result": {
+      "type": "damage",
+      "spellId": 12278,
+      "school": "fire",
+      "min": 0,
+      "max": 0,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 75,
+       "periodMs": 1000,
+       "durationMs": 5000
+      }
+     }
+    }
+   ],
+   "ignored": [
+    "Strong Alcohol 11009 (inebriate, not simulated)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Breath of Fire 12257 keeps a 5 s aura on the wearer that casts 12278 once a second (5 casts): 75 Fire, no variance, to every enemy in a 10 yd cone; each cast is its own spell rolling spell hit and crit. Double damage to Plants. No shared category.",
+   "cite": [
+    "sim/common/shared/shared_utils.go:1343",
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:245",
+    "spell 12257"
+   ]
+  },
+  "833": {
+   "name": "Lifestone",
+   "effects": [],
+   "ignored": [
+    "Lifestone Healing (heals the wearer 640-960)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:286",
+    "spell 17712"
+   ]
+  },
+  "942": {
+   "name": "Freezing Band",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "damageTaken",
+      "attacks": [],
+      "ownHandOnly": false,
+      "chance": 0.01,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 18798,
+      "school": "frost",
+      "min": 50,
+      "max": 50,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Freeze (stuns the attacker 5 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Fires only when the wearer is struck, so it does nothing for a warrior the boss never hits. 1% per damaging melee hit taken (ProcFlags 0x28), 50 Frost to the attacker.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3195",
+    "spell 18798",
+    "spell 18799"
+   ]
+  },
+  "1315": {
+   "name": "Lei of Lilies",
+   "effects": [],
+   "ignored": [
+    "Conjure Lily Root (creates an item; 3 s cast on the global cooldown)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Not simulated by the reference (create-item effect).",
+   "cite": [
+    "spell 18831"
+   ]
+  },
+  "1404": {
+   "name": "Tidal Charm",
+   "effects": [],
+   "ignored": [
+    "Tidal Charm (stuns the target 3 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt. A linked row 1317288 (5 s stun, A_DUMMY 80, 180 s category cooldown) is an unexplained variant.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:17",
+    "spell 835"
+   ]
+  },
+  "1490": {
+   "name": "Guardian Talisman",
+   "effects": [],
+   "ignored": [
+    "Guarded (reduces detection range)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:19",
+    "spell 1300364"
+   ]
+  },
+  "1713": {
+   "name": "Ankh of Life",
+   "effects": [],
+   "ignored": [
+    "Heal (heals a friendly target 648-792)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Shares category 1153 with potions (120 s).",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:288",
+    "spell 1317424"
+   ]
+  },
+  "2802": {
+   "name": "Blazing Emblem",
+   "effects": [],
+   "ignored": [
+    "Blazing Emblem (absorbs 465 Fire damage, +33 Fire resistance, 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:125",
+    "spell 13744"
+   ]
+  },
+  "2820": {
+   "name": "Nifty Stopwatch",
+   "effects": [],
+   "ignored": [
+    "Speed (+40% run speed 10 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:21",
+    "spell 14530"
+   ]
+  },
+  "4130": {
+   "name": "Smotts' Compass",
+   "effects": [],
+   "ignored": [
+    "Smotts' Compass (script dummy with a 200 yd radius, non-combat)"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "E_DUMMY with no amount; read as a non-combat tracking effect from its name. The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:23",
+    "spell 1317740"
+   ]
+  },
+  "5079": {
+   "name": "Cold Basilisk Eye",
+   "effects": [],
+   "ignored": [
+    "Cold Eye (target: -20% melee and ranged attack speed, -40% movement speed, 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Slows the enemy, so it only lowers damage taken.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:202",
+    "spell 1139"
+   ]
+  },
+  "7734": {
+   "name": "Six Demon Bag",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 1800000,
+     "sharedCooldownMs": 10000,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "Six Demon Bag 14537 is a single E_DUMMY on an enemy within 30 yd (base points 1); the spell it scripts is not in the spell store, so its damage is unknown. 30 minute cooldown."
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference comments it out as unsupported (E_DUMMY). With a 30 min cooldown it cannot matter for sustained DPS. Shared category 1141 (10 s).",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:32",
+    "spell 14537"
+   ]
+  },
+  "10418": {
+   "name": "Glimmering Mithril Insignia",
+   "effects": [],
+   "ignored": [
+    "Fearless (fear immunity, +10 all resistances, 30 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Not simulated by the reference (mechanic immunity).",
+   "cite": [
+    "spell 12733"
+   ]
+  },
+  "10455": {
+   "name": "Chained Essence of Eranikus",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 600000,
+     "sharedCooldownMs": 20000,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "Cloud of Chained Essence 12766 places an area trigger and a summoned NPC (8506) for 20 s. Linked row 1300240 is A_PERIODIC_DAMAGE 140 Nature every 2 s on units inside the cloud (at most 10 ticks = 1400 if the target stands in it the whole 20 s); its second effect value 2 together with the item's Troll tag reads as double damage to Trolls. Hit and crit rules unknown."
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference lists it as \"Not simulated\" (summon effect type 28). Numbers are read from rows 12766 and 1300240 without a tooltip. Shared category 1141 (20 s).",
+   "cite": [
+    "spell 12766"
+   ]
+  },
+  "11122": {
+   "name": "Carrot on a Stick",
+   "effects": [],
+   "ignored": [
+    "Mount Speed +3%"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "spell 13587"
+   ]
+  },
+  "11302": {
+   "name": "Uther's Strength",
+   "effects": [],
+   "ignored": [
+    "Uther's Light (when struck in melee: absorb 216 for 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Fires only when the wearer is struck, so it does nothing for a warrior the boss never hits.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3589",
+    "spell 10368",
+    "spell 8397"
+   ]
+  },
+  "11669": {
+   "name": "Naglering",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "damageTaken",
+      "attacks": [],
+      "ownHandOnly": false,
+      "chance": 1.0,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 15438,
+      "school": "arcane",
+      "min": 3,
+      "max": 3,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": false
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Fires only when the wearer is struck, so it does nothing for a warrior the boss never hits. Damage shield: 3 Arcane to each attacker whose hit lands, rolling spell hit, never a crit.",
+   "cite": [
+    "sim/core/buffs/generated_support.go:43",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:72",
+    "spell 15438"
+   ]
+  },
+  "11810": {
+   "name": "Force of Will",
+   "effects": [],
+   "ignored": [
+    "Force of Will (6% when struck: damage taken -51 for 10 s, 30 s internal cooldown)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Fires only when the wearer is struck, so it does nothing for a warrior the boss never hits.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3630",
+    "spell 15595",
+    "spell 15594"
+   ]
+  },
+  "11811": {
+   "name": "Smoking Heart of the Mountain",
+   "effects": [],
+   "ignored": [
+    "Heart of the Mountain (+520 armor 20 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:176",
+    "spell 1300752"
+   ]
+  },
+  "11815": {
+   "name": "Hand of Justice",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": false,
+      "chance": 0.01,
+      "icdMs": 2000
+     },
+     "result": {
+      "type": "extraAttack",
+      "spellId": 15601,
+      "count": 1
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Row 15600 states 3%, which is the chance against Dwarves; the code rolls 3%/3 = 1% against every other target (EV-0007: 0.97% measured). Only a landed hit that dealt damage rolls, on either hand, white or special; the extra attack is a main-hand white swing cast right after the hit without touching the swing timer, a queued Heroic Strike or Cleave replaces it, and it cannot proc Hand of Justice again.",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:445",
+    "sim/common/forever/items_weapons.go:882",
+    "sim/core/extra_attack.go:11",
+    "docs/evidence/EV-0007",
+    "sim/common/forever/items_trinkets.go:437",
+    "sim/common/forever/items_trinkets.go:446",
+    "spell 15601",
+    "spell 15600"
+   ]
+  },
+  "11819": {
+   "name": "Second Wind",
+   "effects": [],
+   "ignored": [
+    "Second Wind (restores 63 mana per second for 10 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Mana only; a warrior has no bar for it.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:318",
+    "spell 15604"
+   ]
+  },
+  "11832": {
+   "name": "Burst of Knowledge",
+   "effects": [],
+   "ignored": [
+    "Burst of Knowledge (spell cost -150 for 10 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:53",
+    "spell 15646"
+   ]
+  },
+  "11905": {
+   "name": "Linken's Boomerang",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 180000,
+     "sharedCooldownMs": 10000,
+     "offGcd": true,
+     "result": {
+      "type": "damage",
+      "spellId": 15712,
+      "school": "physical",
+      "min": 113,
+      "max": 187,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "melee",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Disarm 15752 (10 s)",
+    "Knockdown 15753 (2 s stun)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Usable only from 8 to 30 yd (MinRange 8) and the reference enforces range, so a warrior standing in melee cannot cast it. 0.5 s cast time, no global cooldown; 150 Physical spread by half of variance 0.493, rolled on the melee special table with no attack power share. Shared category 1141 (10 s).",
+   "cite": [
+    "sim/common/shared/shared_utils.go:1326",
+    "sim/core/spell.go:460",
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:249",
+    "spell 15712"
+   ]
+  },
+  "12344": {
+   "name": "Seal of Ascension",
+   "effects": [],
+   "ignored": [
+    "Chromatic Protection (equip dummy, value 1, 10 yd)"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "A_DUMMY the reference does not model; read as defensive from its name.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:607",
+    "spell 16372"
+   ]
+  },
+  "12805": {
+   "name": "Orb of Fire",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": false,
+      "chance": 0.01,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 13441,
+      "school": "fire",
+      "min": 50,
+      "max": 70,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "1% per landed damaging melee hit (row 16982, game-file rate). The database entry lists an 8 s internal cooldown (Firebolt's category cooldown) but the damage-proc code only reads the trigger's ICD and the damage row's CooldownMs, both 0, so the sim applies none; at 1% this is immaterial.",
+   "cite": [
+    "sim/common/shared/shared_utils.go:697",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3808",
+    "spell 13441",
+    "spell 16982"
+   ]
+  },
+  "12930": {
+   "name": "Briarwood Reed",
+   "effects": [],
+   "ignored": [
+    "Briarwood Reed (cannot be tracked)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:712",
+    "spell 1301707"
+   ]
+  },
+  "13143": {
+   "name": "Mark of the Dragon Lord",
+   "effects": [],
+   "ignored": [
+    "Mark of the Dragon Lord (absorbs 500 damage, 22 mana per 5 s, 30 min)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:133",
+    "spell 17252"
+   ]
+  },
+  "13164": {
+   "name": "Heart of the Scale",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 1800000,
+     "sharedCooldownMs": 0,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "Heart of the Scale 17275: for 300 s each melee hit that lands on the wearer deals 20 Fire to the attacker (damage shield: spell hit roll, no crit), plus +20 Fire resistance."
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Fires only when the wearer is struck, so it does nothing for a warrior the boss never hits. 30 minute cooldown, no shared category.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:204",
+    "spell 17275"
+   ]
+  },
+  "13171": {
+   "name": "Smokey's Lighter",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 90000,
+     "sharedCooldownMs": 10000,
+     "offGcd": true,
+     "result": {
+      "type": "damage",
+      "spellId": 17283,
+      "school": "fire",
+      "min": 210,
+      "max": 210,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "210 Fire, no variance, to every enemy in a 15 yd cone, rolled as a spell (hit and crit); double damage to Plants. 90 s cooldown; shared category 1141 (10 s).",
+   "cite": [
+    "sim/common/shared/shared_utils.go:1326",
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:251",
+    "spell 17283"
+   ]
+  },
+  "13209": {
+   "name": "Seal of the Dawn",
+   "effects": [
+    {
+     "kind": "stats",
+     "stats": {
+      "ap": 78
+     },
+     "pct": {},
+     "versus": [
+      "undead"
+     ]
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Equip aura 23930: +78 melee and ranged attack power against Undead. The item states the same +78 as an item stat and the reference shows it once (EV-0111); it is not in items.json mobStats, so it is listed here.",
+   "cite": [
+    "docs/evidence/EV-0111",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:80",
+    "spell 23930"
+   ]
+  },
+  "13213": {
+   "name": "Smolderweb's Eye",
+   "effects": [],
+   "ignored": [
+    "Mother's Watch (removes a disarm from a friendly target)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt. The item's 10 hit rating is its own stat.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:55",
+    "spell 1308917"
+   ]
+  },
+  "13382": {
+   "name": "Cannonball Runner",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 10000,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "Summons a Scarlet Cannon (NPC 11199) for 10 s. Linked row 17501 Cannon Fire: 1 s cast, 85-139 Holy (112, variance 0.48) in a 5 yd radius; how often the cannon fires and its hit rules are not stated. Effect value 2 with the item's Undead tag reads as double damage to Undead."
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference lists it as \"Not simulated\" (summon effect type 28). Shared category 1141 (10 s). The 5 hit rating is the item's own stat.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:781",
+    "spell 6251",
+    "spell 1300668"
+   ]
+  },
+  "13503": {
+   "name": "Alchemist's Stone",
+   "effects": [],
+   "ignored": [
+    "Alchemists Stone (+20% healing and mana potion effect, needs Alchemy)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/shared/consumable_potion.go:14",
+    "sim/core/consumes_potions.go:9",
+    "spell 17619"
+   ]
+  },
+  "13515": {
+   "name": "Ramstein's Lightning Bolts",
+   "effects": [],
+   "ignored": [
+    "Ramstein's Lightning Bolts (stuns the target 2 s, 1.5 s cast)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:59",
+    "spell 1299443"
+   ]
+  },
+  "13544": {
+   "name": "Spectral Essence",
+   "effects": [],
+   "ignored": [
+    "Visions of the Past (invisibility detection in one zone)",
+    "Restore Essence (script dummy on a nearby Undead with a linked self-heal 1298498)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:61",
+    "spell 17623",
+    "spell 1298497"
+   ]
+  },
+  "13965": {
+   "name": "Blackhand's Breadth",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 20000,
+     "offGcd": true,
+     "result": {
+      "type": "buff",
+      "spellId": 1318944,
+      "name": "Blackhand's Breadth",
+      "durationMs": 20000,
+      "stats": {},
+      "pct": {
+       "meleeCritPct": 5
+      },
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Marks the current target: the wearer alone gains +5 percentage points of crit (attacks and spells) against that target for 20 s, doubled to +10 against Orcs and Ogres. The mark always lands (no hit roll). Shared category 1141 (20 s). The item's passive +1% crit is its own stat.",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:326",
+    "sim/common/forever/items_trinkets.go:318",
+    "sim/common/forever/items_trinkets.go:347",
+    "spell 1318944",
+    "spell 1318945"
+   ]
+  },
+  "13966": {
+   "name": "Mark of Tyranny",
+   "effects": [],
+   "ignored": [
+    "Bastion of Tyranny (+620 health 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:307",
+    "spell 1287842"
+   ]
+  },
+  "13968": {
+   "name": "Eye of the Beast",
+   "effects": [],
+   "ignored": [
+    "Eye of the Beast (+7% spell hit 20 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Spell hit only helps the spell-table damage of other item procs, which is negligible.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:206",
+    "spell 1287840"
+   ]
+  },
+  "14022": {
+   "name": "Barov Peasant Caller",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 360000,
+     "sharedCooldownMs": 60000,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "Death by Peasant 18307 summons 3 peasants for 20 s. Their attacks and damage are not in the spell store."
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference lists it as \"Not simulated\" (summon effect type 28); the summoned units' damage is unknown. Shared category 94.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:838",
+    "spell 18307",
+    "spell 1298508"
+   ]
+  },
+  "14023": {
+   "name": "Barov Peasant Caller",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 360000,
+     "sharedCooldownMs": 20000,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "Death by Peasant 18308 summons 3 peasants for 20 s. Their attacks and damage are not in the spell store."
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference lists it as \"Not simulated\" (summon effect type 28); the summoned units' damage is unknown. Shared category 94.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:839",
+    "spell 18308",
+    "spell 1298508"
+   ]
+  },
+  "14557": {
+   "name": "The Lion Horn of Stormwind",
+   "effects": [],
+   "ignored": [
+    "The Lion Horn of Stormwind (when struck: +725 armor to the party for 30 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Fires only when the wearer is struck, so it does nothing for a warrior the boss never hits.",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:471",
+    "sim/common/forever/items_trinkets.go:462",
+    "sim/common/forever/items_trinkets.go:478",
+    "spell 18946",
+    "spell 20847"
+   ]
+  },
+  "15867": {
+   "name": "Prismcharm",
+   "effects": [],
+   "ignored": [
+    "Prismstone (+27 all resistances 30 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:171",
+    "spell 19638"
+   ]
+  },
+  "15873": {
+   "name": "Ragged John's Neverending Cup",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 600000,
+     "sharedCooldownMs": 0,
+     "offGcd": true,
+     "result": {
+      "type": "buff",
+      "spellId": 20587,
+      "name": "Ragged John's Neverending Cup",
+      "durationMs": 125000,
+      "stats": {
+       "str": -10,
+       "agi": -10
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [
+    "+40 Stamina",
+    "physical damage taken -20, magic damage taken +80"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Using it lowers Strength and Agility by 10 for 125 s, so a damage dealer should never use it. The reference applies only the stat changes. No shared category.",
+   "cite": [
+    "sim/common/shared/shared_utils.go:1262",
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:168",
+    "spell 20587"
+   ]
+  },
+  "16009": {
+   "name": "Voice Amplification Modulator",
+   "effects": [],
+   "ignored": [
+    "Resist Silence (+7%)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "spell 19786"
+   ]
+  },
+  "16022": {
+   "name": "Arcanite Dragonling",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 3600000,
+     "sharedCooldownMs": 60000,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "Summons an Arcanite Dragonling (NPC 12473) for 60 s. Its attacks and damage are not in the spell store."
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference lists it as \"Not simulated\" (summon effect type 28). 1 hour cooldown; shared category 94 (60 s).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:950",
+    "spell 19804",
+    "spell 1318325"
+   ]
+  },
+  "17744": {
+   "name": "Heart of Noxxion",
+   "effects": [],
+   "ignored": [
+    "Poison duration -10%",
+    "Dispel Poison"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:66",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:1218",
+    "spell 1294777",
+    "spell 21954"
+   ]
+  },
+  "17759": {
+   "name": "Mark of Resolution",
+   "effects": [],
+   "ignored": [
+    "Stout Heart (resist fear and stun +1%)",
+    "Physical Protection (absorb 546-1014 for 10 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:135",
+    "spell 21958",
+    "spell 21956"
+   ]
+  },
+  "17774": {
+   "name": "Mark of the Chosen",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "damageTaken",
+      "attacks": [],
+      "ownHandOnly": false,
+      "chance": 0.02,
+      "icdMs": 120000
+     },
+     "result": {
+      "type": "buff",
+      "spellId": 21970,
+      "name": "Mark of the Chosen",
+      "durationMs": 60000,
+      "stats": {
+       "str": 21,
+       "agi": 21
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [
+    "+21 Stamina, Intellect and Spirit from the same buff"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Fires only when the wearer is struck, so it does nothing for a warrior the boss never hits. 2% per damaging melee, ranged or harmful spell hit taken, +21 to all stats for 60 s, 120 s internal cooldown (EV-0036).",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:456",
+    "docs/evidence/EV-0036",
+    "sim/common/forever/items_trinkets.go:450",
+    "sim/common/forever/items_trinkets.go:458",
+    "spell 21970",
+    "spell 21969"
+   ]
+  },
+  "18340": {
+   "name": "Eidolon Talisman",
+   "effects": [],
+   "ignored": [
+    "Eidolon Ward (absorbs 1176 Shadow damage 30 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:139",
+    "spell 1302362"
+   ]
+  },
+  "18345": {
+   "name": "Murmuring Ring",
+   "effects": [],
+   "ignored": [
+    "Resist Silence (+7%)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "spell 19786"
+   ]
+  },
+  "18370": {
+   "name": "Vigilance Charm",
+   "effects": [],
+   "ignored": [
+    "Vigilant (+20% dodge for 20 s or 3 dodges)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Hand-written; defensive only. The 10 Strength is the item's own stat.",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:419",
+    "sim/common/forever/items_trinkets.go:413",
+    "sim/common/forever/items_trinkets.go:430",
+    "spell 1302264"
+   ]
+  },
+  "18371": {
+   "name": "Mindtap Talisman",
+   "effects": [],
+   "ignored": [
+    "Mindtap (125 mana per second for 10 s, then -60 Intellect for 2 min)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Mana only.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:322",
+    "spell 1302205"
+   ]
+  },
+  "18537": {
+   "name": "Counterattack Lodestone",
+   "effects": [],
+   "ignored": [
+    "Magnetize (the next melee attacker within 10 s is disarmed for 8 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt. The item's own stats are +30 attack power plus a further +30 against Mechanical, applied separately.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:68",
+    "spell 1302356"
+   ]
+  },
+  "18634": {
+   "name": "Gyrofreeze Ice Reflector",
+   "effects": [],
+   "ignored": [
+    "Frost Reflector (5 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:70",
+    "spell 23131"
+   ]
+  },
+  "18637": {
+   "name": "Major Recombobulator",
+   "effects": [],
+   "ignored": [
+    "Recombobulate (removes a control effect from, heals and restores mana to a friendly target)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Shares category 1153 with potions.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:298",
+    "spell 23064"
+   ]
+  },
+  "18638": {
+   "name": "Hyper-Radiant Flame Reflector",
+   "effects": [],
+   "ignored": [
+    "Fire Reflector (5 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:72",
+    "spell 23097"
+   ]
+  },
+  "18639": {
+   "name": "Ultra-Flash Shadow Reflector",
+   "effects": [],
+   "ignored": [
+    "Shadow Reflector (5 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:74",
+    "spell 23132"
+   ]
+  },
+  "18706": {
+   "name": "Arena Master",
+   "effects": [],
+   "ignored": [
+    "Arena Master (damage taken -5% in the Battle Ring and The Maul)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:22",
+    "spell 1317285"
+   ]
+  },
+  "18951": {
+   "name": "Evonice's Landin' Pilla",
+   "effects": [],
+   "ignored": [
+    "Soft Landin' (less falling damage)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:1393",
+    "spell 23409"
+   ]
+  },
+  "19024": {
+   "name": "Arena Grand Master",
+   "effects": [],
+   "ignored": [
+    "Aura of Protection (absorbs 810-1350 damage 20 s)",
+    "Arena Grand Master (damage taken -6% in the Battle Ring and The Maul)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:141",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:35",
+    "spell 23506",
+    "spell 1318318"
+   ]
+  },
+  "19141": {
+   "name": "Luffa",
+   "effects": [],
+   "ignored": [
+    "Luffa (removes a bleed)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:76",
+    "spell 23595"
+   ]
+  },
+  "19287": {
+   "name": "Darkmoon Card: Heroism",
+   "effects": [],
+   "ignored": [
+    "Heroism (2 procs per minute on melee hits: heals the wearer 158-238)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Heal only. Rate is a Vanilla carry-over (status 5), unmeasured.",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:229",
+    "sim/common/forever/items_trinkets.go:224",
+    "sim/common/forever/items_trinkets.go:248",
+    "sim/common/forever/items_trinkets.go:250",
+    "spell 23682",
+    "spell 23689"
+   ]
+  },
+  "19288": {
+   "name": "Darkmoon Card: Blue Dragon",
+   "effects": [],
+   "ignored": [
+    "Aura of the Blue Dragon (3% on spell cast: +150 Spirit 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4180",
+    "spell 23684",
+    "spell 23688"
+   ]
+  },
+  "19289": {
+   "name": "Darkmoon Card: Maelstrom",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": false,
+      "ppm": 1.0,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 23687,
+      "school": "nature",
+      "min": 200,
+      "max": 300,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "1 proc per minute on the hitting hand's weapon speed, on landed melee hits with a damage component; 250 Nature +/-20% rolled as a spell (hit and crit). Double damage to Aquatic enemies. The rate is an override marked TBC carry-over (status 4), not measured in this game.",
+   "cite": [
+    "sim/common/shared/shared_utils.go:531",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4189",
+    "spell 23687",
+    "spell 23686"
+   ]
+  },
+  "19290": {
+   "name": "Darkmoon Card: Twisting Nether",
+   "effects": [],
+   "ignored": [
+    "Twisting Nether (10% chance to self-resurrect)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:1423",
+    "spell 23701"
+   ]
+  },
+  "19812": {
+   "name": "Rune of the Dawn",
+   "effects": [],
+   "ignored": [
+    "Rune of the Dawn (+46 spell damage against Undead)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "docs/evidence/EV-0111",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:145",
+    "spell 24198"
+   ]
+  },
+  "20071": {
+   "name": "Talisman of Arathor",
+   "effects": [],
+   "ignored": [
+    "Damage Absorb (absorbs 554-678 physical damage for 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:143",
+    "spell 23991"
+   ]
+  },
+  "20072": {
+   "name": "Defiler's Talisman",
+   "effects": [],
+   "ignored": [
+    "Damage Absorb (absorbs 554-678 physical damage for 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:145",
+    "spell 23991"
+   ]
+  },
+  "20130": {
+   "name": "Diamond Flask",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 360000,
+     "sharedCooldownMs": 60000,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "CHUG! 363881 is a 5 s channel (the wearer cannot attack while channelling) healing 224 per second. The row also carries A_DUMMY 20 and links row 1318070 \"Diamond Flask\": +20 Strength for 60 s, presumably granted by the chug; when exactly is not stated."
+     }
+    }
+   ],
+   "ignored": [
+    "heal 224 per second for 5 s"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference models only the heal and names the dummy \"not simulated\", so the +20 Strength buff is not in the reference. Warrior only. 6 min cooldown; shared category 1153 is the potion category (60 s lockout both ways).",
+   "cite": [
+    "sim/common/shared/shared_utils.go:1365",
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:302",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:1691",
+    "spell 363881",
+    "spell 1318073"
+   ]
+  },
+  "20525": {
+   "name": "Earthen Sigil",
+   "effects": [],
+   "ignored": [
+    "Earthen Sigil (40 mana per second for 10 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Mana only.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:330",
+    "spell 24884"
+   ]
+  },
+  "21115": {
+   "name": "Defiler's Talisman",
+   "effects": [],
+   "ignored": [
+    "Damage Absorb (absorbs 454-554 physical damage for 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:147",
+    "spell 25746"
+   ]
+  },
+  "21116": {
+   "name": "Defiler's Talisman",
+   "effects": [],
+   "ignored": [
+    "Damage Absorb (absorbs 353-431 physical damage for 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:149",
+    "spell 25747"
+   ]
+  },
+  "21117": {
+   "name": "Talisman of Arathor",
+   "effects": [],
+   "ignored": [
+    "Damage Absorb (absorbs 454-554 physical damage for 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:151",
+    "spell 25746"
+   ]
+  },
+  "21118": {
+   "name": "Talisman of Arathor",
+   "effects": [],
+   "ignored": [
+    "Damage Absorb (absorbs 353-431 physical damage for 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:153",
+    "spell 25747"
+   ]
+  },
+  "21326": {
+   "name": "Defender of the Timbermaw",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 20000,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "Summons a Timbermaw guardian (NPC 15720) for 20 s. Its attacks and damage are not in the spell store."
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference lists it as \"Not simulated\" (summon effect type 28). Shared category 94 (20 s).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:1853",
+    "spell 26066",
+    "spell 1318470"
+   ]
+  },
+  "22257": {
+   "name": "Bloodclot Band",
+   "effects": [],
+   "ignored": [
+    "Resist Bleed (+10%)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "spell 1300755"
+   ]
+  },
+  "22268": {
+   "name": "Draconic Infused Emblem",
+   "effects": [],
+   "ignored": [
+    "Draconic Infused Emblem (8% on harmful spell hit: +35 spell damage and healing 10 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:494",
+    "sim/common/forever/items_trinkets.go:482",
+    "sim/common/forever/items_trinkets.go:504",
+    "spell 1318930",
+    "spell 1318931"
+   ]
+  },
+  "22321": {
+   "name": "Heart of Wyrmthalak",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": false,
+      "ppm": 1.95,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 27655,
+      "school": "fire",
+      "min": 112,
+      "max": 168,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "1.95 procs per minute, measured (EV-0133), on landed damaging melee hits of either hand, white or special, each priced on its own weapon's speed; no internal cooldown. Flame Lash is 140 Fire +/-20% rolled as a spell (hit and crit); triple damage to Orcs.",
+   "cite": [
+    "sim/common/shared/shared_utils.go:691",
+    "docs/evidence/EV-0133",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4214",
+    "spell 27655",
+    "spell 27656"
+   ]
+  },
+  "191312": {
+   "name": "Failsafe Phylactery",
+   "effects": [],
+   "ignored": [
+    "Failsafe Phylactery (prevents one killing blow)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:2137",
+    "spell 370391"
+   ]
+  },
+  "219326": {
+   "name": "Seed of Renewal",
+   "effects": [],
+   "ignored": [
+    "Seed of Renewal (seed that grows a healing blossom when the enemy dies)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:2169",
+    "spell 443678",
+    "spell 443278"
+   ]
+  },
+  "249469": {
+   "name": "Frozen Heart of the Mountain",
+   "effects": [],
+   "ignored": [
+    "Chthonic Power (+29 Frost and Shadow spell damage 15 s, doubled in Snowy areas)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The 9 hit rating is the item's own stat. Using it puts offensive trinkets (category 1141) on a 15 s lockout.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:262",
+    "spell 1249110"
+   ]
+  },
+  "249470": {
+   "name": "Molten Heart of the Mountain",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 15000,
+     "offGcd": true,
+     "result": {
+      "type": "buff",
+      "spellId": 1249113,
+      "name": "Molten Fury",
+      "durationMs": 15000,
+      "stats": {
+       "ap": 55
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "+55 attack power for 15 s; the amount doubles to 110 in Volcanic areas (area group 9203, which the reference infers to be the Blackrock zones, Molten Core, Blackwing Lair and Onyxia's Lair). Shared category 1141 (15 s). The +2 physical damage is the item's own stat.",
+   "cite": [
+    "sim/common/shared/shared_utils.go:1569",
+    "sim/core/spelldata/area.go:32",
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:198",
+    "spell 1249113"
+   ]
+  },
+  "249473": {
+   "name": "Dormant Heart of the Mountain",
+   "effects": [],
+   "ignored": [
+    "Eternal Power (on a healing cast: +40 healing and +13 spell damage 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:393",
+    "sim/common/forever/items_trinkets.go:386",
+    "sim/common/forever/items_trinkets.go:403",
+    "sim/common/forever/items_trinkets.go:407",
+    "sim/common/forever/items_trinkets.go:408",
+    "sim/common/forever/items_trinkets.go:409",
+    "spell 1249119",
+    "spell 1249118"
+   ]
+  },
+  "260205": {
+   "name": "Highborne Research Tablet",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": false,
+      "ppm": 2.95,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1265634,
+      "school": "arcane",
+      "min": 69,
+      "max": 81,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "2.95 procs per minute, measured (EV-0131), on landed damaging hits, each weapon hit priced on its own weapon's speed; Thunder Clap never rolls it; no internal cooldown. Ancient Power is a 30 yd/s missile, 75 Arcane +/-8%, rolled as a spell (hit and crit); double damage to Naga and Satyrs.",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:259",
+    "sim/core/procs.go:164",
+    "docs/evidence/EV-0131",
+    "sim/common/forever/items_trinkets.go:254",
+    "sim/common/forever/items_trinkets.go:266",
+    "sim/common/forever/items_trinkets.go:289",
+    "sim/common/forever/items_trinkets.go:291",
+    "spell 1265634",
+    "spell 1318159"
+   ]
+  },
+  "260308": {
+   "name": "Hyjal Postal Clasp",
+   "effects": [],
+   "ignored": [
+    "+5% running and swimming speed"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:2212",
+    "spell 1284734"
+   ]
+  },
+  "260819": {
+   "name": "EZ-Thro Field Transporter: Gadgetzan",
+   "effects": [],
+   "ignored": [
+    "Gnomish Transporter (teleport)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:92",
+    "spell 23453"
+   ]
+  },
+  "260820": {
+   "name": "SAF-T Emergency Ripper: Everlook",
+   "effects": [],
+   "ignored": [
+    "Everlook Transporter (teleport)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "spell 23442"
+   ]
+  },
+  "260821": {
+   "name": "EZ and SAF Field Transporter: Mt. Hyjal",
+   "effects": [],
+   "ignored": [
+    "Mount Hyjal Transporter (teleport)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:94",
+    "spell 1269339"
+   ]
+  },
+  "260824": {
+   "name": "Gnomish Poultryizer",
+   "effects": [],
+   "ignored": [
+    "Poultryizer (transforms and silences the target 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:96",
+    "spell 1270941"
+   ]
+  },
+  "268873": {
+   "name": "Defender of the Barkskin",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 20000,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "Summons a Barkskin guardian (NPC 265155) for 20 s. Its attacks and damage are not in the spell store."
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference lists it as \"Not simulated\" (summon effect type 28). Shared category 94 (20 s).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:2226",
+    "spell 1294063",
+    "spell 1318514"
+   ]
+  },
+  "269741": {
+   "name": "Scented Runewood Brooch",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": false,
+      "ppm": 1.2,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "other",
+      "description": "Only when the hit target is a Furbolg: casts 1318324, 84-126 Nature (105 +/-20%), a 25 yd/s missile rolled as a spell (hit and crit). Against any other target it never procs."
+     }
+    }
+   ],
+   "ignored": [
+    "Irresistible Scent (on-use charm, not modelled)"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "1.2 procs per minute is a log fit marked observed, not validated (EV-0136). Weapon hits are priced on their own weapon's speed.",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:305",
+    "docs/evidence/EV-0136",
+    "sim/common/forever/items_trinkets.go:295",
+    "sim/common/forever/items_trinkets.go:314",
+    "spell 1318324",
+    "spell 1318323",
+    "spell 1296664"
+   ]
+  },
+  "270226": {
+   "name": "Golden Banana",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 15000,
+     "offGcd": true,
+     "result": {
+      "type": "buff",
+      "spellId": 1287571,
+      "name": "Monkey Business",
+      "durationMs": 15000,
+      "stats": {
+       "str": 16,
+       "agi": 16
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [
+    "+16 Stamina, Intellect and Spirit from the same buff"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "+16 to all stats for 15 s; both the amount (32) and the duration (30 s) double in Forest and Grassland areas. Shared category 1141 (15 s).",
+   "cite": [
+    "sim/common/shared/shared_utils.go:1569",
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:165",
+    "spell 1287571"
+   ]
+  },
+  "272437": {
+   "name": "Adaptive Combat Assistant",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 15000,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "Damage Sigmoid 1291097 absorbs 450 damage of any school for 15 s. Only if incoming damage uses the shield up before it expires, it casts Sigmoid Revenge 1291099: 90-110 Nature (100 +/-10%) to enemies within 5 yd, rolled as a spell (hit and crit). It is not a damage ramp."
+     }
+    }
+   ],
+   "ignored": [
+    "absorb 450"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "For a warrior who takes no damage the shield never breaks, so it deals nothing; using it still locks category 1141 offensive trinkets for 15 s. The 11 expertise rating is the item's own stat.",
+   "cite": [
+    "sim/common/shared/shared_utils.go:1374",
+    "sim/common/shared/shared_utils.go:1432",
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:157",
+    "spell 1291097"
+   ]
+  },
+  "272438": {
+   "name": "Weakness Analyzer",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 360000,
+     "sharedCooldownMs": 20000,
+     "offGcd": true,
+     "result": {
+      "type": "buff",
+      "spellId": 1291101,
+      "name": "Analyzing Weaknesses",
+      "durationMs": 20000,
+      "stats": {},
+      "pct": {
+       "meleeCritPct": 5
+      },
+      "maxStacks": 1,
+      "charges": 1,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "+5 percentage points of melee and spell crit for 20 s or until the wearer's first direct crit, which spends the single charge (a white or special crit of either hand; periodic ticks and item-proc spells do not spend it; EV-0162). With a high crit chance the buff therefore ends within a few attacks. Shared category 1141 (20 s).",
+   "cite": [
+    "sim/common/shared/spell_data_aura.go:214",
+    "docs/evidence/EV-0162",
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:232",
+    "spell 1291101"
+   ]
+  },
+  "272439": {
+   "name": "Serenity Field",
+   "effects": [],
+   "ignored": [
+    "Serenity (+72 Spirit 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:464",
+    "spell 1291103"
+   ]
+  },
+  "272440": {
+   "name": "Defender's Grip Stabilizer",
+   "effects": [],
+   "ignored": [
+    "Stabilized (+8% block 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:234",
+    "spell 1291105"
+   ]
+  },
+  "274386": {
+   "name": "Toy Soldier",
+   "effects": [],
+   "ignored": [
+    "Toy Soldier (+3% dodge 20 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:236",
+    "spell 1293820"
+   ]
+  },
+  "274641": {
+   "name": "Theka's Last Breath",
+   "effects": [],
+   "ignored": [
+    "Theka's Last Breath (slows and transforms nearby enemies)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Not simulated by the reference.",
+   "cite": [
+    "spell 1294617"
+   ]
+  },
+  "274648": {
+   "name": "The Desert Rose",
+   "effects": [],
+   "ignored": [
+    "The Desert Rose (+7% mount speed in Desert areas)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "spell 1294646"
+   ]
+  },
+  "274759": {
+   "name": "Everlook Pathcarver",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 15000,
+     "offGcd": true,
+     "result": {
+      "type": "damage",
+      "spellId": 1295270,
+      "school": "physical",
+      "min": 607,
+      "max": 607,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "607 Physical, no variance, split evenly between up to 5 enemies within 4 yd of the target (all 607 on a lone target); the row has the magic defense type, so it rolls spell hit and crit although the school is physical. Double damage to Plants. Shared category 1141 (15 s).",
+   "cite": [
+    "sim/common/shared/shared_utils.go:1326",
+    "sim/common/shared/shared_utils.go:953",
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:259",
+    "spell 1295270"
+   ]
+  },
+  "274760": {
+   "name": "Everlook Delivery Bot",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 20000,
+     "offGcd": true,
+     "result": {
+      "type": "damage",
+      "spellId": 1295633,
+      "school": "fire",
+      "min": 467,
+      "max": 467,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": false
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Marks the target for 20 s; once 6, 7 or 8 (uniform roll) damaging hits have landed on it, a 10 yd/s missile deals 467 Fire, rolled as a spell that cannot crit. If the count is not reached in 20 s nothing happens. The tooltip halves the count in Snowy areas, which the sim does not model. Shared category 1141 (20 s).",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:172",
+    "sim/common/forever/items_trinkets.go:218",
+    "spell 1295271"
+   ]
+  },
+  "274761": {
+   "name": "Parachute-Priest Pager",
+   "effects": [],
+   "ignored": [
+    "Parachute-Priest Pager (summons a priest NPC for 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "The reference does not model it; read as a healer from its name, the summoned unit's actions are not in the spell store.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:98",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:2825",
+    "spell 1295272",
+    "spell 1318317"
+   ]
+  },
+  "275009": {
+   "name": "Emblem of Slamming",
+   "effects": [],
+   "ignored": [
+    "Slammed (stuns the target and the wearer for 3 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt. Row 1315972 stuns both the target and the caster for 3 s, so using it costs the wearer 3 s; its A_DUMMY 50 and the linked 5 s variant 1317450 are unexplained. The 14 attack power is the item's own stat.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:100",
+    "spell 1315972"
+   ]
+  },
+  "275347": {
+   "name": "Lichbane",
+   "effects": [],
+   "ignored": [
+    "Lichbane (stuns an Undead 6 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:102",
+    "spell 1296564"
+   ]
+  },
+  "276337": {
+   "name": "Thaelemaches' Talisman",
+   "effects": [],
+   "ignored": [
+    "Demonbane (fears Demons within 15 yd for 6 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt. The 18 attack power is the item's own stat.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:106",
+    "spell 1299440"
+   ]
+  },
+  "276743": {
+   "name": "Fingerbreaker Stamp",
+   "effects": [],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "medium",
+   "notes": "Tooltip (generated comment): \"Increases Strength by 38 while affected by a Bleed.\" Row 1314784 is A_PERIODIC_DUMMY 38 every 1 s. The reference does not model it; the bonus needs a bleed on the wearer, which a warrior the boss never hits does not have.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:2898",
+    "spell 1314784"
+   ]
+  },
+  "276744": {
+   "name": "Zarla's Snack Pouch",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 900000,
+     "sharedCooldownMs": 15000,
+     "offGcd": true,
+     "result": {
+      "type": "other",
+      "description": "Summons NPC 274297 for 15 s. What it does is not in the spell store."
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Reference lists it as \"Not simulated\" (summon effect type 28); purpose unknown. 15 min cooldown; shared category 94 (15 s).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:2912",
+    "spell 1315190",
+    "spell 1318104"
+   ]
+  },
+  "277559": {
+   "name": "Shen'dralar Relic",
+   "effects": [],
+   "ignored": [
+    "Forbidden Magic (dispels a magic effect from the enemy every 4 s for 8 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:108",
+    "spell 1302359"
+   ]
+  },
+  "277844": {
+   "name": "Mirage Mirror",
+   "effects": [],
+   "ignored": [
+    "Mirage Mirror (+25% speed 10 s, invisibility in Desert areas)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:110",
+    "spell 1302833"
+   ]
+  },
+  "277910": {
+   "name": "Mysticbloom Seed",
+   "effects": [],
+   "ignored": [],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "Its only effect, 1317283, is an equip A_DUMMY with no amount; the item is tagged for Forest and Grassland areas from its tooltip. What it does is unknown and the reference does not model it. Item level 40.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:2926",
+    "spell 1317283"
+   ]
+  },
+  "277950": {
+   "name": "Wastewanderer Rations",
+   "effects": [],
+   "ignored": [
+    "Wastewanderer Rations (Well Fed buffs last longer)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:2942",
+    "spell 1302968"
+   ]
+  },
+  "280032": {
+   "name": "Bolt's Charged Eyeball",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": false,
+      "chance": 0.15,
+      "icdMs": 3000
+     },
+     "result": {
+      "type": "other",
+      "description": "On a successful 15% roll, a second 50% roll decides: half the time it casts Grounded Electroshock 1315996 on the hit target, 60 Nature, no variance, rolled as a spell (hit and crit), triple damage to Dinosaurs; the other half shocks the wearer and deals nothing. The 3 s internal cooldown starts on the 15% roll either way."
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Hand-written. Any landed hit rolls it, one that deals no damage included, and so do the ticks of a periodic the wearer cast as an ability (Rend); Deep Wounds, which the warrior code flags as a proc with no proc mask, does not. The 50/50 split between wearer and target is the reference's own assumption, flagged TODO.",
+   "cite": [
+    "sim/common/forever/items_trinkets.go:361",
+    "sim/common/forever/items_trinkets.go:353",
+    "sim/common/forever/items_trinkets.go:368",
+    "sim/common/forever/items_trinkets.go:380",
+    "sim/common/forever/items_trinkets.go:382",
+    "spell 1311505"
+   ]
+  },
+  "280060": {
+   "name": "Lucky Shovelnose Tuft",
+   "effects": [],
+   "ignored": [
+    "Lucky Shovelnose Snout (+5% dodge 15 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The 11 Strength is the item's own stat.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:238",
+    "spell 1315844"
+   ]
+  },
+  "280065": {
+   "name": "Behemoth Bones",
+   "effects": [],
+   "ignored": [
+    "Behemoth Bone (heals the wearer 480-530 and a nearby ally)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The 34 attack power is the item's own stat.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:304",
+    "spell 1315849"
+   ]
+  },
+  "280071": {
+   "name": "Flamebreak Talisman",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 30000,
+     "offGcd": true,
+     "result": {
+      "type": "buff",
+      "spellId": 1315878,
+      "name": "Flamebreak Talisman",
+      "durationMs": 30000,
+      "stats": {
+       "agi": 66
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "The reference applies +66 Agility for 30 s unconditionally. Row 1315878 states two separate +33 Agility effects and the item is tagged Elemental from its tooltip, which fits \"33, and 33 more if an elemental is nearby\"; if so the reference overstates it against non-elementals. Shared category 1141 (30 s).",
+   "cite": [
+    "sim/common/shared/shared_utils.go:1262",
+    "tools/database/dbc/item_effect_types_test.go:87",
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:162",
+    "spell 1315878"
+   ]
+  },
+  "280074": {
+   "name": "Scalding Flamehoof",
+   "effects": [],
+   "ignored": [
+    "Scalding Flamehoof (+14% Fire damage taken and +14% movement speed 20 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt. The +4 to all stats is the item's own.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:113",
+    "spell 1309551"
+   ]
+  },
+  "281598": {
+   "name": "Rusthowl's Worn Collar",
+   "effects": [],
+   "ignored": [
+    "Hyjal Speed (+4% movement speed in Mount Hyjal)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:2972",
+    "spell 1311895"
+   ]
+  },
+  "282080": {
+   "name": "Flame Seared Signet",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "damageTaken",
+      "attacks": [],
+      "ownHandOnly": false,
+      "chance": 1.0,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1312955,
+      "school": "fire",
+      "min": 2,
+      "max": 2,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": false
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Fires only when the wearer is struck, so it does nothing for a warrior the boss never hits. Damage shield: 2 Fire to each attacker whose hit lands, rolling spell hit, never a crit.",
+   "cite": [
+    "sim/core/buffs/generated_support.go:43",
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:209",
+    "spell 1312955"
+   ]
+  },
+  "282778": {
+   "name": "Mark of the Red Flight",
+   "effects": [],
+   "ignored": [
+    "Renewing Flame (absorbs 570 Fire damage 10 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Shares category 1153 with potions (120 s). The attack power against Dragonkin is the item's own stat.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:159",
+    "spell 1314412"
+   ]
+  },
+  "284231": {
+   "name": "Sayaad Charm",
+   "effects": [],
+   "ignored": [
+    "Charm (stuns a Humanoid 15 s; 1.5 s cast on the global cooldown)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:115",
+    "spell 1315557"
+   ]
+  },
+  "286556": {
+   "name": "Winds of Tanaris",
+   "effects": [],
+   "ignored": [
+    "Desert Winds (slows enemies within 10 yd by 50% for 10 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "The generator could not model it (commented-out block) and nothing hand-written does; it does not change damage dealt. The row also has an unexplained E_DUMMY of -80. The 16 attack power is the item's own stat.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:117",
+    "spell 1320579"
+   ]
+  },
+  "286646": {
+   "name": "Gill's Gills",
+   "effects": [],
+   "ignored": [
+    "Water Breathing (+50%)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The 12 attack power is the item's own stat.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3084",
+    "spell 11789"
+   ]
+  },
+  "287043": {
+   "name": "Predaceous Band",
+   "effects": [],
+   "ignored": [
+    "Guidance of Ursoc (+2% movement speed in Forest and Grassland areas)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "The attack power against Beasts is the item's own stat.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3114",
+    "spell 1308520"
+   ]
+  }
+ }
+}

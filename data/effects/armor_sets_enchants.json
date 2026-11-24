@@ -1,0 +1,3726 @@
+{
+ "items": {
+  "8348": {
+   "name": "Helm of Fire",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 300000,
+     "sharedCooldownMs": 10000,
+     "offGcd": true,
+     "result": {
+      "type": "damage",
+      "spellId": 10578,
+      "school": "fire",
+      "min": 286,
+      "max": 376,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 33,
+       "periodMs": 2000,
+       "durationMs": 8000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "On use (5 min cooldown): Fireball 10578 at the target, 286 to 376 Fire (331 with 27.2% variance) plus 33 Fire every 2 s for 8 s (4 ticks, applied only if the hit lands); it rolls the spell hit table, can crit and has no power coefficient. It shares on-use category 1141 with most on-use trinkets and locks them for 10 s; it is off the global cooldown.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:247",
+    "sim/common/shared/shared_utils.go:1326",
+    "sim/common/shared/shared_utils.go:2183",
+    "spell 10578"
+   ]
+  },
+  "11808": {
+   "name": "Circle of Flame",
+   "effects": [],
+   "ignored": [
+    "Circle of Flame (on use: burns the wearer and restores the wearer's mana for 10 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "17447 puts periodic damage and a periodic mana gain on the wearer each second for 10 s; no enemy is hit and a warrior has no mana. The reference leaves it commented out ('the damage lands on implicit target 1, not an enemy'), so nothing DPS-relevant is missing.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:51",
+    "spell 17447"
+   ]
+  },
+  "12628": {
+   "name": "Demon Forged Breastplate",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "damageTaken",
+      "attacks": [],
+      "ownHandOnly": false,
+      "chance": 0.03,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16608,
+      "school": "shadow",
+      "min": 0,
+      "max": 0,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": false,
+      "dot": {
+       "tickDamage": 60,
+       "periodMs": 1000,
+       "durationMs": 4000
+      }
+     }
+    }
+   ],
+   "ignored": [
+    "Drain Life self-heal (heals the wearer for the damage leeched)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Fires only when the wearer is struck by a melee swing or melee ability: 3% each, no cooldown (ProcChance column, status GameFiles). It casts Drain Life 16608 on the attacker: one spell hit roll, then 60 Shadow per second for 4 s with no tick crit. Worth nothing unless the wearer takes melee hits.",
+   "cite": [
+    "sim/common/forever/items_armor.go:225",
+    "spell 16611",
+    "spell 16608"
+   ]
+  },
+  "12631": {
+   "name": "Fiery Plate Gauntlets",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": false,
+      "chance": 1.0,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 7714,
+      "school": "fire",
+      "min": 4,
+      "max": 4,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Trigger 7721 fires on every landed melee hit that deals damage (white swing or ability, either hand; 100%, no cooldown) and casts 7714: 4 Fire damage as a separate magic spell that rolls spell hit and spell crit, with no power coefficient.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3727",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 7721",
+    "spell 7714"
+   ]
+  },
+  "12632": {
+   "name": "Storm Gauntlets",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": false,
+      "chance": 1.0,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 16614,
+      "school": "nature",
+      "min": 3,
+      "max": 3,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Trigger 16615 fires on every landed melee hit that deals damage (white swing or ability, either hand; 100%, no cooldown) and casts 16614: 3 Nature damage as a separate magic spell that rolls spell hit and spell crit, with no power coefficient.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3735",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 16615",
+    "spell 16614"
+   ]
+  },
+  "18383": {
+   "name": "Force Imbued Gauntlets",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": false,
+      "chance": 1.0,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 1302247,
+      "school": "arcane",
+      "min": 2,
+      "max": 2,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Trigger 1302248 fires on every landed melee hit that deals damage (white swing or ability, either hand; 100%, no cooldown) and casts 1302247: 2 Arcane damage as a separate magic spell that rolls spell hit and spell crit, with no power coefficient.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4106",
+    "sim/common/shared/shared_utils.go:738",
+    "spell 1302248",
+    "spell 1302247"
+   ]
+  },
+  "12641": {
+   "name": "Invulnerable Mail",
+   "effects": [],
+   "ignored": [
+    "Self Invulnerability (5% when struck in melee, 10 s internal cooldown: immune to Physical damage for 3 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Defensive only. The reference leaves 16620 commented out as a manual implementation, so nothing DPS-relevant is missing.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:653",
+    "spell 16620",
+    "spell 16621"
+   ]
+  },
+  "13955": {
+   "name": "Stoneform Shoulders",
+   "effects": [],
+   "ignored": [
+    "Stoneform Shoulders (first Physical hit taken within 20 s of entering combat is reduced by 60)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Defensive only; hand-written in the reference as flat Physical damage taken -60 on the first hit taken after the encounter starts.",
+   "cite": [
+    "sim/common/forever/items_armor.go:264",
+    "spell 1298231"
+   ]
+  },
+  "14134": {
+   "name": "Cloak of Fire",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 120000,
+     "sharedCooldownMs": 0,
+     "offGcd": true,
+     "result": {
+      "type": "damage",
+      "spellId": 18374,
+      "school": "fire",
+      "min": 0,
+      "max": 0,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true,
+      "dot": {
+       "tickDamage": 25,
+       "periodMs": 5000,
+       "durationMs": 15000
+      }
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "On use (2 min cooldown, no shared cooldown category, off the global cooldown): for 15 s the wearer's aura 18364 casts 18374 every 5 s (3 pulses), 25 Fire to every enemy within 8 yd of the wearer. Each pulse is its own magic spell that rolls spell hit and spell crit; no power coefficient. The 'dot' fields describe the pulses, not a debuff on the target.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:253",
+    "sim/common/shared/shared_utils.go:1343",
+    "spell 18364",
+    "spell 18374"
+   ]
+  },
+  "14554": {
+   "name": "Cloudkeeper Legplates",
+   "effects": [
+    {
+     "kind": "onUse",
+     "cooldownMs": 900000,
+     "sharedCooldownMs": 30000,
+     "offGcd": true,
+     "result": {
+      "type": "buff",
+      "spellId": 18787,
+      "name": "Heaven's Blessing",
+      "durationMs": 30000,
+      "stats": {
+       "ap": 100
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "On use (15 min cooldown): +100 attack power (and +100 ranged attack power) for 30 s, off the global cooldown. It shares on-use category 1141 with most on-use trinkets and locks them for 30 s.",
+   "cite": [
+    "sim/common/forever/stat_bonus_cds_auto_gen.go:195",
+    "sim/common/shared/shared_utils.go:1262",
+    "spell 18787"
+   ]
+  },
+  "15138": {
+   "name": "Onyxia Scale Cloak",
+   "effects": [],
+   "ignored": [
+    "Onyxia Scale Cloak (protection from Shadow Flame)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "22683 is a dummy aura with no combat stats; the reference leaves it commented out.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:910",
+    "spell 22683"
+   ]
+  },
+  "16406": {
+   "name": "Knight-Lieutenant's Plate Gauntlets",
+   "effects": [
+    {
+     "kind": "other",
+     "description": "Passive while equipped: the rage cost of Hamstring is reduced by 3 (spell 22778, flat cost modifier of -30 tenths of rage on Hamstring's class flag)."
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Not a stat, proc or on-use effect, so it is given as kind 'other'. The reference applies 22778 as an equip aura that lowers Hamstring's cost; it changes damage only if the rotation casts Hamstring.",
+   "cite": [
+    "sim/warrior/item_armor.go:30",
+    "sim/core/spelldata/parse_effects_table.go:620",
+    "spell 22778"
+   ]
+  },
+  "16510": {
+   "name": "Blood Guard's Plate Gloves",
+   "effects": [
+    {
+     "kind": "other",
+     "description": "Passive while equipped: the rage cost of Hamstring is reduced by 3 (spell 22778, flat cost modifier of -30 tenths of rage on Hamstring's class flag)."
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Not a stat, proc or on-use effect, so it is given as kind 'other'. The reference applies 22778 as an equip aura that lowers Hamstring's cost; it changes damage only if the rotation casts Hamstring.",
+   "cite": [
+    "sim/warrior/item_armor.go:30",
+    "sim/core/spelldata/parse_effects_table.go:620",
+    "spell 22778"
+   ]
+  },
+  "272478": {
+   "name": "Premier Mortarplate Gloves",
+   "effects": [
+    {
+     "kind": "other",
+     "description": "Passive while equipped: the rage cost of Hamstring is reduced by 3 (spell 22778, flat cost modifier of -30 tenths of rage on Hamstring's class flag)."
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Not a stat, proc or on-use effect, so it is given as kind 'other'. The reference applies 22778 as an equip aura that lowers Hamstring's cost; it changes damage only if the rotation casts Hamstring.",
+   "cite": [
+    "sim/warrior/item_armor.go:30",
+    "sim/core/spelldata/parse_effects_table.go:620",
+    "spell 22778"
+   ]
+  },
+  "272513": {
+   "name": "Premier Champion's Mortarplate Gauntlets",
+   "effects": [
+    {
+     "kind": "other",
+     "description": "Passive while equipped: the rage cost of Hamstring is reduced by 3 (spell 22778, flat cost modifier of -30 tenths of rage on Hamstring's class flag)."
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Not a stat, proc or on-use effect, so it is given as kind 'other'. The reference applies 22778 as an equip aura that lowers Hamstring's cost; it changes damage only if the rotation casts Hamstring.",
+   "cite": [
+    "sim/warrior/item_armor.go:30",
+    "sim/core/spelldata/parse_effects_table.go:620",
+    "spell 22778"
+   ]
+  },
+  "272717": {
+   "name": "Premier Plate Gauntlets",
+   "effects": [
+    {
+     "kind": "other",
+     "description": "Passive while equipped: the rage cost of Hamstring is reduced by 3 (spell 22778, flat cost modifier of -30 tenths of rage on Hamstring's class flag)."
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Not a stat, proc or on-use effect, so it is given as kind 'other'. The reference applies 22778 as an equip aura that lowers Hamstring's cost; it changes damage only if the rotation casts Hamstring.",
+   "cite": [
+    "sim/warrior/item_armor.go:30",
+    "sim/core/spelldata/parse_effects_table.go:620",
+    "spell 22778"
+   ]
+  },
+  "272793": {
+   "name": "Premier Lieutenant Commander's Plate Gauntlets",
+   "effects": [
+    {
+     "kind": "other",
+     "description": "Passive while equipped: the rage cost of Hamstring is reduced by 3 (spell 22778, flat cost modifier of -30 tenths of rage on Hamstring's class flag)."
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Not a stat, proc or on-use effect, so it is given as kind 'other'. The reference applies 22778 as an equip aura that lowers Hamstring's cost; it changes damage only if the rotation casts Hamstring.",
+   "cite": [
+    "sim/warrior/item_armor.go:30",
+    "sim/core/spelldata/parse_effects_table.go:620",
+    "spell 22778"
+   ]
+  },
+  "18351": {
+   "name": "Magically Sealed Bracers",
+   "effects": [],
+   "ignored": [
+    "Spell Damage Reduction 05 (spell damage taken reduced by 5)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Defensive only; the reference applies it as an equip aura (flat spell damage taken -5).",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:128",
+    "spell 1292692"
+   ]
+  },
+  "276742": {
+   "name": "Girdle of Extracted Answers",
+   "effects": [],
+   "ignored": [
+    "Shield Spike (20 to 30 Physical damage to the attacker each time the wearer blocks; needs a shield)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "1308777 deals 25 Physical (40% variance) to the attacker on every blocked melee hit taken. A dual-wielding or two-hand Fury warrior has no shield and cannot block, so it never fires for this wearer. The reference models it for shield users.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:4343",
+    "spell 1308777"
+   ]
+  },
+  "284262": {
+   "name": "Howling Hide",
+   "effects": [],
+   "ignored": [
+    "Howler's Cry (10% per landed hit, 20 s internal cooldown: target attack power -60 for 30 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "It lowers the target's attack power, which does not change the wearer's damage. The reference leaves it commented out ('the debuff states no duration'), so it is not simulated at all.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3039",
+    "spell 1330916",
+    "spell 1315767"
+   ]
+  },
+  "285066": {
+   "name": "Ooze Rummagers",
+   "effects": [],
+   "ignored": [
+    "Ooze Covered Miner (extra ore from Ooze Covered Thorium Veins)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "1317446 is a dummy aura for mining; no combat effect.",
+   "cite": [
+    "sim/common/forever/stat_bonus_procs_auto_gen.go:3054",
+    "spell 1317446"
+   ]
+  }
+ },
+ "sets": {
+  "1": {
+   "name": "The Gladiator",
+   "bonuses": {
+    "2": {
+     "name": "The Gladiator (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "Fear resistance (lowers the hit chance of Fear effects on the wearer)"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known only from the reference's code comment; the reference registers nothing for it and its spell id is not in the checkout. Set: 6 items under id 1, one per slot (head, shoulder, chest, hands, legs, feet), one name group, at most 6 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1021"
+     ]
+    },
+    "3": {
+     "name": "The Gladiator (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 20
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "9331 is A_MOD_ATTACK_POWER +20 (and +20 ranged attack power), parsed onto the set aura. Set: 6 items under id 1, one per slot (head, shoulder, chest, hands, legs, feet), one name group, at most 6 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1023",
+      "spell 9331",
+      "sim/core/spelldata/parse_effects_table.go:272"
+     ]
+    },
+    "4": {
+     "name": "The Gladiator (4 pieces)",
+     "effects": [
+      {
+       "kind": "proc",
+       "trigger": {
+        "event": "hit",
+        "attacks": [
+         "mhAuto",
+         "ohAuto",
+         "mhSpecial",
+         "ohSpecial"
+        ],
+        "ownHandOnly": false,
+        "chance": 0.072,
+        "icdMs": 0
+       },
+       "result": {
+        "type": "buff",
+        "spellId": 1301124,
+        "name": "Roar of the Crowd",
+        "durationMs": 10000,
+        "stats": {},
+        "pct": {
+         "meleeHastePct": 5
+        },
+        "maxStacks": 1,
+        "charges": 0,
+        "decaying": false
+       }
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Hand-written: 7.2% per landed melee hit, white swings and melee abilities of either hand, a hit that deals no damage included; no cooldown. Row 1301123 states no rate; 7.2% is an Observed value from one wearer (EV-0166, 95% interval 5.1 to 9.8), so the rate is uncertain. The buff is A_MOD_MELEE_HASTE_3 +5: melee swing speed multiplied by 1.05 for 10 s, a new proc refreshes it. The tooltip's doubled chance with no ally within 20 yd is never applied. Set: 6 items under id 1, one per slot (head, shoulder, chest, hands, legs, feet), one name group, at most 6 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1013",
+      "sim/common/forever/items_sets.go:1035",
+      "docs/evidence/EV-0166-the-gladiator-roar-of-the-crowd-chance-per-melee-hit.md",
+      "spell 1301123",
+      "spell 1301124",
+      "db.json setBonusProcRates set 1"
+     ]
+    },
+    "5": {
+     "name": "The Gladiator (5 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeCritPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1314795 is A_MOD_CRIT_PCT +1: one percentage point of melee (and spell) crit given as percent, not rating. Set: 6 items under id 1, one per slot (head, shoulder, chest, hands, legs, feet), one name group, at most 6 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1023",
+      "spell 1314795",
+      "sim/core/spelldata/parse_effects_table.go:346"
+     ]
+    }
+   }
+  },
+  "321": {
+   "name": "Imperial Plate",
+   "bonuses": {
+    "2": {
+     "name": "Imperial Plate (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "Defense +7"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Hand-written as defense rating. Set: 8 items under id 321, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:37",
+      "spell 13385"
+     ]
+    },
+    "3": {
+     "name": "Imperial Plate (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeHitPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Hand-written as PhysicalHitPercent +1 (and spell hit +1): percentage points, not rating. Set: 8 items under id 321, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:37",
+      "spell 1251990"
+     ]
+    },
+    "4": {
+     "name": "Imperial Plate (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Movement speed cannot drop below 80%"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Known from the reference's code comment only; not registered because it has no place in the sim. Set: 8 items under id 321, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:34"
+     ]
+    },
+    "5": {
+     "name": "Imperial Plate (5 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "str": 20
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Hand-written +20 Strength. Set: 8 items under id 321, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:37",
+      "spell 1251984"
+     ]
+    },
+    "6": {
+     "name": "Imperial Plate (6 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeCritPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Hand-written as PhysicalCritPercent +1 (and spell crit +1): percentage points, not rating. Set: 8 items under id 321, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:37",
+      "spell 1251991"
+     ]
+    }
+   }
+  },
+  "41": {
+   "name": "Dal'Rend's Arms",
+   "bonuses": {
+    "2": {
+     "name": "Dal'Rend's Arms (2 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 50
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Generated set; 14056 is A_MOD_ATTACK_POWER +50 (and +50 ranged attack power). Set: 2 items under id 41: Dal'Rend's Sacred Charge (main-hand sword) and Dal'Rend's Tribal Guardian (off-hand sword), so both hands are taken and it needs dual wield. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:14",
+      "spell 14056"
+     ]
+    }
+   }
+  },
+  "65": {
+   "name": "Spider's Kiss",
+   "bonuses": {
+    "2": {
+     "name": "Spider's Kiss (2 pieces)",
+     "effects": [
+      {
+       "kind": "proc",
+       "trigger": {
+        "event": "hit",
+        "attacks": [
+         "mhAuto",
+         "ohAuto",
+         "mhSpecial",
+         "ohSpecial"
+        ],
+        "ownHandOnly": false,
+        "chance": 0.05,
+        "icdMs": 0
+       },
+       "result": {
+        "type": "targetArmor",
+        "spellId": 17333,
+        "amount": -100,
+        "durationMs": 10000,
+        "maxStacks": 1
+       }
+      }
+     ],
+     "ignored": [
+      "Spider's Kiss root (immobilizes the target)"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Hand-written: 5% per landed melee hit that deals damage (white swing or ability, either hand), from 17332's ProcChance column (status GameFiles), no cooldown. Debuff 17333 lowers the target's armor by 100 for 10 s and roots it (root ignored). The reference puts the armor in no exclusive category, so it stacks with Sunder Armor and the like; its own TODO says that stacking still needs an in-game test. Set: 2 one-hand weapons under id 65 (Venomspitter mace and Fang of the Crystal Spider dagger), one in each hand, so it needs dual wield. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:971",
+      "sim/common/forever/items_sets.go:981",
+      "spell 17332",
+      "spell 17333",
+      "db.json setBonusProcRates set 65"
+     ]
+    }
+   }
+  },
+  "123": {
+   "name": "Bloodmail Regalia",
+   "bonuses": {
+    "2": {
+     "name": "Bloodmail Regalia (2 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 10
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "9140 is A_MOD_ATTACK_POWER +10 (and ranged). Set: 5 items under id 123, one per slot (chest, hands, waist, legs, feet), at most 5 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1063",
+      "spell 9140"
+     ]
+    },
+    "3": {
+     "name": "Bloodmail Regalia (3 pieces)",
+     "effects": [
+      {
+       "kind": "proc",
+       "trigger": {
+        "event": "hit",
+        "attacks": [
+         "mhAuto",
+         "ohAuto"
+        ],
+        "ownHandOnly": false,
+        "chance": 0.107,
+        "icdMs": 0
+       },
+       "result": {
+        "type": "damage",
+        "spellId": 1299739,
+        "school": "physical",
+        "min": 0,
+        "max": 0,
+        "apCoef": 0,
+        "spCoef": 0,
+        "table": "none",
+        "canCrit": false,
+        "dot": {
+         "tickDamage": 7,
+         "periodMs": 1000,
+         "durationMs": 10000
+        }
+       }
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Hand-written: 10.7% per landed white swing of either hand (also Windfury hits); melee abilities, Heroic Strike and Cleave included, never roll it. Row 1299740 states no rate; 10.7% is an Observed value from shaman wearers only (EV-0167), and the reference's TODO says chance-per-swing versus procs per minute is not settled. The bleed 1299739 lands with no hit roll: 7 Physical per second for 10 s (70 total), flagged as a bleed, no crit, no attack power coefficient; a new proc restarts it. Set: 5 items under id 123, one per slot (chest, hands, waist, legs, feet), at most 5 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1054",
+      "sim/common/forever/items_sets.go:1078",
+      "docs/evidence/EV-0167-bloodmail-regalia-bleed-on-white-swings-and-windfury-strikes.md",
+      "spell 1299740",
+      "spell 1299739",
+      "db.json setBonusProcRates set 123"
+     ]
+    },
+    "4": {
+     "name": "Bloodmail Regalia (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "All resistances +5"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18676 is A_MOD_RESISTANCE +5 on the magic schools. Set: 5 items under id 123, one per slot (chest, hands, waist, legs, feet), at most 5 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1063",
+      "spell 18676"
+     ]
+    },
+    "5": {
+     "name": "Bloodmail Regalia (5 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "crit": 21
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1299738 is A_MOD_RATING 21 on the crit rating mask (1792), so the reference gives 21 crit rating (1.5% at 14 rating per 1%), not a flat percent. Set: 5 items under id 123, one per slot (chest, hands, waist, legs, feet), at most 5 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1063",
+      "spell 1299738",
+      "sim/core/spelldata/parse_effects_table.go:298",
+      "sim/core/spelldata/parse_effects_table.go:1518"
+     ]
+    }
+   }
+  },
+  "121": {
+   "name": "Cadaverous Garb",
+   "bonuses": {
+    "3": {
+     "name": "Cadaverous Garb (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 10
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [
+      "Snare and root duration on the wearer -10%"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "9140 is A_MOD_ATTACK_POWER +10 (and ranged). The same bonus also shortens snares and roots on the wearer (1292546), which the reference leaves out. Set: 5 items under id 121, one per slot (chest, hands, waist, legs, feet), at most 5 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:662",
+      "spell 9140",
+      "spell 1292546"
+     ]
+    },
+    "4": {
+     "name": "Cadaverous Garb (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "All resistances +5"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18676 is A_MOD_RESISTANCE +5 on the magic schools. Set: 5 items under id 121, one per slot (chest, hands, waist, legs, feet), at most 5 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:662",
+      "spell 18676"
+     ]
+    },
+    "5": {
+     "name": "Cadaverous Garb (5 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeHitPct": 2
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "460230 is A_MOD_HIT_CHANCE +2 (and spell hit +2): percentage points, not rating. Set: 5 items under id 121, one per slot (chest, hands, waist, legs, feet), at most 5 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:662",
+      "spell 460230",
+      "sim/core/spelldata/parse_effects_table.go:319"
+     ]
+    }
+   }
+  },
+  "489": {
+   "name": "Black Dragon Mail",
+   "bonuses": {
+    "2": {
+     "name": "Black Dragon Mail (2 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeHitPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Generated set; 15464 is A_MOD_HIT_CHANCE +1 (and spell hit +1): percentage points, not rating. Set: 3 items under id 489, one per slot (shoulder, chest, legs), at most 3 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:685",
+      "spell 15464",
+      "sim/core/spelldata/parse_effects_table.go:319"
+     ]
+    },
+    "3": {
+     "name": "Black Dragon Mail (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeCritPct": 2
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Generated set; 7598 is A_MOD_WEAPON_CRIT_PERCENT +2: melee crit in percentage points, not rating. Set: 3 items under id 489, one per slot (shoulder, chest, legs), at most 3 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:685",
+      "spell 7598",
+      "sim/core/spelldata/parse_effects_table.go:335"
+     ]
+    }
+   }
+  },
+  "142": {
+   "name": "Stormshroud Armor",
+   "bonuses": {
+    "2": {
+     "name": "Stormshroud Armor (2 pieces)",
+     "effects": [
+      {
+       "kind": "proc",
+       "trigger": {
+        "event": "hit",
+        "attacks": [
+         "mhAuto",
+         "ohAuto",
+         "mhSpecial",
+         "ohSpecial"
+        ],
+        "ownHandOnly": false,
+        "chance": 0.1,
+        "icdMs": 0
+       },
+       "result": {
+        "type": "damage",
+        "spellId": 18980,
+        "school": "nature",
+        "min": 15,
+        "max": 25,
+        "apCoef": 0,
+        "spCoef": 0,
+        "table": "spell",
+        "canCrit": true
+       }
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Generated set proc: 10% per landed melee hit that deals damage (white swing or ability, either hand), from 18979's ProcChance column (status GameFiles), no cooldown. It casts Lightning 18980: 20 Nature with 50% variance (15 to 25) as a magic spell that rolls spell hit and spell crit, no power coefficient. Set: 4 items under id 142, one per slot (shoulder, chest, hands, legs), at most 4 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:57",
+      "sim/common/shared/item_sets.go:97",
+      "spell 18979",
+      "spell 18980",
+      "db.json setBonusProcRates set 142"
+     ]
+    },
+    "3": {
+     "name": "Stormshroud Armor (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "Revitalize (3% per melee hit: restores 18 energy)"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "23864 restores energy; a warrior has no energy bar, so the reference registers no listener for this wearer. Set: 4 items under id 142, one per slot (shoulder, chest, hands, legs), at most 4 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:57",
+      "spell 23863",
+      "spell 23864",
+      "sim/common/shared/item_sets.go:114"
+     ]
+    },
+    "4": {
+     "name": "Stormshroud Armor (4 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 14
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "9142 is A_MOD_ATTACK_POWER +14 (and ranged). Set: 4 items under id 142, one per slot (shoulder, chest, hands, legs), at most 4 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:57",
+      "spell 9142"
+     ]
+    }
+   }
+  },
+  "143": {
+   "name": "Devilsaur Armor",
+   "bonuses": {
+    "2": {
+     "name": "Devilsaur Armor (2 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeHitPct": 2
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Generated set; 460230 is A_MOD_HIT_CHANCE +2 (and spell hit +2): percentage points, not rating. Set: 2 items under id 143 (legs and hands), at most 2 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:71",
+      "spell 460230",
+      "sim/core/spelldata/parse_effects_table.go:319"
+     ]
+    }
+   }
+  },
+  "187": {
+   "name": "The Elements",
+   "bonuses": {
+    "2": {
+     "name": "The Elements (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "All resistances +8"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18679 is A_MOD_RESISTANCE +8 on the five magic schools. Set: 6 warrior-usable items under id 187 in items.json (head, shoulder, feet, wrist, hands, waist); the reference lists 8 slots but no chest or legs piece is in items.json, so at most 6 worn. No bonus changes a warrior's melee damage. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:437",
+      "spell 18679"
+     ]
+    },
+    "3": {
+     "name": "The Elements (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "+18 spell damage and healing"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "9346 raises magic-school damage and healing done; it adds nothing to Physical attacks. Set: 6 warrior-usable items under id 187 in items.json (head, shoulder, feet, wrist, hands, waist); the reference lists 8 slots but no chest or legs piece is in items.json, so at most 6 worn. No bonus changes a warrior's melee damage. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:437",
+      "spell 9346"
+     ]
+    },
+    "4": {
+     "name": "The Elements (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Disarms an attacker when struck"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known from the reference's code comment only; not registered. Set: 6 warrior-usable items under id 187 in items.json (head, shoulder, feet, wrist, hands, waist); the reference lists 8 slots but no chest or legs piece is in items.json, so at most 6 worn. No bonus changes a warrior's melee damage. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:434"
+     ]
+    },
+    "5": {
+     "name": "The Elements (5 pieces)",
+     "effects": [],
+     "ignored": [
+      "The Furious Storm (1 proc per minute on white swings and spell casts: +65 spell damage and healing for 10 s)"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "450626 casts 27775, which raises magic-school damage and healing only; it fires for a warrior but adds nothing to Physical attacks. Set: 6 warrior-usable items under id 187 in items.json (head, shoulder, feet, wrist, hands, waist); the reference lists 8 slots but no chest or legs piece is in items.json, so at most 6 worn. No bonus changes a warrior's melee damage. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:437",
+      "spell 450626",
+      "spell 27775"
+     ]
+    },
+    "6": {
+     "name": "The Elements (6 pieces)",
+     "effects": [],
+     "ignored": [
+      "8 mana per 5 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18378 is mana regeneration; a warrior has no mana. Set: 6 warrior-usable items under id 187 in items.json (head, shoulder, feet, wrist, hands, waist); the reference lists 8 slots but no chest or legs piece is in items.json, so at most 6 worn. No bonus changes a warrior's melee damage. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:437",
+      "spell 18378"
+     ]
+    }
+   }
+  },
+  "186": {
+   "name": "Beaststalker Armor",
+   "bonuses": {
+    "2": {
+     "name": "Beaststalker Armor (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "All resistances +8"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18679 is A_MOD_RESISTANCE +8 on the five magic schools. Set: 8 items under id 186, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:419",
+      "spell 18679"
+     ]
+    },
+    "3": {
+     "name": "Beaststalker Armor (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 30
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "9336 is A_MOD_ATTACK_POWER +30 (and +30 ranged attack power). Set: 8 items under id 186, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:419",
+      "spell 9336"
+     ]
+    },
+    "4": {
+     "name": "Beaststalker Armor (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Removes a root when struck"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known from the reference's code comment only; not registered. Set: 8 items under id 186, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:418"
+     ]
+    },
+    "5": {
+     "name": "Beaststalker Armor (5 pieces)",
+     "effects": [],
+     "ignored": [
+      "Sudden Insight (5% per landed melee or ranged auto attack: restores 200 mana)"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "450577 restores mana; a warrior has no mana. Set: 8 items under id 186, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:419",
+      "spell 450577",
+      "spell 450554"
+     ]
+    },
+    "6": {
+     "name": "Beaststalker Armor (6 pieces)",
+     "effects": [],
+     "ignored": [
+      "8 mana per 5 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18378 is mana regeneration; a warrior has no mana. Set: 8 items under id 186, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:419",
+      "spell 18378"
+     ]
+    }
+   }
+  },
+  "181": {
+   "name": "Magister's Regalia",
+   "bonuses": {
+    "2": {
+     "name": "Magister's Regalia (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "All resistances"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known from the reference's code comment only; not registered. Set: only 1 warrior-usable item under id 181 in items.json (Magister's Leggings), so a warrior cannot reach any bonus. No bonus changes melee damage anyway. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:140"
+     ]
+    },
+    "3": {
+     "name": "Magister's Regalia (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "+18 spell damage and healing"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "9346 raises magic-school damage and healing done; it adds nothing to Physical attacks. Set: only 1 warrior-usable item under id 181 in items.json (Magister's Leggings), so a warrior cannot reach any bonus. No bonus changes melee damage anyway. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:142",
+      "spell 9346"
+     ]
+    },
+    "4": {
+     "name": "Magister's Regalia (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Chance to freeze an attacker when struck"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known from the reference's code comment only; not registered. Set: only 1 warrior-usable item under id 181 in items.json (Magister's Leggings), so a warrior cannot reach any bonus. No bonus changes melee damage anyway. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:140"
+     ]
+    },
+    "5": {
+     "name": "Magister's Regalia (5 pieces)",
+     "effects": [],
+     "ignored": [
+      "Sudden Insight (5% per spell cast: restores 200 mana)"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "450527 fires on spell casts and restores mana. Set: only 1 warrior-usable item under id 181 in items.json (Magister's Leggings), so a warrior cannot reach any bonus. No bonus changes melee damage anyway. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:142",
+      "spell 450527",
+      "spell 450554"
+     ]
+    },
+    "6": {
+     "name": "Magister's Regalia (6 pieces)",
+     "effects": [],
+     "ignored": [
+      "8 mana per 5 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18378 is mana regeneration; a warrior has no mana. Set: only 1 warrior-usable item under id 181 in items.json (Magister's Leggings), so a warrior cannot reach any bonus. No bonus changes melee damage anyway. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:142",
+      "spell 18378"
+     ]
+    }
+   }
+  },
+  "183": {
+   "name": "Dreadmist Raiment",
+   "bonuses": {
+    "2": {
+     "name": "Dreadmist Raiment (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "All resistances +8"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18679 is A_MOD_RESISTANCE +8 on the five magic schools. Set: only 1 warrior-usable item under id 183 in items.json (Dreadmist Wraps), so a warrior cannot reach any bonus. No bonus changes melee damage anyway. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:254",
+      "spell 18679"
+     ]
+    },
+    "3": {
+     "name": "Dreadmist Raiment (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "+18 spell damage and healing"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "9346 raises magic-school damage and healing done; it adds nothing to Physical attacks. Set: only 1 warrior-usable item under id 183 in items.json (Dreadmist Wraps), so a warrior cannot reach any bonus. No bonus changes melee damage anyway. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:254",
+      "spell 9346"
+     ]
+    },
+    "4": {
+     "name": "Dreadmist Raiment (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Fears an attacker when struck"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "The reference's TODO says 27780 is not modelled. Set: only 1 warrior-usable item under id 183 in items.json (Dreadmist Wraps), so a warrior cannot reach any bonus. No bonus changes melee damage anyway. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:261"
+     ]
+    },
+    "5": {
+     "name": "Dreadmist Raiment (5 pieces)",
+     "effects": [],
+     "ignored": [
+      "Dark Reward (5% per spell cast: heals the wearer for about 300)"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "450585 fires on spell casts and heals. Set: only 1 warrior-usable item under id 183 in items.json (Dreadmist Wraps), so a warrior cannot reach any bonus. No bonus changes melee damage anyway. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:254",
+      "spell 450585",
+      "spell 450583"
+     ]
+    },
+    "6": {
+     "name": "Dreadmist Raiment (6 pieces)",
+     "effects": [],
+     "ignored": [
+      "8 mana per 5 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18378 is mana regeneration; a warrior has no mana. Set: only 1 warrior-usable item under id 183 in items.json (Dreadmist Wraps), so a warrior cannot reach any bonus. No bonus changes melee damage anyway. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:254",
+      "spell 18378"
+     ]
+    }
+   }
+  },
+  "184": {
+   "name": "Shadowcraft Armor",
+   "bonuses": {
+    "2": {
+     "name": "Shadowcraft Armor (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "All resistances +8"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18679 is A_MOD_RESISTANCE +8 on the five magic schools. Set: 8 items under id 184, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:567",
+      "spell 18679"
+     ]
+    },
+    "3": {
+     "name": "Shadowcraft Armor (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 30
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "9336 is A_MOD_ATTACK_POWER +30 (and +30 ranged attack power). Set: 8 items under id 184, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:567",
+      "spell 9336"
+     ]
+    },
+    "4": {
+     "name": "Shadowcraft Armor (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Removes a snare when struck"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known from the reference's code comment only; not registered. Set: 8 items under id 184, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:565"
+     ]
+    },
+    "5": {
+     "name": "Shadowcraft Armor (5 pieces)",
+     "effects": [],
+     "ignored": [
+      "Rogue Armor Energize (0.8 procs per minute on white swings: restores 20 energy)"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "27788 restores energy; the reference returns without a listener for a wearer with no energy bar, so a warrior gets nothing. Set: 8 items under id 184, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:567",
+      "sim/common/forever/items_sets.go:548",
+      "spell 27787",
+      "spell 27788"
+     ]
+    },
+    "6": {
+     "name": "Shadowcraft Armor (6 pieces)",
+     "effects": [],
+     "ignored": [
+      "Health regeneration"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known from the reference's code comment only; not registered. Set: 8 items under id 184, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:565"
+     ]
+    }
+   }
+  },
+  "185": {
+   "name": "Wildheart Raiment",
+   "bonuses": {
+    "2": {
+     "name": "Wildheart Raiment (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "All resistances +8"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18679 is A_MOD_RESISTANCE +8 on the five magic schools. Set: only 3 warrior-usable items under id 185 in items.json (wrist, legs, head), so a warrior can reach the 2- and 3-piece bonuses only; the 4-, 5- and 6-piece bonuses are out of reach. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:400",
+      "spell 18679"
+     ]
+    },
+    "3": {
+     "name": "Wildheart Raiment (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 30
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [
+      "+18 spell damage and healing"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "The bonus parses two rows: 9336 gives A_MOD_ATTACK_POWER +30 (and ranged), and 9346 gives +18 spell damage and healing, which adds nothing to Physical attacks. Set: only 3 warrior-usable items under id 185 in items.json (wrist, legs, head), so a warrior can reach the 2- and 3-piece bonuses only; the 4-, 5- and 6-piece bonuses are out of reach. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:400",
+      "spell 9336",
+      "spell 9346"
+     ]
+    },
+    "4": {
+     "name": "Wildheart Raiment (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Wild Heart (5% when struck, 60 s cooldown: movement speed +10% for 8 s)"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Movement speed only. Out of reach for a warrior (3 usable pieces). Set: only 3 warrior-usable items under id 185 in items.json (wrist, legs, head), so a warrior can reach the 2- and 3-piece bonuses only; the 4-, 5- and 6-piece bonuses are out of reach. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:400",
+      "sim/common/forever/items_sets.go:378",
+      "spell 1302708"
+     ]
+    },
+    "5": {
+     "name": "Wildheart Raiment (5 pieces)",
+     "effects": [
+      {
+       "kind": "proc",
+       "trigger": {
+        "event": "damageTaken",
+        "attacks": [],
+        "ownHandOnly": false,
+        "ppm": 1.0,
+        "icdMs": 0
+       },
+       "result": {
+        "type": "rage",
+        "spellId": 27783,
+        "amount": 10
+       }
+      }
+     ],
+     "ignored": [
+      "Nature's Bounty mana on spell casts",
+      "Nature's Bounty energy on white swings"
+     ],
+     "referenceModels": true,
+     "confidence": "low",
+     "notes": "Out of reach for a warrior (3 usable pieces). As coded, a wearer with a rage bar gains 10 rage (27783, 100 tenths) when a landed melee white swing is taken, at 1 proc per minute priced on the attacker's swing interval (chance = attacker swing interval / 60), not on the wearer's weapon; melee abilities taken roll nothing. The mana (spell casts) and energy (white swings) halves do nothing for a warrior. The reference's TODO says whether a warrior gains the rage still needs an in-game test, and the rate is an Observed log fit (EV-0144). Set: only 3 warrior-usable items under id 185 in items.json (wrist, legs, head), so a warrior can reach the 2- and 3-piece bonuses only; the 4-, 5- and 6-piece bonuses are out of reach. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:400",
+      "sim/common/forever/items_sets.go:351",
+      "spell 450608",
+      "spell 27783",
+      "docs/evidence/EV-0144-reissued-dungeon-set-rows-and-dungeon-set-proc-rates.md"
+     ]
+    },
+    "6": {
+     "name": "Wildheart Raiment (6 pieces)",
+     "effects": [],
+     "ignored": [
+      "8 mana per 5 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18378 is mana regeneration; a warrior has no mana. Set: only 3 warrior-usable items under id 185 in items.json (wrist, legs, head), so a warrior can reach the 2- and 3-piece bonuses only; the 4-, 5- and 6-piece bonuses are out of reach. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:400",
+      "spell 18378"
+     ]
+    }
+   }
+  },
+  "188": {
+   "name": "Lightforge Armor",
+   "bonuses": {
+    "2": {
+     "name": "Lightforge Armor (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "All resistances +8"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18679 is A_MOD_RESISTANCE +8 on the five magic schools. Set: 8 items under id 188, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. No bonus changes a warrior's melee damage. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:455",
+      "spell 18679"
+     ]
+    },
+    "3": {
+     "name": "Lightforge Armor (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "+18 spell damage and healing"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "9346 raises magic-school damage and healing done; it adds nothing to Physical attacks. Set: 8 items under id 188, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. No bonus changes a warrior's melee damage. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:455",
+      "spell 9346"
+     ]
+    },
+    "4": {
+     "name": "Lightforge Armor (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Silences a caster when struck by a spell"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known from the reference's code comment only; not registered. Set: 8 items under id 188, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. No bonus changes a warrior's melee damage. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:452"
+     ]
+    },
+    "5": {
+     "name": "Lightforge Armor (5 pieces)",
+     "effects": [],
+     "ignored": [
+      "Crusader's Wrath (0.9 procs per minute on white swings and spell casts: +65 spell damage and healing for 10 s)"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "450625 casts 27499, which raises magic-school damage and healing only; it fires for a warrior but adds nothing to Physical attacks. Set: 8 items under id 188, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. No bonus changes a warrior's melee damage. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:455",
+      "spell 450625",
+      "spell 27499"
+     ]
+    },
+    "6": {
+     "name": "Lightforge Armor (6 pieces)",
+     "effects": [],
+     "ignored": [
+      "8 mana per 5 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18378 is mana regeneration; a warrior has no mana. Set: 8 items under id 188, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. No bonus changes a warrior's melee damage. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:455",
+      "spell 18378"
+     ]
+    }
+   }
+  },
+  "189": {
+   "name": "Battlegear of Valor",
+   "bonuses": {
+    "2": {
+     "name": "Battlegear of Valor (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "All resistances +8"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18679 is A_MOD_RESISTANCE +8 on the five magic schools. Set: 8 items under id 189 (16730 to 16737), one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. Battlegear of Heroism pieces are a different set (id 1778) and do not count here: the reference's test states four Valor pieces beside a Heroism piece carry no proc. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:472",
+      "spell 18679"
+     ]
+    },
+    "3": {
+     "name": "Battlegear of Valor (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "str": 15
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "13198 is A_MOD_STAT +15 on stat index 0 (Strength). Set: 8 items under id 189 (16730 to 16737), one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. Battlegear of Heroism pieces are a different set (id 1778) and do not count here: the reference's test states four Valor pieces beside a Heroism piece carry no proc. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:472",
+      "spell 13198",
+      "sim/core/spelldata/parse_effects_table.go:310"
+     ]
+    },
+    "4": {
+     "name": "Battlegear of Valor (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Removes a disarm when struck"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known from the reference's code comment only; not registered. Set: 8 items under id 189 (16730 to 16737), one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. Battlegear of Heroism pieces are a different set (id 1778) and do not count here: the reference's test states four Valor pieces beside a Heroism piece carry no proc. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:470"
+     ]
+    },
+    "5": {
+     "name": "Battlegear of Valor (5 pieces)",
+     "effects": [
+      {
+       "kind": "proc",
+       "trigger": {
+        "event": "hit",
+        "attacks": [
+         "mhAuto",
+         "ohAuto"
+        ],
+        "ownHandOnly": false,
+        "ppm": 1.0,
+        "icdMs": 0
+       },
+       "result": {
+        "type": "rage",
+        "spellId": 450589,
+        "amount": 10
+       }
+      }
+     ],
+     "ignored": [
+      "Warrior's Resolve heal (88 to 132 health per proc)"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Hand-written (Warrior's Resolve): 1 proc per minute on landed white swings that deal damage, each hand priced on its own weapon's base speed (haste leaves the chance alone), no cooldown. Heroic Strike and Cleave replace the swing and never roll it; a Windfury Totem hit counts as a main-hand swing. Row 450587 states no rate; 1 per minute is a Measured override (0.94 per minute over 16 wearers, EV-0144 and EV-0136). Each proc casts 450589: 10 rage (energize of 100 tenths) and a heal of 88 to 132. Set: 8 items under id 189 (16730 to 16737), one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. Battlegear of Heroism pieces are a different set (id 1778) and do not count here: the reference's test states four Valor pieces beside a Heroism piece carry no proc. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:472",
+      "sim/common/forever/items_sets.go:492",
+      "sim/common/shared/spell_data_energize.go:192",
+      "spell 450587",
+      "spell 450589",
+      "docs/evidence/EV-0144-reissued-dungeon-set-rows-and-dungeon-set-proc-rates.md"
+     ]
+    },
+    "6": {
+     "name": "Battlegear of Valor (6 pieces)",
+     "effects": [],
+     "ignored": [
+      "Health regeneration"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known from the reference's code comment only; not registered. Set: 8 items under id 189 (16730 to 16737), one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. Battlegear of Heroism pieces are a different set (id 1778) and do not count here: the reference's test states four Valor pieces beside a Heroism piece carry no proc. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:470"
+     ]
+    }
+   }
+  },
+  "467": {
+   "name": "The Highlander's Resolution",
+   "bonuses": {
+    "2": {
+     "name": "The Highlander's Resolution (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:494",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Highlander's Resolution (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeCritPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7597 is A_MOD_WEAPON_CRIT_PERCENT +1: melee crit in percentage points, not rating. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:494",
+      "spell 7597",
+      "sim/core/spelldata/parse_effects_table.go:335"
+     ]
+    }
+   }
+  },
+  "468": {
+   "name": "The Highlander's Resolve",
+   "bonuses": {
+    "2": {
+     "name": "The Highlander's Resolve (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:505",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Highlander's Resolve (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeCritPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7597 is A_MOD_WEAPON_CRIT_PERCENT +1: melee crit in percentage points, not rating. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:505",
+      "spell 7597",
+      "sim/core/spelldata/parse_effects_table.go:335"
+     ]
+    }
+   }
+  },
+  "469": {
+   "name": "The Highlander's Determination",
+   "bonuses": {
+    "2": {
+     "name": "The Highlander's Determination (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:516",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Highlander's Determination (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeCritPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7597 is A_MOD_WEAPON_CRIT_PERCENT +1: melee crit in percentage points, not rating. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:516",
+      "spell 7597",
+      "sim/core/spelldata/parse_effects_table.go:335"
+     ]
+    }
+   }
+  },
+  "470": {
+   "name": "The Highlander's Fortitude",
+   "bonuses": {
+    "2": {
+     "name": "The Highlander's Fortitude (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:527",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Highlander's Fortitude (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "+1% spell crit"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18384 is A_MOD_SPELL_CRIT_CHANCE +1: spell crit only, nothing for melee. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:527",
+      "spell 18384"
+     ]
+    }
+   }
+  },
+  "471": {
+   "name": "The Highlander's Purpose",
+   "bonuses": {
+    "2": {
+     "name": "The Highlander's Purpose (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:12",
+      "sim/common/forever/items_sets.go:29",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Highlander's Purpose (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeCritPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7597 is A_MOD_WEAPON_CRIT_PERCENT +1: melee crit in percentage points, not rating. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:12",
+      "sim/common/forever/items_sets.go:29",
+      "spell 7597",
+      "sim/core/spelldata/parse_effects_table.go:335"
+     ]
+    }
+   }
+  },
+  "472": {
+   "name": "The Highlander's Will",
+   "bonuses": {
+    "2": {
+     "name": "The Highlander's Will (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:538",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Highlander's Will (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "+1% spell crit"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18384 is A_MOD_SPELL_CRIT_CHANCE +1: spell crit only, nothing for melee. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:538",
+      "spell 18384"
+     ]
+    }
+   }
+  },
+  "473": {
+   "name": "The Highlander's Intent",
+   "bonuses": {
+    "2": {
+     "name": "The Highlander's Intent (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: only 2 warrior-usable items under this id in items.json (waist and feet), so the 3-piece bonus is out of reach for a warrior; each Arathi Basin set has its own id. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:549",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Highlander's Intent (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "+1% spell crit"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18384 is A_MOD_SPELL_CRIT_CHANCE +1: spell crit only, nothing for melee. Set: only 2 warrior-usable items under this id in items.json (waist and feet), so the 3-piece bonus is out of reach for a warrior; each Arathi Basin set has its own id. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:549",
+      "spell 18384"
+     ]
+    }
+   }
+  },
+  "483": {
+   "name": "The Defiler's Determination",
+   "bonuses": {
+    "2": {
+     "name": "The Defiler's Determination (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:630",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Defiler's Determination (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeCritPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7597 is A_MOD_WEAPON_CRIT_PERCENT +1: melee crit in percentage points, not rating. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:630",
+      "spell 7597",
+      "sim/core/spelldata/parse_effects_table.go:335"
+     ]
+    }
+   }
+  },
+  "485": {
+   "name": "The Defiler's Intent",
+   "bonuses": {
+    "2": {
+     "name": "The Defiler's Intent (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: only 2 warrior-usable items under this id in items.json (waist and feet), so the 3-piece bonus is out of reach for a warrior; each Arathi Basin set has its own id. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:652",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Defiler's Intent (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "+1% spell crit"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18384 is A_MOD_SPELL_CRIT_CHANCE +1: spell crit only, nothing for melee. Set: only 2 warrior-usable items under this id in items.json (waist and feet), so the 3-piece bonus is out of reach for a warrior; each Arathi Basin set has its own id. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:652",
+      "spell 18384"
+     ]
+    }
+   }
+  },
+  "488": {
+   "name": "The Defiler's Will",
+   "bonuses": {
+    "2": {
+     "name": "The Defiler's Will (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:674",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Defiler's Will (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "+1% spell crit"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18384 is A_MOD_SPELL_CRIT_CHANCE +1: spell crit only, nothing for melee. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:674",
+      "spell 18384"
+     ]
+    }
+   }
+  },
+  "486": {
+   "name": "The Defiler's Purpose",
+   "bonuses": {
+    "2": {
+     "name": "The Defiler's Purpose (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:12",
+      "sim/common/forever/items_sets.go:25",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Defiler's Purpose (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeCritPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7597 is A_MOD_WEAPON_CRIT_PERCENT +1: melee crit in percentage points, not rating. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:12",
+      "sim/common/forever/items_sets.go:25",
+      "spell 7597",
+      "sim/core/spelldata/parse_effects_table.go:335"
+     ]
+    }
+   }
+  },
+  "484": {
+   "name": "The Defiler's Fortitude",
+   "bonuses": {
+    "2": {
+     "name": "The Defiler's Fortitude (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:641",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Defiler's Fortitude (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeCritPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7597 is A_MOD_WEAPON_CRIT_PERCENT +1: melee crit in percentage points, not rating. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:641",
+      "spell 7597",
+      "sim/core/spelldata/parse_effects_table.go:335"
+     ]
+    }
+   }
+  },
+  "487": {
+   "name": "The Defiler's Resolution",
+   "bonuses": {
+    "2": {
+     "name": "The Defiler's Resolution (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+5 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7503 is A_MOD_STAT +5 Stamina. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:663",
+      "spell 7503"
+     ]
+    },
+    "3": {
+     "name": "The Defiler's Resolution (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeCritPct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "7597 is A_MOD_WEAPON_CRIT_PERCENT +1: melee crit in percentage points, not rating. Set: 3 items under this id, one per slot (shoulder, waist, feet), at most 3 worn; each Arathi Basin set has its own id and pieces of two different ids never count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:663",
+      "spell 7597",
+      "sim/core/spelldata/parse_effects_table.go:335"
+     ]
+    }
+   }
+  },
+  "2071": {
+   "name": "Teachings of the Furbolgs",
+   "bonuses": {
+    "2": {
+     "name": "Teachings of the Furbolgs (2 pieces)",
+     "effects": [
+      {
+       "kind": "proc",
+       "trigger": {
+        "event": "hit",
+        "attacks": [
+         "mhAuto",
+         "ohAuto",
+         "mhSpecial",
+         "ohSpecial"
+        ],
+        "ownHandOnly": false,
+        "chance": 0.1,
+        "icdMs": 0
+       },
+       "result": {
+        "type": "buff",
+        "spellId": 1294071,
+        "name": "Ferocity of the Barkskin",
+        "durationMs": 15000,
+        "stats": {
+         "ap": 40
+        },
+        "pct": {},
+        "maxStacks": 1,
+        "charges": 0,
+        "decaying": false
+       }
+      }
+     ],
+     "ignored": [
+      "Wisdom of the Timbermaw (healing-spell half, never fires)"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Parsed set proc: 10% per landed melee hit that deals damage (white swing or ability, either hand; ranged hits too), from 1294087's ProcChance column (status GameFiles), no cooldown. It puts up Ferocity of the Barkskin: +40 attack power (and ranged) for 15 s, refreshed by a new proc. The healing-spell half (Wisdom of the Timbermaw) is cast by no effect and never fires. The reference's TODO says which melee and ranged hits roll it still needs an in-game test. Set: 2 trinkets under id 2071 (Defender of the Timbermaw 21326 and Defender of the Barkskin 268873), so both trinket slots are taken. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:753",
+      "sim/common/shared/item_sets.go:97",
+      "spell 1294087",
+      "spell 1294071",
+      "db.json setBonusProcRates set 2071"
+     ]
+    }
+   }
+  },
+  "1778": {
+   "name": "Battlegear of Heroism",
+   "bonuses": {
+    "2": {
+     "name": "Battlegear of Heroism (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "All resistances +8"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "18679 is A_MOD_RESISTANCE +8 on the five magic schools. Set: 16 items under id 1778 in two name groups of eight, two items per slot in 8 slots (head, shoulder, chest, wrist, hands, waist, legs, feet), so at most 8 worn. Group A (hit and crit stats): 226857 Battleboots, 226858 Spaulders, 226859 Legplates, 226860 Crown, 226861 Gauntlets, 226862 Breastplate, 226863 Bracers, 226864 Belt. Group B (more Stamina): 226865 Wristguards, 226866 Waistguard, 226867 Pauldrons, 226868 Legguards, 226869 Faceguard, 226870 Handguards, 226871 Sabatons, 226872 Chestguard. Pieces of both groups count toward the same bonuses because the reference counts by set id (EV-0144 confirms this in game for the Feralheart reissue). Battlegear of Valor (id 189) is a separate set and does not count. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:646",
+      "spell 18679"
+     ]
+    },
+    "3": {
+     "name": "Battlegear of Heroism (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "Health regeneration"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known from the reference's code comment only; not registered. Set: 16 items under id 1778 in two name groups of eight, two items per slot in 8 slots (head, shoulder, chest, wrist, hands, waist, legs, feet), so at most 8 worn. Group A (hit and crit stats): 226857 Battleboots, 226858 Spaulders, 226859 Legplates, 226860 Crown, 226861 Gauntlets, 226862 Breastplate, 226863 Bracers, 226864 Belt. Group B (more Stamina): 226865 Wristguards, 226866 Waistguard, 226867 Pauldrons, 226868 Legguards, 226869 Faceguard, 226870 Handguards, 226871 Sabatons, 226872 Chestguard. Pieces of both groups count toward the same bonuses because the reference counts by set id (EV-0144 confirms this in game for the Feralheart reissue). Battlegear of Valor (id 189) is a separate set and does not count. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:643"
+     ]
+    },
+    "4": {
+     "name": "Battlegear of Heroism (4 pieces)",
+     "effects": [
+      {
+       "kind": "proc",
+       "trigger": {
+        "event": "hit",
+        "attacks": [
+         "mhAuto",
+         "ohAuto"
+        ],
+        "ownHandOnly": false,
+        "ppm": 1.0,
+        "icdMs": 0
+       },
+       "result": {
+        "type": "rage",
+        "spellId": 450589,
+        "amount": 10
+       }
+      }
+     ],
+     "ignored": [
+      "Warrior's Resolve heal (88 to 132 health per proc)"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Hand-written (Warrior's Resolve): 1 proc per minute on landed white swings that deal damage, each hand priced on its own weapon's base speed (haste leaves the chance alone), no cooldown. Heroic Strike and Cleave replace the swing and never roll it; a Windfury Totem hit counts as a main-hand swing. Row 450587 states no rate; 1 per minute is a Measured override (0.94 per minute over 16 wearers, EV-0144 and EV-0136). Each proc casts 450589: 10 rage (energize of 100 tenths) and a heal of 88 to 132. Set: 16 items under id 1778 in two name groups of eight, two items per slot in 8 slots (head, shoulder, chest, wrist, hands, waist, legs, feet), so at most 8 worn. Group A (hit and crit stats): 226857 Battleboots, 226858 Spaulders, 226859 Legplates, 226860 Crown, 226861 Gauntlets, 226862 Breastplate, 226863 Bracers, 226864 Belt. Group B (more Stamina): 226865 Wristguards, 226866 Waistguard, 226867 Pauldrons, 226868 Legguards, 226869 Faceguard, 226870 Handguards, 226871 Sabatons, 226872 Chestguard. Pieces of both groups count toward the same bonuses because the reference counts by set id (EV-0144 confirms this in game for the Feralheart reissue). Battlegear of Valor (id 189) is a separate set and does not count. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:646",
+      "sim/common/forever/items_sets.go:492",
+      "sim/common/shared/spell_data_energize.go:192",
+      "spell 450587",
+      "spell 450589",
+      "docs/evidence/EV-0144-reissued-dungeon-set-rows-and-dungeon-set-proc-rates.md"
+     ]
+    },
+    "5": {
+     "name": "Battlegear of Heroism (5 pieces)",
+     "effects": [],
+     "ignored": [
+      "Removes a disarm when struck"
+     ],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Known from the reference's code comment only; not registered. Set: 16 items under id 1778 in two name groups of eight, two items per slot in 8 slots (head, shoulder, chest, wrist, hands, waist, legs, feet), so at most 8 worn. Group A (hit and crit stats): 226857 Battleboots, 226858 Spaulders, 226859 Legplates, 226860 Crown, 226861 Gauntlets, 226862 Breastplate, 226863 Bracers, 226864 Belt. Group B (more Stamina): 226865 Wristguards, 226866 Waistguard, 226867 Pauldrons, 226868 Legguards, 226869 Faceguard, 226870 Handguards, 226871 Sabatons, 226872 Chestguard. Pieces of both groups count toward the same bonuses because the reference counts by set id (EV-0144 confirms this in game for the Feralheart reissue). Battlegear of Valor (id 189) is a separate set and does not count. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:643"
+     ]
+    },
+    "6": {
+     "name": "Battlegear of Heroism (6 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "str": 20
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "14492 is A_MOD_STAT +20 on stat index 0 (Strength). Set: 16 items under id 1778 in two name groups of eight, two items per slot in 8 slots (head, shoulder, chest, wrist, hands, waist, legs, feet), so at most 8 worn. Group A (hit and crit stats): 226857 Battleboots, 226858 Spaulders, 226859 Legplates, 226860 Crown, 226861 Gauntlets, 226862 Breastplate, 226863 Bracers, 226864 Belt. Group B (more Stamina): 226865 Wristguards, 226866 Waistguard, 226867 Pauldrons, 226868 Legguards, 226869 Faceguard, 226870 Handguards, 226871 Sabatons, 226872 Chestguard. Pieces of both groups count toward the same bonuses because the reference counts by set id (EV-0144 confirms this in game for the Feralheart reissue). Battlegear of Valor (id 189) is a separate set and does not count. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:646",
+      "spell 14492",
+      "sim/core/spelldata/parse_effects_table.go:310"
+     ]
+    }
+   }
+  },
+  "1968": {
+   "name": "Blessed Plate",
+   "bonuses": {
+    "2": {
+     "name": "Blessed Plate (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "Shadow resistance +10"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Hand-written. Set: 8 items under id 1968, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:74",
+      "spell 14673"
+     ]
+    },
+    "3": {
+     "name": "Blessed Plate (3 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "str": 20
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Hand-written +20 Strength. Set: 8 items under id 1968, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:74",
+      "spell 1252009"
+     ]
+    },
+    "4": {
+     "name": "Blessed Plate (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Restores 20 health every 5 sec to party members within 10 yards"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Known from the reference's code comment only; not registered. Set: 8 items under id 1968, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:72"
+     ]
+    },
+    "5": {
+     "name": "Blessed Plate (5 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeHitPct": 2
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Hand-written as PhysicalHitPercent +2 (and spell hit +2): percentage points, not rating. Set: 8 items under id 1968, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:74",
+      "spell 1252013"
+     ]
+    },
+    "6": {
+     "name": "Blessed Plate (6 pieces)",
+     "effects": [],
+     "ignored": [
+      "+29 Holy spell damage"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Hand-written as Holy damage +29; a warrior deals no Holy damage. Set: 8 items under id 1968, one per slot (head, shoulder, chest, wrist, hands, waist, legs, feet), at most 8 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:74",
+      "spell 21518"
+     ]
+    }
+   }
+  },
+  "281": {
+   "name": "Champion's Battlegear",
+   "bonuses": {
+    "2": {
+     "name": "Champion's Battlegear (2 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 40
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Generated set; 14049 is A_MOD_ATTACK_POWER +40 (and +40 ranged attack power). Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:121",
+      "spell 14049"
+     ]
+    },
+    "4": {
+     "name": "Champion's Battlegear (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Intercept cooldown -5 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "22738 is a flat cooldown modifier of -5000 ms on Intercept; the reference applies it, but Intercept is a gap closer and does not add damage in a stand-still fight. Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:121",
+      "spell 22738"
+     ]
+    },
+    "6": {
+     "name": "Champion's Battlegear (6 pieces)",
+     "effects": [],
+     "ignored": [
+      "+20 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "14467 is A_MOD_STAT +20 Stamina. Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:121",
+      "spell 14467"
+     ]
+    }
+   }
+  },
+  "383": {
+   "name": "Warlord's Battlegear",
+   "bonuses": {
+    "6": {
+     "name": "Warlord's Battlegear (6 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 40
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Generated set; 14049 is A_MOD_ATTACK_POWER +40 (and +40 ranged attack power). Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:257",
+      "spell 14049"
+     ]
+    },
+    "3": {
+     "name": "Warlord's Battlegear (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "Intercept cooldown -5 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "22738 is a flat cooldown modifier of -5000 ms on Intercept; the reference applies it, but Intercept is a gap closer and does not add damage in a stand-still fight. Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:257",
+      "spell 22738"
+     ]
+    },
+    "2": {
+     "name": "Warlord's Battlegear (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+20 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "14467 is A_MOD_STAT +20 Stamina. Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:257",
+      "spell 14467"
+     ]
+    }
+   }
+  },
+  "282": {
+   "name": "Lieutenant Commander's Battlegear",
+   "bonuses": {
+    "2": {
+     "name": "Lieutenant Commander's Battlegear (2 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 40
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Generated set; 14049 is A_MOD_ATTACK_POWER +40 (and +40 ranged attack power). Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:135",
+      "spell 14049"
+     ]
+    },
+    "4": {
+     "name": "Lieutenant Commander's Battlegear (4 pieces)",
+     "effects": [],
+     "ignored": [
+      "Intercept cooldown -5 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "22738 is a flat cooldown modifier of -5000 ms on Intercept; the reference applies it, but Intercept is a gap closer and does not add damage in a stand-still fight. Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:135",
+      "spell 22738"
+     ]
+    },
+    "6": {
+     "name": "Lieutenant Commander's Battlegear (6 pieces)",
+     "effects": [],
+     "ignored": [
+      "+20 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "14467 is A_MOD_STAT +20 Stamina. Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:135",
+      "spell 14467"
+     ]
+    }
+   }
+  },
+  "384": {
+   "name": "Field Marshal's Battlegear",
+   "bonuses": {
+    "6": {
+     "name": "Field Marshal's Battlegear (6 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 40
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Generated set; 14049 is A_MOD_ATTACK_POWER +40 (and +40 ranged attack power). Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:271",
+      "spell 14049"
+     ]
+    },
+    "3": {
+     "name": "Field Marshal's Battlegear (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "Intercept cooldown -5 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "22738 is a flat cooldown modifier of -5000 ms on Intercept; the reference applies it, but Intercept is a gap closer and does not add damage in a stand-still fight. Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:271",
+      "spell 22738"
+     ]
+    },
+    "2": {
+     "name": "Field Marshal's Battlegear (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "+20 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "14467 is A_MOD_STAT +20 Stamina. Set: 6 items under this id, one per slot (head, shoulder, chest, hands, legs, feet), at most 6 worn; the four warrior PvP sets (281, 282, 383, 384) have separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:271",
+      "spell 14467"
+     ]
+    }
+   }
+  },
+  "2102": {
+   "name": "Battlegear of Glory",
+   "bonuses": {
+    "2": {
+     "name": "Battlegear of Glory (2 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {
+        "meleeHastePct": 1
+       },
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [
+      "Cast speed +1%"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1300968 is A_MOD_MELEE_RANGED_HASTE_2 +1: the reference multiplies attack speed by 1.01 (multiplicative with every other haste source). Its second effect is cast speed +1%, which no physical ability uses. Set: 4 items under this id in items.json (shoulder, hands, legs, feet); the reference lists 6 slots but says the head and chest pieces have no rows in the game files, so at most 4 worn and the 5-piece bonus cannot be reached. Battlegear of Glory (2102) and Battleplate of Glory (2103) are separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/warrior/items.go:243",
+      "spell 1300968",
+      "sim/core/spelldata/parse_effects_table.go:369",
+      "sim/core/spelldata/parse_effects_table.go:1050"
+     ]
+    },
+    "3": {
+     "name": "Battlegear of Glory (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "Intimidating Shout cooldown -30 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1301069 is a flat cooldown modifier of -30000 ms on Intimidating Shout. Set: 4 items under this id in items.json (shoulder, hands, legs, feet); the reference lists 6 slots but says the head and chest pieces have no rows in the game files, so at most 4 worn and the 5-piece bonus cannot be reached. Battlegear of Glory (2102) and Battleplate of Glory (2103) are separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/warrior/items.go:243",
+      "spell 1301069"
+     ]
+    },
+    "4": {
+     "name": "Battlegear of Glory (4 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "ap": 36
+       },
+       "pct": {},
+       "weaponSkill": {},
+       "versus": [
+        "humanoid"
+       ]
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1301095 is A_MOD_MELEE_ATTACK_POWER_VERSUS +36 with creature type mask 64 (Humanoid): +36 melee attack power against Humanoid targets only. Set: 4 items under this id in items.json (shoulder, hands, legs, feet); the reference lists 6 slots but says the head and chest pieces have no rows in the game files, so at most 4 worn and the 5-piece bonus cannot be reached. Battlegear of Glory (2102) and Battleplate of Glory (2103) are separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/warrior/items.go:243",
+      "spell 1301095",
+      "sim/core/spelldata/parse_effects_table.go:278",
+      "sim/core/spelldata/mob_types.go:34"
+     ]
+    },
+    "5": {
+     "name": "Battlegear of Glory (5 pieces)",
+     "effects": [
+      {
+       "kind": "other",
+       "description": "Passive: the cooldown of Recklessness is reduced by 30 sec (spell 1301721, flat cooldown modifier of -30000 ms on Recklessness's class flag)."
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Not a stat, proc or on-use effect, so it is given as kind 'other'. The reference parses it as a cooldown modifier, but only 4 pieces of the set exist, so this bonus cannot be worn yet. Set: 4 items under this id in items.json (shoulder, hands, legs, feet); the reference lists 6 slots but says the head and chest pieces have no rows in the game files, so at most 4 worn and the 5-piece bonus cannot be reached. Battlegear of Glory (2102) and Battleplate of Glory (2103) are separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/warrior/items.go:243",
+      "sim/warrior/items.go:216",
+      "spell 1301721"
+     ]
+    }
+   }
+  },
+  "2103": {
+   "name": "Battleplate of Glory",
+   "bonuses": {
+    "2": {
+     "name": "Battleplate of Glory (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "Defense +7"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1300970 is A_MOD_SKILL +7 on the Defense skill line. Set: 4 items under this id in items.json (shoulder, hands, legs, feet); the reference lists 6 slots but says the head and chest pieces have no rows in the game files, so at most 4 worn and the 5-piece bonus cannot be reached. Battlegear of Glory (2102) and Battleplate of Glory (2103) are separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/warrior/items.go:263",
+      "spell 1300970"
+     ]
+    },
+    "3": {
+     "name": "Battleplate of Glory (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "Intervene cooldown -10 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1301071 is a cooldown modifier on Intervene, which the reference's sim never casts. Set: 4 items under this id in items.json (shoulder, hands, legs, feet); the reference lists 6 slots but says the head and chest pieces have no rows in the game files, so at most 4 worn and the 5-piece bonus cannot be reached. Battlegear of Glory (2102) and Battleplate of Glory (2103) are separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/warrior/items.go:263",
+      "spell 1301071"
+     ]
+    },
+    "4": {
+     "name": "Battleplate of Glory (4 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "expertise": 12
+       },
+       "pct": {},
+       "weaponSkill": {}
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1301096 is A_MOD_RATING 12 on the expertise rating mask (0x800000): 12 expertise rating (1.2% at 10 rating per 1%), not a flat percent. Set: 4 items under this id in items.json (shoulder, hands, legs, feet); the reference lists 6 slots but says the head and chest pieces have no rows in the game files, so at most 4 worn and the 5-piece bonus cannot be reached. Battlegear of Glory (2102) and Battleplate of Glory (2103) are separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/warrior/items.go:263",
+      "spell 1301096",
+      "sim/core/spelldata/parse_effects_table.go:298",
+      "sim/core/spelldata/parse_effects_table.go:1518"
+     ]
+    },
+    "5": {
+     "name": "Battleplate of Glory (5 pieces)",
+     "effects": [],
+     "ignored": [
+      "Shield Wall cooldown -30 sec"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1301722 is a cooldown modifier on Shield Wall. Only 4 pieces of the set exist, so this bonus cannot be worn yet. Set: 4 items under this id in items.json (shoulder, hands, legs, feet); the reference lists 6 slots but says the head and chest pieces have no rows in the game files, so at most 4 worn and the 5-piece bonus cannot be reached. Battlegear of Glory (2102) and Battleplate of Glory (2103) are separate ids and do not count together. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/warrior/items.go:263",
+      "spell 1301722"
+     ]
+    }
+   }
+  },
+  "2136": {
+   "name": "Defias Enforcer's Garb",
+   "bonuses": {
+    "2": {
+     "name": "Defias Enforcer's Garb (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "Fire resistance +10"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1324673 is A_MOD_RESISTANCE +10 Fire. Set: 5 items under id 2136, one per slot (head, shoulder, chest, legs, feet), at most 5 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1258",
+      "spell 1324673"
+     ]
+    },
+    "3": {
+     "name": "Defias Enforcer's Garb (3 pieces)",
+     "effects": [],
+     "ignored": [
+      "+15 Stamina"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1324674 is A_MOD_STAT +15 Stamina. Set: 5 items under id 2136, one per slot (head, shoulder, chest, legs, feet), at most 5 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1258",
+      "spell 1324674"
+     ]
+    },
+    "4": {
+     "name": "Defias Enforcer's Garb (4 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {},
+       "pct": {},
+       "weaponSkill": {
+        "sword1h": 1
+       }
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1324675 is A_MOD_SKILL +1 on skill line 43 (one-handed Swords); two-handed swords are line 55 and get nothing. Set: 5 items under id 2136, one per slot (head, shoulder, chest, legs, feet), at most 5 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1258",
+      "spell 1324675",
+      "sim/core/spelldata/parse_effects_table.go:545",
+      "sim/core/spelldata/parse_effects_table.go:26"
+     ]
+    },
+    "5": {
+     "name": "Defias Enforcer's Garb (5 pieces)",
+     "effects": [
+      {
+       "kind": "proc",
+       "trigger": {
+        "event": "hit",
+        "attacks": [
+         "mhAuto",
+         "ohAuto",
+         "mhSpecial",
+         "ohSpecial"
+        ],
+        "ownHandOnly": false,
+        "ppm": 1.0,
+        "icdMs": 0
+       },
+       "result": {
+        "type": "buff",
+        "spellId": 1324683,
+        "name": "Defias Juggernaut",
+        "durationMs": 20000,
+        "stats": {},
+        "pct": {
+         "meleeCritPct": 2
+        },
+        "maxStacks": 1,
+        "charges": 0,
+        "decaying": false
+       }
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "medium",
+     "notes": "Hand-written: 1 proc per minute on every landed melee hit (white swing or ability, a hit that deals no damage included), each priced on the base speed of the weapon that hit; the row names the main hand alone but off-hand swings proc it as often (EV-0170). Row 1324684 states no rate; 1 per minute is a Measured override, with the evidence note leaving it open between 1.0 and 1.13. The buff is A_MOD_CRIT_PCT +2 (percentage points of melee and spell crit) for 20 s, one stack, refreshed by a new proc; in a swamp area it is +4 instead (the row's second effect). Set: 5 items under id 2136, one per slot (head, shoulder, chest, legs, feet), at most 5 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:1258",
+      "sim/common/forever/items_sets.go:1272",
+      "docs/evidence/EV-0170-defias-enforcers-garb-juggernaut-ppm-on-either-hand.md",
+      "spell 1324684",
+      "spell 1324683",
+      "db.json setBonusProcRates set 2136"
+     ]
+    }
+   }
+  },
+  "2130": {
+   "name": "Rider of the Plaguelands",
+   "bonuses": {
+    "2": {
+     "name": "Rider of the Plaguelands (2 pieces)",
+     "effects": [],
+     "ignored": [
+      "Mounted movement speed +5% in the Plaguelands"
+     ],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "1315080 is not registered by the reference (area-restricted mount speed). Set: 3 items under id 2130: Horseman's Unyielding Shroud (back), Blade of Senseless Slaughter (main-hand sword) and Signet of the Soulless Rider (one ring), so it takes the back, the main hand and one finger slot; at most 3 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:1425",
+      "spell 1315080"
+     ]
+    },
+    "3": {
+     "name": "Rider of the Plaguelands (3 pieces)",
+     "effects": [
+      {
+       "kind": "proc",
+       "trigger": {
+        "event": "hit",
+        "attacks": [
+         "mhAuto"
+        ],
+        "ownHandOnly": false,
+        "chance": 0.15,
+        "icdMs": 45000
+       },
+       "result": {
+        "type": "damage",
+        "spellId": 1315077,
+        "school": "shadow",
+        "min": 140,
+        "max": 140,
+        "apCoef": 0,
+        "spCoef": 0,
+        "table": "spell",
+        "canCrit": true
+       }
+      }
+     ],
+     "ignored": [],
+     "referenceModels": true,
+     "confidence": "high",
+     "notes": "Generated set proc: 15% per landed main-hand white swing that deals damage (the row carries the main-hand-only flag; off-hand swings and abilities never roll it), 45 s internal cooldown, from 1330858's ProcChance column (status GameFiles). It casts Lash of the Dark Rider 1315077: 140 Shadow as a magic spell that rolls spell hit and spell crit, no power coefficient. Set: 3 items under id 2130: Horseman's Unyielding Shroud (back), Blade of Senseless Slaughter (main-hand sword) and Signet of the Soulless Rider (one ring), so it takes the back, the main hand and one finger slot; at most 3 worn. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/item_sets_auto_gen.go:1425",
+      "sim/common/shared/item_sets.go:97",
+      "sim/core/proc_types.go:234",
+      "spell 1330858",
+      "spell 1315077",
+      "db.json setBonusProcRates set 2130"
+     ]
+    }
+   }
+  },
+  "2131": {
+   "name": "Partners in Crime",
+   "bonuses": {
+    "2": {
+     "name": "Partners in Crime (2 pieces)",
+     "effects": [
+      {
+       "kind": "stats",
+       "stats": {
+        "str": 22
+       },
+       "pct": {},
+       "weaponSkill": {}
+      },
+      {
+       "kind": "proc",
+       "trigger": {
+        "event": "hit",
+        "attacks": [
+         "mhAuto",
+         "ohAuto",
+         "mhSpecial",
+         "ohSpecial"
+        ],
+        "ownHandOnly": false,
+        "chance": null,
+        "icdMs": 100
+       },
+       "result": {
+        "type": "buff",
+        "spellId": 1317040,
+        "name": "Angry",
+        "durationMs": 10000,
+        "stats": {
+         "str": 50
+        },
+        "pct": {},
+        "maxStacks": 1,
+        "charges": 0,
+        "decaying": false
+       }
+      }
+     ],
+     "ignored": [],
+     "referenceModels": false,
+     "confidence": "low",
+     "notes": "The reference models only the +22 Strength (1317038). The second 2-piece bonus is NOT modelled: 1317039 hears melee swings and abilities and puts up Angry (+50 Strength for 10 s, 100 ms internal cooldown), but its row states no rate and the reference's TODO says the rate is still being measured. The proc's chance is therefore unknown (null); do not assume one. Set: 2 rings under id 2131 (First Mate Band and Band of the Better Half), so both finger slots are taken. The reference counts worn pieces by set id (sim/core/item_sets.go:41 and :128) and every bonus whose piece count is reached is active.",
+     "cite": [
+      "sim/common/forever/items_sets.go:996",
+      "sim/common/forever/items_sets.go:1001",
+      "spell 1317038",
+      "spell 1317039",
+      "spell 1317040"
+     ]
+    }
+   }
+  }
+ },
+ "enchants": {
+  "34": {
+   "name": "Weapon Counterweight",
+   "effects": [],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "No extra effect beyond the plain pseudo stat already in enchants.json (meleeHastePct 3), which is not repeated here. That stat is A_MOD_MELEE_HASTE_3 +3: melee swing speed multiplied by 1.03, multiplicative and not additive. The reference turns an item's or enchant's haste pseudo stat into a multiplier on swing speed (sim/core/enchant_speed.go:67), and all haste multipliers multiply together with the single haste-rating multiplier (sim/core/unit.go:610). Two-handed melee weapons only (enchantType twoHand); the item is made by Blacksmithing, with no profession needed to use it.",
+   "cite": [
+    "sim/core/enchant_speed.go:13",
+    "sim/core/itemfit/itemfit.go:82",
+    "spell 7217",
+    "db.json enchant 34"
+   ]
+  },
+  "36": {
+   "name": "Enchant: Fiery Blaze",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "chance": 0.15,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 6297,
+      "school": "fire",
+      "min": 9,
+      "max": 13,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Generated weapon proc: a flat 15% per landed hit made with the enchanted weapon (white swings and melee abilities of that hand), no cooldown; the 15 is the enchantment row's own value (status GameFiles). It casts 6297: 11 Fire with 36% variance (9 to 13) to every enemy within 3 yd of the target, as a magic spell that rolls spell hit and spell crit, no power coefficient. Any melee weapon, either hand; it comes from quest 706.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:172",
+    "sim/common/shared/shared_utils.go:554",
+    "spell 6297",
+    "db.json enchant 36"
+   ]
+  },
+  "37": {
+   "name": "Weapon Chain",
+   "effects": [],
+   "ignored": [
+    "Immune to Disarm"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "7219 is disarm immunity only; nothing is registered for it. Any melee weapon; made by Blacksmithing.",
+   "cite": [
+    "spell 7219",
+    "db.json enchant 37"
+   ]
+  },
+  "249": {
+   "name": "Enchant Weapon - Minor Beastslayer",
+   "effects": [
+    {
+     "kind": "stats",
+     "stats": {
+      "physDmg": 2
+     },
+     "pct": {},
+     "weaponSkill": {},
+     "versus": [
+      "beast"
+     ]
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "7784 is A_MOD_DAMAGE_DONE_CREATURE +2: the reference adds 2 flat damage to every Physical hit (white swings and abilities of either hand) and 2 spell damage against Beast targets only. An enchant's effect is registered once per character, so the same enchant on both weapons still gives +2, not double. Any melee weapon; world drop formula.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:215",
+    "sim/core/spelldata/parse_effects_table.go:281",
+    "sim/core/spelldata/mob_types.go:15",
+    "sim/core/item_effects.go:115",
+    "spell 7784"
+   ]
+  },
+  "853": {
+   "name": "Enchant Weapon - Lesser Beastslayer",
+   "effects": [
+    {
+     "kind": "stats",
+     "stats": {
+      "physDmg": 6
+     },
+     "pct": {},
+     "weaponSkill": {},
+     "versus": [
+      "beast"
+     ]
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "13650 is A_MOD_DAMAGE_DONE_CREATURE +6: the reference adds 6 flat damage to every Physical hit (white swings and abilities of either hand) and 6 spell damage against Beast targets only. An enchant's effect is registered once per character, so the same enchant on both weapons still gives +6, not double. Any melee weapon; world drop formula.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:234",
+    "sim/core/spelldata/parse_effects_table.go:281",
+    "sim/core/spelldata/mob_types.go:15",
+    "sim/core/item_effects.go:115",
+    "spell 13650"
+   ]
+  },
+  "854": {
+   "name": "Enchant Weapon - Lesser Elemental Slayer",
+   "effects": [
+    {
+     "kind": "stats",
+     "stats": {
+      "physDmg": 6
+     },
+     "pct": {},
+     "weaponSkill": {},
+     "versus": [
+      "elemental"
+     ]
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "13651 is A_MOD_DAMAGE_DONE_CREATURE +6: the reference adds 6 flat damage to every Physical hit (white swings and abilities of either hand) and 6 spell damage against Elemental targets only. An enchant's effect is registered once per character, so the same enchant on both weapons still gives +6, not double. Any melee weapon; world drop formula.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:243",
+    "sim/core/spelldata/parse_effects_table.go:281",
+    "sim/core/spelldata/mob_types.go:15",
+    "sim/core/item_effects.go:115",
+    "spell 13651"
+   ]
+  },
+  "464": {
+   "name": "Mithril Spurs",
+   "effects": [],
+   "ignored": [
+    "Mounted movement speed +4%"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "7215 is mounted speed only; nothing is registered for it. Boots; made by Blacksmithing.",
+   "cite": [
+    "spell 7215",
+    "db.json enchant 464"
+   ]
+  },
+  "803": {
+   "name": "Enchant Weapon - Fiery Weapon",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 6.0,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 13897,
+      "school": "fire",
+      "min": 40,
+      "max": 40,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "Hand-registered weapon proc at 6 procs per minute on the enchanted weapon's base speed: only hits made with that weapon roll it (main hand: white swings and every melee ability; off hand: white swings and Whirlwind's off-hand hit), landed hits including ones that deal no damage, no cooldown. Main-hand and off-hand copies roll independently. It casts 13897: 40 Fire as a magic spell that rolls spell hit and spell crit, no power coefficient. The game files state no rate; 6 per minute is Measured on two two-handers only (EV-0130), with a TODO to measure one-handers and the off hand, and in 1,401 logged strikes none missed, so the spell-table miss the reference rolls may be too harsh. Any melee weapon, either hand; drops in Blackrock Depths.",
+   "cite": [
+    "sim/common/forever/enchants.go:70",
+    "sim/common/shared/shared_utils.go:531",
+    "sim/core/procs.go:266",
+    "tools/database/overrides/enchant_procs.go:35",
+    "docs/evidence/EV-0130-fiery-weapon-proc-rate.md",
+    "spell 13897"
+   ]
+  },
+  "912": {
+   "name": "Enchant Weapon - Demonslaying",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "chance": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 13907,
+      "school": "holy",
+      "min": 75,
+      "max": 125,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Smite Demon stun (5 s)"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "NOT modelled by the reference: the generated block is commented out because the row states no rate and the damage spell can only hit Demons. From the row: Smite Demon 13907 deals 100 Holy with 50% variance (75 to 125) and stuns for 5 s, on Demon targets only; the proc chance is unknown (null), so do not assume one. Any melee weapon; world drop formula.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:11",
+    "spell 13907"
+   ]
+  },
+  "931": {
+   "name": "Enchant Gloves - Minor Haste",
+   "effects": [],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "No extra effect beyond the plain pseudo stat already in enchants.json (meleeHastePct 1), which is not repeated here. The row 13928 is A_MOD_MELEE_RANGED_HASTE_2 +1 and cast speed +1: melee swing speed multiplied by 1.01, multiplicative and not additive. The reference turns an item's or enchant's haste pseudo stat into a multiplier on swing speed (sim/core/enchant_speed.go:67), and all haste multipliers multiply together with the single haste-rating multiplier (sim/core/unit.go:610). Gloves only. The database lists no source and no item level for it, so how it is obtained is not stated.",
+   "cite": [
+    "sim/core/enchant_speed.go:13",
+    "spell 13928",
+    "db.json enchant 931"
+   ]
+  },
+  "1894": {
+   "name": "Enchant Weapon - Icy Chill",
+   "effects": [],
+   "ignored": [
+    "Chilled (target attack speed -25% and movement speed -30% for 5 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "It slows the target and adds no damage. The reference does not simulate it at all (commented out, 'states no rate'), so nothing DPS-relevant is missing. Any melee weapon; drops in Winterspring.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:27",
+    "spell 20005"
+   ]
+  },
+  "1898": {
+   "name": "Enchant Weapon - Lifestealing",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "chance": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 20004,
+      "school": "shadow",
+      "min": 30,
+      "max": 30,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Life Steal self-heal (heals the wielder for the damage dealt)"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "NOT modelled by the reference: the generated block is commented out because the row states no rate. From the row: Life Steal 20004 is a health leech of 30 Shadow with the magic defense type, no power coefficient; the proc chance is unknown (null), so do not assume one. Any melee weapon; drops from Scholomance trash.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:42",
+    "spell 20004"
+   ]
+  },
+  "1899": {
+   "name": "Enchant Weapon - Unholy Weapon",
+   "effects": [],
+   "ignored": [
+    "Unholy Curse (target's Physical damage done -15 for 12 s)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "It lowers the target's damage and adds none to the wielder. The reference does not simulate it at all (commented out, 'states no rate'). Any melee weapon; drops from Stratholme trash.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:58",
+    "spell 20006"
+   ]
+  },
+  "1900": {
+   "name": "Enchant Weapon - Crusader",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "ppm": 1.0,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "buff",
+      "spellId": 20007,
+      "name": "Holy Strength",
+      "durationMs": 15000,
+      "stats": {
+       "str": 100
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [
+    "Holy Strength heal (75 to 125 health per proc)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "Hand-written: 1 proc per minute on the enchanted weapon's base speed, rolled only by landed hits made with that weapon (main hand: white swings and every melee ability, Heroic Strike and Cleave included; off hand: white swings and Whirlwind's off-hand hit), hits that deal no damage included, no cooldown. Each proc gives +100 Strength for 15 s. The main-hand and off-hand copies are separate buffs, Holy Strength (MH) and (OH): both can be up at once for +200 Strength, and a new proc from the same hand only refreshes that hand's buff. The game files state no rate; 1 per minute is Measured (0.95 pooled, EV-0135). Any melee weapon, either hand, one- or two-handed; drops from Scarlet mobs in the Plaguelands.",
+   "cite": [
+    "sim/common/classic/enchants.go:40",
+    "sim/core/procs.go:266",
+    "sim/core/character.go:682",
+    "tools/database/overrides/enchant_procs.go:43",
+    "docs/evidence/EV-0135-crusader-procs-per-minute.md",
+    "spell 20007"
+   ]
+  },
+  "2443": {
+   "name": "Enchant Weapon - Winter's Might",
+   "effects": [],
+   "ignored": [
+    "+15 Frost spell damage"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "21930 is A_MOD_DAMAGE_DONE +15 on the Frost school, carried as a plain stat; it adds nothing to Physical attacks. Any melee weapon.",
+   "cite": [
+    "spell 21930",
+    "db.json enchant 2443"
+   ]
+  },
+  "2543": {
+   "name": "Arcanum of Rapidity",
+   "effects": [],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "No extra effect beyond the plain pseudo stat already in enchants.json (meleeHastePct 1), which is not repeated here. The row 22841 is A_MOD_MELEE_HASTE_3 +1 and ranged haste +1: melee swing speed multiplied by 1.01, multiplicative and not additive. The reference turns an item's or enchant's haste pseudo stat into a multiplier on swing speed (sim/core/enchant_speed.go:67), and all haste multipliers multiply together with the single haste-rating multiplier (sim/core/unit.go:610). Head or legs (one on each is allowed, each applies its own multiplier); reward of the quest Libram of Rapidity (7483).",
+   "cite": [
+    "sim/core/enchant_speed.go:13",
+    "spell 22841",
+    "db.json enchant 2543"
+   ]
+  },
+  "7210": {
+   "name": "Enchant Weapon - Dismantle",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": false,
+      "chance": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 439164,
+      "school": "nature",
+      "min": 60,
+      "max": 90,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "spell",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [
+    "Dismantle spell-cast trigger (30% on harmful spell casts, 12 s internal cooldown)"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "NOT modelled by the reference: both generated blocks are commented out because the damage spell can only hit Mechanical targets and the melee trigger states no rate. From the rows: trigger 435467 hears landed melee and ranged hits and casts Dismantle 439164, 75 Nature with 40% variance (60 to 90), magic defense type, on Mechanical targets only; the proc chance is unknown (null), so do not assume one. Whether only the enchanted hand rolls it is not stated. Any melee weapon; the database lists no source.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:73",
+    "sim/common/forever/enchants_auto_gen.go:89",
+    "spell 435467",
+    "spell 442206",
+    "spell 439164"
+   ]
+  },
+  "7223": {
+   "name": "Enchant Chest - Retricutioner",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "damageTaken",
+      "attacks": [],
+      "ownHandOnly": false,
+      "chance": 1.0,
+      "icdMs": 5000
+     },
+     "result": {
+      "type": "damage",
+      "spellId": 435901,
+      "school": "physical",
+      "min": 9,
+      "max": 9,
+      "apCoef": 0,
+      "spCoef": 0,
+      "table": "none",
+      "canCrit": true
+     }
+    }
+   ],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "medium",
+   "notes": "A damage shield: every melee swing or melee ability taken reflects 9 Physical to the attacker, at most once per 5 s, with no roll to miss and through the attacker's armor. It only acts when the wearer is struck in melee, so it is worth nothing to a non-tank. The reference's test zeroes spell crit before reading the flat 9, which suggests the reflection can crit; that was not traced further. Chest only; the database lists no source.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:264",
+    "sim/common/forever/enchants_test.go:753",
+    "sim/core/spelldata/item_aura.go:98",
+    "spell 435901"
+   ]
+  },
+  "7664": {
+   "name": "Enchant Shield - Critical Strike",
+   "effects": [],
+   "ignored": [],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "No extra effect beyond the plain pseudo stat already in enchants.json (meleeCritPct 1), which is not repeated here: 1220596 is A_MOD_WEAPON_CRIT_PERCENT +1 and spell crit +1, in percentage points. Shields only (enchantType shield), so a dual-wielding or two-hand Fury warrior cannot use it.",
+   "cite": [
+    "sim/core/itemfit/itemfit.go:84",
+    "spell 1220596",
+    "db.json enchant 7664"
+   ]
+  },
+  "7940": {
+   "name": "Enchant Weapon - Grand Crusader",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "ohAuto",
+       "mhSpecial",
+       "ohSpecial"
+      ],
+      "ownHandOnly": true,
+      "chance": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "buff",
+      "spellId": 1231124,
+      "name": "Righteous Strength",
+      "durationMs": 20000,
+      "stats": {
+       "str": 120
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [
+    "Righteous Strength heal (350 to 450 health per proc)"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "NOT modelled by the reference: the generated block is commented out because neither 1231124 nor the slot spell 1231126 states a rate, and the enchant's database entry carries an empty proc. From the rows: Righteous Strength gives +120 Strength for 20 s and heals 400 (25% variance); trigger 1231126 names melee swings and melee abilities. The proc chance is unknown (null), so do not assume one, and whether main-hand and off-hand copies are separate buffs is not stated. Any melee weapon in the database; no source listed.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:105",
+    "spell 1231124",
+    "spell 1231126",
+    "db.json enchant 7940"
+   ]
+  },
+  "7943": {
+   "name": "Enchant 2H Weapon - Grand Inquisitor",
+   "effects": [
+    {
+     "kind": "proc",
+     "trigger": {
+      "event": "hit",
+      "attacks": [
+       "mhAuto",
+       "mhSpecial"
+      ],
+      "ownHandOnly": true,
+      "chance": null,
+      "icdMs": 0
+     },
+     "result": {
+      "type": "buff",
+      "spellId": 1232169,
+      "name": "Righteous Inquisition",
+      "durationMs": 20000,
+      "stats": {
+       "str": 200
+      },
+      "pct": {},
+      "maxStacks": 1,
+      "charges": 0,
+      "decaying": false
+     }
+    }
+   ],
+   "ignored": [
+    "Righteous Inquisition heal (350 to 450 health per proc)"
+   ],
+   "referenceModels": false,
+   "confidence": "low",
+   "notes": "NOT modelled by the reference: the generated block is commented out because neither 1232169 nor the slot spell 1232170 states a rate. From the rows: Righteous Inquisition gives +200 Strength for 20 s and heals 400 (25% variance); trigger 1232170 names melee swings and melee abilities. The proc chance is unknown (null), so do not assume one. The tooltip says two-handed melee weapon, but the database entry has enchantType normal, so the reference would let it sit on any weapon; treat it as two-hand only. No source listed.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:121",
+    "spell 1232169",
+    "spell 1232170",
+    "db.json enchant 7943"
+   ]
+  },
+  "8695": {
+   "name": "Enchant Gloves - Lotus Claw",
+   "effects": [],
+   "ignored": [
+    "Lotus Claw (chance to find Death Lotus when gathering herbs in Hyjal)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "1294053 is a dummy aura for herb gathering; no combat effect. Gloves.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:137",
+    "spell 1294053"
+   ]
+  },
+  "8726": {
+   "name": "Arcanum of Binding",
+   "effects": [],
+   "ignored": [
+    "Arcanum of Binding (lets ancient spirits be bound to an unfinished masterwork)"
+   ],
+   "referenceModels": true,
+   "confidence": "high",
+   "notes": "1314330 is a dummy aura for a crafting step; no combat effect. The database files it as a weapon enchant.",
+   "cite": [
+    "sim/common/forever/enchants_auto_gen.go:152",
+    "spell 1314330"
+   ]
+  }
+ }
+}
