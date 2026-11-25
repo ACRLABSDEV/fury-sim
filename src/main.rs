@@ -3,7 +3,8 @@ use forever::optimize::{Optimizer, Policy, Weights};
 use forever::reference;
 use forever::run::simulate;
 use forever::setup::{
-    Buffs, Consumables, Debuffs, Gear, Piece, Race, Settings, build_player, empty_gear,
+    Buffs, Consumables, Debuffs, Gear, Piece, Race, Settings, build_player, empty_gear, gear_armor,
+    piece_armor, piece_stamina,
 };
 use forever::sim::{Encounter, N_SRC, SRC_NAMES};
 use forever::talents::FURY_TWO_HAND;
@@ -65,14 +66,16 @@ fn print_report(
         secs / out.iterations as f64
     );
     println!(
-        "Sheet: {:.0} strength, {:.0} agility, {:.0} attack power, {:.2}% crit, {:.2}% hit, {:.2}% expertise, haste x{:.3}",
+        "Sheet: {:.0} strength, {:.0} agility, {:.0} stamina, {:.0} attack power, {:.2}% crit, {:.2}% hit, {:.2}% expertise, haste x{:.3}, {:.0} armor from gear",
         player.stats.strength(),
         player.stats.agility(),
+        player.stats.stamina(),
         player.stats.attack_power(),
         player.stats.crit_pct() + 3.0,
         player.stats.hit_pct(),
         player.stats.expertise_pct(),
-        player.stats.haste()
+        player.stats.haste(),
+        gear_armor(gear)
     );
     println!(
         "{:<26} {:>8} {:>7} {:>9} {:>7}",
@@ -445,16 +448,21 @@ fn run_optimize(args: &Args, enc: &Encounter, seed: u64) -> Result<(), String> {
             };
             let cat = policy.category_text(item);
             let ok = is_allowed(item.id);
+            let stamina = piece_stamina(&r.piece);
+            let armor = piece_armor(&r.piece);
             println!(
-                "  {:>+7.2}  {:<34} [{}{}] {}",
+                "  {:>+7.2}  {:<34} {:>3.0} stamina {:>4.0} armor  [{}{}] {}",
                 r.dps - base,
                 item.name,
+                stamina,
+                armor,
                 cat,
                 if ok { "" } else { ", excluded by the rules" },
                 policy.source_text(item)
             );
             rows.push(serde_json::json!({
                 "id": item.id, "name": item.name, "dpsChange": ((r.dps - base) * 100.0).round() / 100.0,
+                "stamina": stamina, "armor": armor,
                 "category": cat, "allowed": ok, "source": policy.source_text(item)
             }));
         }

@@ -38,6 +38,7 @@ pub struct StatBlock {
     pub dmg_mult: f64,
     pub str_mult: f64,
     pub agi_mult: f64,
+    pub sta_mult: f64,
     pub ap_mult: f64,
 }
 
@@ -49,6 +50,7 @@ impl Default for StatBlock {
             dmg_mult: 1.0,
             str_mult: 1.0,
             agi_mult: 1.0,
+            sta_mult: 1.0,
             ap_mult: 1.0,
         }
     }
@@ -125,6 +127,7 @@ impl StatBlock {
         self.dmg_mult *= other.dmg_mult;
         self.str_mult *= other.str_mult;
         self.agi_mult *= other.agi_mult;
+        self.sta_mult *= other.sta_mult;
         self.ap_mult *= other.ap_mult;
     }
 
@@ -136,6 +139,7 @@ impl StatBlock {
         self.dmg_mult /= other.dmg_mult;
         self.str_mult /= other.str_mult;
         self.agi_mult /= other.agi_mult;
+        self.sta_mult /= other.sta_mult;
         self.ap_mult /= other.ap_mult;
     }
 
@@ -145,6 +149,10 @@ impl StatBlock {
 
     pub fn agility(&self) -> f64 {
         (self.get(Add::Agi) * self.agi_mult + 1e-9).floor()
+    }
+
+    pub fn stamina(&self) -> f64 {
+        (self.get(Add::Sta) * self.sta_mult + 1e-9).floor()
     }
 
     pub fn attack_power(&self) -> f64 {
