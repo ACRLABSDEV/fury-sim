@@ -355,7 +355,11 @@ fn run_optimize(args: &Args, enc: &Encounter, seed: u64) -> Result<(), String> {
             .unwrap_or_default()
     };
     policy.deny.extend(ids("deny"));
-    policy.allow.extend(ids("allow"));
+    // --allow must also lift the preRaid:false rulings Policy::new put in deny.
+    for id in ids("allow") {
+        policy.deny.remove(&id);
+        policy.allow.insert(id);
+    }
     let keep = args.num("keep", 9.0) as usize;
     let mut opt = Optimizer::new(&settings, &policy, enc, seed);
     opt.two_hand = args.flag("two-hand");
