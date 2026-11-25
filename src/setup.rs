@@ -754,6 +754,7 @@ pub fn build_player(settings: &Settings, gear: &Gear) -> Result<Player, String> 
     if b.kings {
         stats.str_mult *= 1.1;
         stats.agi_mult *= 1.1;
+        stats.sta_mult *= 1.1;
     }
     stats.bump(Add::Ap, [0.0, 112.0, 133.0][b.might.min(2) as usize]);
     if b.mark_of_the_wild {
@@ -878,7 +879,6 @@ pub fn build_player(settings: &Settings, gear: &Gear) -> Result<Player, String> 
         armor_ignore: 0.0,
         minor_armor_buffs: Vec::new(),
         spell_hit_bonus,
-        gear_armor: 0.0,
         warnings,
     };
 
@@ -948,7 +948,6 @@ pub fn build_player(settings: &Settings, gear: &Gear) -> Result<Player, String> 
         };
         builder.player.stats.absorb_map(&item.stats);
         builder.player.stats.absorb_map(&item.pseudo);
-        builder.player.gear_armor += armor_of(&item.stats);
         for group in &item.mob_stats {
             if builder.versus_ok(&group.mob_types) {
                 builder.player.stats.absorb_map(&group.stats);
@@ -1001,7 +1000,6 @@ pub fn build_player(settings: &Settings, gear: &Gear) -> Result<Player, String> 
                 .ok_or_else(|| format!("enchant {enchant_id} is not in the database"))?;
             builder.player.stats.absorb_map(&ench.stats);
             builder.player.stats.absorb_map(&ench.pseudo);
-            builder.player.gear_armor += armor_of(&ench.stats);
             if ench.weapon_damage != 0.0 {
                 match slot {
                     GearSlot::MainHand => {
@@ -1152,8 +1150,7 @@ pub fn build_player(settings: &Settings, gear: &Gear) -> Result<Player, String> 
                 .push("Gnome: the Eureka! cooldown (8 s of +10% ability damage and -10% rage cost every 2 min) is not modelled".into());
         }
         if settings.race == Race::Undead {
-            let sta = player.stats.get(Add::Sta);
-            let health = BASE_HEALTH + (sta - 20.0).max(0.0) * 10.0;
+            let health = BASE_HEALTH + (player.stats.stamina() - 20.0).max(0.0) * 10.0;
             player.procs.push(Proc {
                 name: "Touch of the Grave".into(),
                 event: ProcEvent::Hit,
@@ -1255,9 +1252,34 @@ pub fn gear_from_names(names: &[(GearSlot, &str, u32)]) -> Result<Gear, String> 
     Ok(gear)
 }
 
-fn armor_of(stats: &BTreeMap<String, f64>) -> f64 {
-    ["armor", "bonusArmor"]
-        .iter()
-        .filter_map(|k| stats.get(*k))
-        .sum()
+fn piece_stat(piece: &Piece, keys: &[&str]) -> f64 {
+    let database = db();
+    let Some(item) = database.item(piece.item) else {
+        return 0.0;
+    };
+    let total = |stats: &BTreeMap<String, f64>| -> f64 {
+        keys.iter()
+            .filter_map(|k| stats.get(*k))
+            .fold(0.0, |sum, v| sum + v)
+    };
+    let enchant = if piece.enchant == 0 {
+        None
+    } else {
+        database.enchant(piece.enchant, item.slot)
+    };
+    total(&item.stats) + enchant.map_or(0.0, |e| total(&e.stats))
+}
+
+pub fn piece_stamina(piece: &Piece) -> f64 {
+    piece_stat(piece, &["sta"])
+}
+
+pub fn piece_armor(piece: &Piece) -> f64 {
+    piece_stat(piece, &["armor", "bonusArmor"])
+}
+
+pub fn gear_armor(gear: &Gear) -> f64 {
+    gear.iter()
+        .flatten()
+        .fold(0.0, |sum, piece| sum + piece_armor(piece))
 }

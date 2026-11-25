@@ -2,7 +2,7 @@ use forever::data::{GearSlot, db};
 use forever::optimize::{Category, Optimizer, Policy, allowed, category};
 use forever::reference;
 use forever::run::simulate;
-use forever::setup::{Piece, build_player};
+use forever::setup::{Piece, build_player, gear_armor, piece_stamina};
 use forever::sim::{Encounter, TableInput, hand_table, swing_rage};
 use forever::talents::{FURY_DUAL_WIELD, Talents};
 
@@ -15,9 +15,14 @@ fn character_sheet_matches_the_reference_sim() {
     let player = build_player(&reference::test_settings(), &reference::test_gear()).unwrap();
     assert_eq!(player.stats.strength(), 336.0);
     assert_eq!(player.stats.agility(), 239.0);
+    assert_eq!(player.stats.stamina(), 409.0);
     assert_eq!(player.stats.attack_power(), 1089.0);
     assert!(close(player.stats.crit_pct() + 3.0, 27.95));
     assert!(close(player.stats.hit_pct(), 1.0));
+    let prebis = reference::prebis_gear();
+    assert_eq!(gear_armor(&prebis), 2260.0);
+    let gear_stamina: f64 = prebis.iter().flatten().map(piece_stamina).sum();
+    assert_eq!(gear_stamina, 69.0);
 }
 
 #[test]

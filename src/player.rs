@@ -210,8 +210,6 @@ pub struct Player {
     pub armor_ignore: f64,
     pub minor_armor_buffs: Vec<usize>,
     pub spell_hit_bonus: f64,
-    /// Armor from items and enchants; display only, the engine never reads it.
-    pub gear_armor: f64,
     pub warnings: Vec<String>,
 }
 
