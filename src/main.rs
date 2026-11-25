@@ -6,6 +6,7 @@ use forever::setup::{
     Buffs, Consumables, Debuffs, Gear, Piece, Race, Settings, build_player, empty_gear,
 };
 use forever::sim::{Encounter, N_SRC, SRC_NAMES};
+use forever::stats::Add;
 use forever::talents::FURY_TWO_HAND;
 use std::collections::HashMap;
 
@@ -65,14 +66,16 @@ fn print_report(
         secs / out.iterations as f64
     );
     println!(
-        "Sheet: {:.0} strength, {:.0} agility, {:.0} attack power, {:.2}% crit, {:.2}% hit, {:.2}% expertise, haste x{:.3}",
+        "Sheet: {:.0} strength, {:.0} agility, {:.0} stamina, {:.0} attack power, {:.2}% crit, {:.2}% hit, {:.2}% expertise, haste x{:.3}, {:.0} armor from gear",
         player.stats.strength(),
         player.stats.agility(),
+        player.stats.get(Add::Sta),
         player.stats.attack_power(),
         player.stats.crit_pct() + 3.0,
         player.stats.hit_pct(),
         player.stats.expertise_pct(),
-        player.stats.haste()
+        player.stats.haste(),
+        player.gear_armor
     );
     println!(
         "{:<26} {:>8} {:>7} {:>9} {:>7}",

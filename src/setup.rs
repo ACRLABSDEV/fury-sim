@@ -878,6 +878,7 @@ pub fn build_player(settings: &Settings, gear: &Gear) -> Result<Player, String> 
         armor_ignore: 0.0,
         minor_armor_buffs: Vec::new(),
         spell_hit_bonus,
+        gear_armor: 0.0,
         warnings,
     };
 
@@ -947,6 +948,7 @@ pub fn build_player(settings: &Settings, gear: &Gear) -> Result<Player, String> 
         };
         builder.player.stats.absorb_map(&item.stats);
         builder.player.stats.absorb_map(&item.pseudo);
+        builder.player.gear_armor += armor_of(&item.stats);
         for group in &item.mob_stats {
             if builder.versus_ok(&group.mob_types) {
                 builder.player.stats.absorb_map(&group.stats);
@@ -999,6 +1001,7 @@ pub fn build_player(settings: &Settings, gear: &Gear) -> Result<Player, String> 
                 .ok_or_else(|| format!("enchant {enchant_id} is not in the database"))?;
             builder.player.stats.absorb_map(&ench.stats);
             builder.player.stats.absorb_map(&ench.pseudo);
+            builder.player.gear_armor += armor_of(&ench.stats);
             if ench.weapon_damage != 0.0 {
                 match slot {
                     GearSlot::MainHand => {
@@ -1250,4 +1253,11 @@ pub fn gear_from_names(names: &[(GearSlot, &str, u32)]) -> Result<Gear, String> 
         });
     }
     Ok(gear)
+}
+
+fn armor_of(stats: &BTreeMap<String, f64>) -> f64 {
+    ["armor", "bonusArmor"]
+        .iter()
+        .filter_map(|k| stats.get(*k))
+        .sum()
 }
