@@ -150,6 +150,36 @@ const BATTLEGROUND_VENDORS: [&str; 6] = [
 ];
 const BATTLEGROUND_FACTIONS: [u32; 4] = [509, 510, 2798, 2799];
 const RAID_FACTIONS: [u32; 1] = [910];
+// PvP rank rows carry no faction in the reference data, so the rank title in the
+// item or set name decides it. Alliance is checked first: "Knight-Champion's" and
+// "Lieutenant Commander's" would otherwise match the Horde "Champion's" and "Commander".
+// Unranked pieces fall back to the line name ("Premier Plate" vs "Premier Mortarplate").
+const ALLIANCE_RANKS: [&str; 9] = [
+    "Marshal",
+    "Knight-",
+    "Commander",
+    "Sergeant Major",
+    "Corporal",
+    "Master Sergeant",
+    "Premier Plate",
+    "Sentinel's",
+    "of the Alliance",
+];
+const HORDE_RANKS: [&str; 13] = [
+    "Mortarplate",
+    "Outrider's",
+    "of the Horde",
+    "General",
+    "Warlord",
+    "Blood Guard",
+    "Legionnaire",
+    "Centurion",
+    "Champion's",
+    "Stone Guard",
+    "Senior Sergeant",
+    "First Sergeant",
+    "Grunt",
+];
 const INSTANCE_ZONES: [&str; 22] = [
     "Scholomance",
     "Stratholme",
@@ -238,6 +268,32 @@ fn source_category(item: &Item, source: &Source, faction: &str) -> Option<Catego
 pub fn category(item: &Item, faction: &str) -> Option<Category> {
     if item.faction.as_deref().is_some_and(|f| f != faction) {
         return None;
+    }
+    // Random-suffix greens ("Champion's Armor") are tagged pvp but are world drops.
+    if item.faction.is_none()
+        && !item.random_suffix
+        && item.sources.iter().any(|s| matches!(s, Source::Pvp {}))
+    {
+        let names = [
+            Some(item.name.as_str()),
+            item.set.as_ref().and_then(|s| s.name.as_deref()),
+        ];
+        let has = |ranks: &[&str]| {
+            names
+                .iter()
+                .flatten()
+                .any(|n| ranks.iter().any(|r| n.contains(r)))
+        };
+        let side = if has(&ALLIANCE_RANKS) {
+            Some("alliance")
+        } else if has(&HORDE_RANKS) {
+            Some("horde")
+        } else {
+            None
+        };
+        if side.is_some_and(|s| s != faction) {
+            return None;
+        }
     }
     if item.sources.is_empty() {
         return Some(if item.id < CLASSIC_ID_LIMIT {

@@ -147,6 +147,21 @@ fn source_rules_separate_pre_raid_gear_from_raid_and_grind_gear() {
         Some(Category::BattlegroundReputation)
     );
     assert_eq!(category(by_name("Darkspear Pauldrons"), "alliance"), None);
+    // PvP rank rows have no faction field; the rank title decides the side.
+    let grand_marshal = d.item(272844).unwrap();
+    assert_eq!(category(grand_marshal, "horde"), None);
+    assert_eq!(category(grand_marshal, "alliance"), Some(Category::PvpRank));
+    let mortarplate = d.item(272637).unwrap();
+    assert_eq!(category(mortarplate, "horde"), Some(Category::PvpRank));
+    assert_eq!(category(mortarplate, "alliance"), None);
+    assert_eq!(category(by_name("Marshal's Plate Girdle"), "horde"), None);
+    // Unranked Premier pieces: the line name decides the side.
+    assert_eq!(category(d.item(273325).unwrap(), "horde"), None);
+    assert_eq!(
+        category(d.item(273324).unwrap(), "horde"),
+        Some(Category::PvpRank)
+    );
+    assert_eq!(category(d.item(273324).unwrap(), "alliance"), None);
 }
 
 #[test]
