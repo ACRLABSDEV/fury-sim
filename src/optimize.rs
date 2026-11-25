@@ -51,6 +51,7 @@ pub struct Policy {
     pub max_phase: u8,
     pub deny: HashSet<u32>,
     pub allow: HashSet<u32>,
+    pub forced: HashSet<u32>,
     pub notes: HashMap<u32, String>,
 }
 
@@ -63,6 +64,9 @@ impl Policy {
     }
 
     pub fn category_text(&self, item: &Item) -> &'static str {
+        if self.forced.contains(&item.id) && !allowed_by_rules(item, self) {
+            return "allowed by flag";
+        }
         if self.allow.contains(&item.id) && self.notes.contains_key(&item.id) {
             return "confirmed by hand";
         }
@@ -110,6 +114,7 @@ impl Policy {
             max_phase: 1,
             deny,
             allow,
+            forced: HashSet::new(),
             notes,
         }
     }
@@ -309,6 +314,10 @@ pub fn category(item: &Item, faction: &str) -> Option<Category> {
 }
 
 pub fn allowed(item: &Item, policy: &Policy) -> bool {
+    policy.forced.contains(&item.id) || allowed_by_rules(item, policy)
+}
+
+fn allowed_by_rules(item: &Item, policy: &Policy) -> bool {
     if policy.deny.contains(&item.id) {
         return false;
     }
