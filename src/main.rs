@@ -354,12 +354,13 @@ fn run_optimize(args: &Args, enc: &Encounter, seed: u64) -> Result<(), String> {
             .map(|v| v.split(',').filter_map(|x| x.trim().parse().ok()).collect())
             .unwrap_or_default()
     };
-    policy.deny.extend(ids("deny"));
-    // --allow must also lift the preRaid:false rulings Policy::new put in deny.
-    for id in ids("allow") {
-        policy.deny.remove(&id);
-        policy.allow.insert(id);
+    let denied = ids("deny");
+    let forced = ids("allow");
+    if let Some(id) = forced.iter().find(|id| denied.contains(id)) {
+        return Err(format!("item {id} is in both --allow and --deny"));
     }
+    policy.deny.extend(denied);
+    policy.forced.extend(forced);
     let keep = args.num("keep", 9.0) as usize;
     let mut opt = Optimizer::new(&settings, &policy, enc, seed);
     opt.two_hand = args.flag("two-hand");

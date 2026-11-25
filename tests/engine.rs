@@ -134,6 +134,22 @@ fn source_rules_separate_pre_raid_gear_from_raid_and_grind_gear() {
     assert!(allowed(by_name("Don Julio's Band"), &policy));
     assert!(allowed(by_name("Furbolg Berserker's Boots"), &policy));
     assert!(!allowed(by_name("Gauntlets of Glory"), &policy));
+    let titanic_leggings = d.item(22385).unwrap();
+    let engraved_band = d.item(260219).unwrap();
+    assert!(!allowed(titanic_leggings, &policy));
+    let mut with_allow_flag = policy.clone();
+    with_allow_flag
+        .forced
+        .extend([titanic_leggings.id, engraved_band.id]);
+    assert!(allowed(titanic_leggings, &with_allow_flag));
+    assert_eq!(
+        with_allow_flag.category_text(titanic_leggings),
+        "allowed by flag"
+    );
+    assert_eq!(
+        with_allow_flag.category_text(engraved_band),
+        "confirmed by hand"
+    );
     assert!(!allowed(by_name("Onyxia Tooth Pendant"), &policy));
     assert!(!allowed(by_name("Warden's Signet of Ferocity"), &policy));
     assert!(!allowed(by_name("Darkspear Pauldrons"), &policy));
